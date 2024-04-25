@@ -4,6 +4,7 @@ import '../styles/lastTransactionsEth.css';
 import { Modal, ModalClose, Sheet, Typography } from '@mui/joy';
 import { colors } from '../../../constants/colors';
 import FormatStrPerPoint from '../../../functions/formatNumbrePerPoint';
+import { formatCientyfuNumbre } from '../../../functions/formatCientyfuNumbre';
 
 export default function LastTransactinsEth() {
   const [transactions, setTransactions] = useState([]);
@@ -48,24 +49,23 @@ export default function LastTransactinsEth() {
   };
 
   return (
-    <div className='tx_container' ref={txContainerRef}>
+    <div className='tx_container' ref={txContainerRef} title='Polaris Web3 - Transaction Container'>
       {transactions.map((tx, index) => (
-        <div onClick={() => handleTransactionClick(index)} key={index} className='tx'>
+        <div onClick={() => handleTransactionClick(index)} key={index} title={`Polaris Web3 - Transaction: ${tx.hash}`} className='tx'>
           {/* Contenido de la transacción */}
           <div><span>{index}</span></div>
           <div className='tx_cgeneral tx_c1'>
-            <div className='tx_c1_block'>Block: <span className='tx_span'>{tx.blockNumber.slice(0,9)}</span></div>
-            <div className='tx_c1_hash'>Hash: <span className='tx_span'>{tx.hash.slice(0,9)}</span></div>
+            <div className='tx_c1_block'>Block: <span className='tx_span' title={`Polaris Web3 - Block/${tx.blockNumber}`}>{tx.blockNumber.slice(0,9)}</span></div>
+            <div className='tx_c1_hash'>Hash: <span className='tx_span' title={`Polaris Web3 - Hash/${tx.hash}`}>{tx.hash.slice(0,9)}</span></div>
           </div>
 
           <div className='tx_cgeneral tx_c2'>
-            <div className='tx_c2_from'>from: <span className='tx_span'>{tx.from.slice(0,9)}</span></div>
-            <div className='tx_c2_to'>to: <span className='tx_span'>{tx.to.slice(0,9)}</span></div>
+            <div className='tx_c2_from'>from: <span className='tx_span'>{tx.from.slice(0,5)}</span></div>
+            <div className='tx_c2_to'>to: <span className='tx_span'>{tx.to.slice(0,5)}</span></div>
           </div>
 
           <div className='tx_cgeneral tx_c3'>
-            <div className='tx_c3_value'>To: <span className='tx_span'>{tx.to.slice(0,9)}</span></div>
-            <div className='tx_c3_xxx'>Value: <span className='tx_span'>{FormatStrPerPoint(parseInt(tx.value, 16) / 10**18)}</span></div>
+            <div className='tx_c3_xxx'>Value: <span className='tx_span'>{formatCientyfuNumbre(parseInt(tx.value, 16) / 10**18).slice(0,11)}</span></div>
           </div>
 
           <div><span>ETH</span></div>

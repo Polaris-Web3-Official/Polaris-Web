@@ -5,14 +5,22 @@
 
   .bento_market_c1 {
     width: 100%;
-    height: 38rem;
-    background-color: var(--mainBackgroundColor2);
-    border-radius: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+
+    .benton_market_c1_containers {
+      width: 32%;
+      height: 15rem;
+      border-radius: 0.75rem;
+      background-color: var(--mainBackgroundColor2);
+    }
   }
 
   .bento_market_c2 {
     width: 100%;
-    height: 25rem;
+    height: 38rem;
     background-color: var(--mainBackgroundColor2);
     border-radius: 0.75rem;
   }

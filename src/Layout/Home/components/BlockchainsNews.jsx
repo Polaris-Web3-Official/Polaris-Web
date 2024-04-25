@@ -31,7 +31,7 @@ export default function BlockchainsNews() {
                 
                 <div className='news_home_c1-general'>
                   <div className='news_home_c1_title'> 
-                    <span>{item.title.slice(0,70)} ...</span>
+                    <span>{item.title.slice(0,50)} ...</span>
                   </div>
 
                   <div className='news_home_c2'>

@@ -73,14 +73,6 @@ export default function Bento() {
           <BlockchainsNews />
         </div>
       </div>
-
-      <div className='bento_c3'>
-        <div className='bento_c3_newProjects'>
-          <BetsProjects />
-        </div>
-
-        <div className='bento_c3_generalMarketOverviewHedera'></div>
-      </div>
     </div>
   )
 }

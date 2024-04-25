@@ -16,22 +16,37 @@
     
 
     img {
-      width: 40px;
-      border-radius: 20px;
+      width: 6%;
+      border-radius: 30%;
     }
+
+
 
     .best_projects_c1_container {
       display: flex;
-      justify-content: space-around;
+      align-items: center;
       width: 100%;
-      gap: 1rem;
+      gap: 2rem;
       padding: 1rem;
       border-radius: 0.75rem;
       cursor: pointer;
-      transition: all .3s;
 
       &:hover {
         background-color: var(--mainBackgroundColor3);
+      }
+
+      h4 {
+        width: 35%;
+      }
+
+      span {
+        width: 20%;
+      }
+
+      .best_projects_c1_container_chart {
+        height: 100%;
+        width: 100%;
+        position: absolute;
       }
     }
   }
