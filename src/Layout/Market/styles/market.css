@@ -1,0 +1,19 @@
+.bento_market {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .bento_market_c1 {
+    width: 100%;
+    height: 38rem;
+    background-color: var(--mainBackgroundColor2);
+    border-radius: 0.75rem;
+  }
+
+  .bento_market_c2 {
+    width: 100%;
+    height: 25rem;
+    background-color: var(--mainBackgroundColor2);
+    border-radius: 0.75rem;
+  }
+}

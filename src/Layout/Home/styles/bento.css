@@ -1,0 +1,154 @@
+.bento {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bento_c1 {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .bento_c1_user {
+      width: 38%;
+      height: 16rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bento_c1_satisfactionMarket {
+      position: relative;
+      width: 24%;
+      height: 15rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+      padding: 20px;
+      gap: 0.3rem;
+
+      .bento_c1_satisfactionMarket_c1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -0.3rem;
+        span {
+          color: var(--borderColor);
+        }
+      }
+
+      .bento_c1_satisfactionMarket_c2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-180deg);
+        z-index: -1000;
+        margin-top: 1rem;
+      }
+
+      .bento_c1_satisfactionMarket_c2-5_sentiment {
+        position: absolute;
+        top: calc(50% - 1.3rem);
+        left: calc(50% - 2rem);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-top: 0.35rem;
+        }
+
+      }
+
+      .bento_c1_satisfactionMarket_c3 {
+        position: relative;
+        width: 80%;
+        margin-left: 10%;
+        height: 4rem;
+        margin-top: -3rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background-color: var(--mainBackgroundColor);
+
+        .bento_c1_satisfactionMarket_c3_porcentage {
+          height: 65%;
+          display: flex;
+          justify-content: space-around;
+
+          #span_porcentaje-home{
+            font-size: 2rem;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    .bento_c1_trackingNetWork{
+      width: 33%;
+      height: 15rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-image: url('https://cusoft.tech/wp-content/uploads/2024/03/image-3.jpg');
+      background-position: center;
+      background-size: contain;
+      
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .bento_c2 {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    .bento_c2_salesNftHedera {
+      width: 53%;
+      height: 25rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+
+    .bento_c2_activeUserNFTMarket {
+      width: 43%;
+      height: 25rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+  }
+
+  .bento_c3 {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    .bento_c3_newProjects {
+      width: 67%;
+      height: 25rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+
+    .bento_c3_generalMarketOverviewHedera {
+      width: 30%;
+      height: 25rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+  }
+
+  .bento_c2 {
+    margin-top: 0.25rem;
+  }
+}
+

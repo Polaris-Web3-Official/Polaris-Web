@@ -1,0 +1,12 @@
+.bento_settings {
+  display: flex;
+  flex-direction: column;
+
+  .bento_settings_c1 {
+    width: 100%;
+    height: 39rem;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+    background-color: var(--mainBackgroundColor2);
+  }
+}

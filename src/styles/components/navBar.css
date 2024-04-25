@@ -1,0 +1,56 @@
+*::-webkit-scrollbar {
+  display: none; 
+}
+.navbar_c {
+  scrollbar-width: none;  
+}
+
+.navBar_move {
+  transition: all 0.5s ease; /* Define una transición para el estilo left */
+}
+
+.divisor{
+flex-shrink: 0;
+    border-top: 0px solid rgba(0, 0, 0, 0.08);
+    border-right: 0px solid rgba(144, 101, 101, 0.08);
+    border-left: 0px solid rgba(0, 0, 0, 0.08);
+    height: 0.0625rem;
+    margin: 1rem 0px;
+    border-bottom: none;
+    opacity: 0.25;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(0, 117, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) !important;
+}
+
+.sponsor {
+  background-image: url('https://polarisweb3.org/wp-content/uploads/2024/04/universo-e1551279332781.jpg');
+}
+
+.bootonDocs {
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    min-width: 64px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    line-height: 1.4;
+    user-select: none;
+    transition: all 150ms ease-in 0s;
+    box-shadow: rgba(0, 0, 0, 0.11) 0rem 0.25rem 0.4375rem -0.0625rem, rgba(0, 0, 0, 0.07) 0rem 0.125rem 0.25rem -0.0625rem;
+    min-height: 2rem;
+    padding: 0.5rem 2rem;
+    font-size: 0.75rem;
+    background-image: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    color: rgb(255, 255, 255);
+}
+
+#navBarContainer {
+  box-shadow: 0px 0px 20px 5px var(--mainBackgroundColor);
+}

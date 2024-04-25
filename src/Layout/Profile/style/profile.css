@@ -1,0 +1,61 @@
+.bento_profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .bento_profile_c1 {
+    width: 100%;
+    height: 6rem;
+    margin-top: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--mainBackgroundColor2);
+  }
+
+  .bento_profile_c2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .bento_profile_c2_presentation {
+      border-radius: 0.75rem;
+      width: 28%;
+      height: 30rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+
+    .bento_profile_c2_profileBasicInfo {
+      border-radius: 0.75rem;
+      width: 39%;
+      height: 30rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+
+    .bento_profile_c2_profileMaxInfo {
+      border-radius: 0.75rem;
+      width: 28%;
+      height: 30rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+  }
+
+  .bento_profile_c3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .bento_profile_c3_profileSettings {
+      border-radius: 0.75rem;
+      width: 22%;
+      height: 30rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+
+    .bento_profile_c3_publish {
+      border-radius: 0.75rem;
+      width: 75%;
+      height: 30rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.rapid_icons_general {
+  width: 25%;
+  min-height: 3rem;
+  background-color: var(--mainBackgroundColor2);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  .rapid_icons_general_c1 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-evenly;
+
+    .rapid_icons_general_c1_name {
+      span {
+        color: var(--borderColor);
+      }
+    }
+  }
+
+  .rapid_icons_general_c1_price {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  .rapid_icons_general_2 {
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rapid_icons_general_2-icon {
+      background-color: var(--ButtonColor);
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.bento_portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+
+  .bento_portfolio_c1 {
+    width: 100%;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+
+    .bento_portfolio_c1_creaditCardPolaris{
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+
+    .bento_portfolio_c1_creditBalancePolaris {
+      grid-column: 2 / 3;
+      grid-row:  1 / 2;
+      border-radius: 0.75rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+
+    .bento_portfolio_c1_walletConectedToPolaris {
+      grid-column: 1 / 3;
+      grid-row:  2 / 3;
+      border-radius: 0.75rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+
+    .bento_portfolio_c1_walletTrackerHelp {
+      grid-column: 3 / 4;
+      grid-row:  1 / 3;
+      border-radius: 0.75rem;
+      background-color: var(--mainBackgroundColor2);
+    }
+  }
+
+  .bento_portfolio_c2 {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+
+
+    .bento_portfolio_c2_infWalletsfamiliars {
+      width: 55%;
+      height: 40rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+
+    .bento_portfolio_c2_historyUserTransactions {
+      width: 45%;
+      height: 40rem;
+      background-color: var(--mainBackgroundColor2);
+      border-radius: 0.75rem;
+    }
+  }
+}

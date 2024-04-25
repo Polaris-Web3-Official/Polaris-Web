@@ -1,0 +1,39 @@
+.best_projects {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+
+  .best_projects_c1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    height: 100%;
+    gap: 1rem;
+
+    
+
+    img {
+      width: 40px;
+      border-radius: 20px;
+    }
+
+    .best_projects_c1_container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        background-color: var(--mainBackgroundColor3);
+      }
+    }
+  }
+}
+
