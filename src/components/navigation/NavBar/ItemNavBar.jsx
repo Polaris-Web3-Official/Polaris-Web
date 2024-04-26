@@ -1,28 +1,18 @@
 import { useEffect, useState } from "react";
 import { colors } from "../../../constants/colors";
+import { Link, useLocation } from "react-router-dom";
 
-export default function ItemNavBar({url, target='_self', icon, line='example'}) {
-  const [focus, setFocus] = useState(false)
+export default function ItemNavBar({ url, target = '_self', icon, line = 'example' }) {
+  const location = useLocation().pathname;
+  const [focus, setFocus] = useState(location === url);
 
-  let page = window.location.pathname;
-  console.log(page);
+  useEffect(() => {
+    setFocus(location === url);
+  }, [location, url]);
 
-  const getPage = ()=>{
-    if (`/${line.toLowerCase()}` === page) {
-      console.log(`El patname es ${page} y el nombre es ${line.toLowerCase()}`);
-      setFocus(true)
-    } else {
-      setFocus(false)
-    }
-  }
-
-  useEffect(()=>{
-    getPage()
-    console.log('se ejecuto getPage()');
-  }, [page])
 
   return (
-    <a href={url} target={target} style={{textDecoration: 'none'}}>
+    <Link to={url} target={target} style={{textDecoration: 'none'}}>
       <li style={{
           padding: '0.675rem 0.8rem 0.675rem 1rem', 
           display: 'flex', 
@@ -50,6 +40,6 @@ export default function ItemNavBar({url, target='_self', icon, line='example'}) 
           <span style={{fontSize: '1rem', fontWeight: 500, color: colors.paragraphColor}}>{line}</span>
         </div>
       </li>
-    </a>
+    </Link>
   )
 }

@@ -1,0 +1,42 @@
+.detail_coin {
+  width: 100%;
+  margin-top: 1rem;
+  min-height: 50rem;
+  display: flex;
+  justify-content: space-around;
+
+  .detail_coin_c1{
+    width: 25%;
+    border-radius: 0.75rem;
+    background-color: var(--mainBackgroundColor2);
+  }
+
+  .detail_coin_c2 {
+    width: 47%;
+    background-color: var(--mainBackgroundColor2);
+    border-radius: 0.75rem;
+  }
+
+  .detail_coin_c3 {
+    width: 25%;
+    height: 50rem;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: var(--mainBackgroundColor2);
+    border-radius: 0.75rem;
+  }
+}
+
+.eapps-widget-toolbar {
+  display: none !important;
+}
+
+.eapps-twitter-feed-posts-item-inner {
+  background-color: var(--mainBackgroundColor2) !important;
+  border-bottom: 1px solid var(--mainBackgroundColor3);
+
+  [rel='noreferrer'] {
+    display: none !important;
+  }
+
+}

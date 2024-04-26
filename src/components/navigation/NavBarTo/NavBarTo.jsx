@@ -54,18 +54,18 @@ export default function NavBarTo() {
         <div style={{opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
           <hr className='divisor'/>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
-            <ItemNavBar url={'trading'} icon={<img src='../../../public/svg/icons/chartcompar.svg'/>} line={'Trading'}/>
-            <ItemNavBar url={'p2p-market'} icon={<img src='../../../public/svg/icons/piechart.svg'/>} line={'P2P-Market'}/>
-            <ItemNavBar url={'community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Swaper'}/>
-            <ItemNavBar url={'airdrops'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Airdrops'}/>
-            <ItemNavBar url={'community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Community'}/>
-            <ItemNavBar url={'community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Recompenzas'}/>
-            <ItemNavBar url={'community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Affiliates'}/>
-            <ItemNavBar url={'jobs'} icon={<img src='../../../public/svg/icons/worker.svg'/>} line={'Jobs'}/>
-            <ItemNavBar url={'materials'} icon={<img src='../../../public/svg/icons/bookopen.svg'/>} line={'Materials'}/>
-            <ItemNavBar url={'masters'} icon={<img src='../../../public/svg/icons/notepad.svg'/>} line={'Masters'}/>
-            <ItemNavBar url={'services'} icon={<img src='../../../public/svg/icons/service.svg'/>} line={'Services'}/>
-            <ItemNavBar url={'products'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Products'}/>
+            <ItemNavBar url={'/trading'} icon={<img src='../../../public/svg/icons/chartcompar.svg'/>} line={'Trading'}/>
+            <ItemNavBar url={'/p2p-market'} icon={<img src='../../../public/svg/icons/piechart.svg'/>} line={'P2P-Market'}/>
+            <ItemNavBar url={'/swaper'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Swaper'}/>
+            <ItemNavBar url={'/airdrops'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Airdrops'}/>
+            <ItemNavBar url={'/community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Community'}/>
+            <ItemNavBar url={'/recompenzas'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Recompenzas'}/>
+            <ItemNavBar url={'/affiliates'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Affiliates'}/>
+            <ItemNavBar url={'/jobs'} icon={<img src='../../../public/svg/icons/worker.svg'/>} line={'Jobs'}/>
+            <ItemNavBar url={'/materials'} icon={<img src='../../../public/svg/icons/bookopen.svg'/>} line={'Materials'}/>
+            <ItemNavBar url={'/masters'} icon={<img src='../../../public/svg/icons/notepad.svg'/>} line={'Masters'}/>
+            <ItemNavBar url={'/services'} icon={<img src='../../../public/svg/icons/service.svg'/>} line={'Services'}/>
+            <ItemNavBar url={'/products'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Products'}/>
           </ul>b
         </div>
       </div>

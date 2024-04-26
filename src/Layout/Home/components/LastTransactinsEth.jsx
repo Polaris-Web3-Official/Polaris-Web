@@ -1,10 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { fetchData } from '../../../functions/fetchData';
 import '../styles/lastTransactionsEth.css';
-import { Modal, ModalClose, Sheet, Typography } from '@mui/joy';
-import { colors } from '../../../constants/colors';
-import FormatStrPerPoint from '../../../functions/formatNumbrePerPoint';
 import { formatCientyfuNumbre } from '../../../functions/formatCientyfuNumbre';
+import ModalCommuns from '../../../components/comuns/Modal';
 
 export default function LastTransactinsEth() {
   const [transactions, setTransactions] = useState([]);
@@ -74,43 +72,11 @@ export default function LastTransactinsEth() {
       
       {/* Renderizar el modal solo si hay una transacción seleccionada */}
       {selectedTransaction !== null && (
-        <Modal 
-          aria-labelledby="modal-title"
-          aria-describedby="modal-desc"
-          open={true}
-          onClose={handleCloseModal}
-          sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}
-        >
-          <Sheet
-            variant="outlined"
-            sx={{
-              maxWidth: 500,
-              borderRadius: 'md',
-              p: 3,
-              boxShadow: 'lg',
-              backgroundColor: colors.mainBackgroundColor2,
-            }}
-          >
-            <ModalClose variant="plain" sx={{ m: 1 }} onClick={handleCloseModal}/>
-            <Typography
-              component="h2"
-              id="modal-title"
-              level="h4"
-              textColor={colors.paragraphColor}
-              fontWeight="lg"
-              mb={1}
-            >
-              Tx: <a target='_blank' href={`https://etherscan.io/tx/${transactions[selectedTransaction]?.hash}`}>{transactions[selectedTransaction]?.hash?.slice(0,35)}</a>
-            </Typography>
-            <div>
-              <div>
-                <span>
-                  The transaction family tree will be available in Polaris V1.0. For more information we suggest reading our documentation.
-                </span>
-              </div>
-            </div>
-          </Sheet>
-        </Modal>
+        <ModalCommuns 
+          handleCloseModal={handleCloseModal}
+          title={`Tx: ${transactions[selectedTransaction]?.hash?.slice(0,35)}`}
+          description={`The transaction family tree will be available in Polaris V1.0. For more information we suggest reading our documentation.`}
+        />
       )}
     </div>
   );

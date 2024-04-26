@@ -1,12 +1,21 @@
 import './style/header.css'
-import { colors } from '../../constants/colors'
 
-let path = window.location.pathname
 
-export default function Header() {
-  console.log(path.charAt(1).toUpperCase() + path.slice(2));
-  let pathPage = path.charAt(1).toUpperCase() + path.slice(2) === '/' ? 
-                 'Home' : path.charAt(1).toUpperCase() + path.slice(2);
+export default function Header({text='Polaris Web3'}) {
+  const colors = [
+    '#595959',
+    '#595959',
+    '#595959',
+  ]
+  const path = window.location.pathname;
+  const pathParts = path.split('/').filter(part => part !== ''); 
+  
+  const pathFormatted = pathParts.map((part, index) => (
+    <span key={index} style={{ color: colors[index] }}>
+      {part.charAt(0).toUpperCase() + part.slice(1)}
+    </span>
+  ));
+
   return (
     <header>
       <div className='container_header'>
@@ -16,10 +25,10 @@ export default function Header() {
             
             <div style={{display: 'flex', marginLeft: 5, gap: 5}}>
               <span style={{color: colors.borderColor, fontSize: 13}}>/</span>
-              <span style={{color: colors.borderColor, fontSize: 13}}>{pathPage}</span>
+              <span style={{color: colors.borderColor, fontSize: 13, display: 'flex', gap: 5}}>{pathFormatted}</span>
             </div>
           </div>
-          <div style={{fontSize: 20}}>{pathPage}</div>
+          <div style={{fontSize: 20, display: 'flex', gap: 10, color: 'white'}}>{text}</div>
         </div>
       </div>
 

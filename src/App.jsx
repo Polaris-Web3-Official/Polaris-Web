@@ -21,6 +21,10 @@ import Community from './Layout/Community/Community'
 import P2PMarket from './Layout/P2PMarket/P2PMarket'
 import Trading from './Layout/Trading/Trading'
 import Airdrops from './Layout/Airdrops/Airdrops'
+import DetailStatsCoin from './Layout/DetailStatsCoin/DetailCoin'
+import Affilieates from './Layout/Affilieates/Affilieates'
+import Swaper from './Layout/Swaper/Swaper'
+import Recompenzas from './Layout/Recompenzas/Recompenzas'
 
 
 
@@ -34,6 +38,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='market' element={<Market />}/>
+          <Route path='market/detail/:id' element={<DetailStatsCoin />}/>
           <Route path='games' element={<Games />}/>
           <Route path='portfolio' element={<PortFolio />}/>
           <Route path='profile' element={<Profile />}/>
@@ -42,13 +47,16 @@ function App() {
           <Route path='sponsors' element={<Sponsors />}/>
           
           <Route path='products' element={<Products />}/>
+          <Route path='affiliates' element={<Affilieates />}/>
           <Route path='services' element={<Service />}/>
           <Route path='materials' element={<Materials />}/>
           <Route path='masters' element={<Masters />}/>
+          <Route path='recompenzas' element={<Recompenzas />}/>
           <Route path='jobs' element={<Jobs />}/>
           <Route path='community' element={<Community />}/>
           <Route path='p2p-market' element={<P2PMarket />}/>
           <Route path='trading' element={<Trading />}/>
+          <Route path='swaper' element={<Swaper />}/>
           <Route path='airdrops' element={<Airdrops />}/>
 
         </Routes>

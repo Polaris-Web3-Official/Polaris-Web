@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/market.css'
-import TopCriptos from './TopCriptos'
-import WinnersCoins from './WinnersCoins'
-import TrendingCoins from './TrendingCoins'
-import LossersCoins from './LossersCoins'
+import TopCriptos from './TopCriptos/TopCriptos'
+import WinnersCoins from './Winners/WinnersCoins'
+import TrendingCoins from './Trending/TrendingCoins'
+import LossersCoins from './Lossers/LossersCoins'
 
 export default function Index() {
   return (

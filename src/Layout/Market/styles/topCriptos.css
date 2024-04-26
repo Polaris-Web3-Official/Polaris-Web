@@ -1,0 +1,159 @@
+
+.top_cryptos {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
+  span {
+    color: var(--paragraphColor);
+  }
+
+  .top_cryptos_header{
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    .top_cryptos_header_c1 {
+      display: flex;
+      padding: 0.7rem;
+      border-radius: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .top_cryptos_header_c1_categories {
+        ul {
+          gap: 0rem;
+
+          li {
+            padding: 0.3rem 1rem;
+            border-radius: 0.55rem;
+            cursor: pointer;
+            display: flex;
+            gap: 0.3rem;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+              background-color: var(--mainBackgroundColor3);
+            }
+
+            img {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .top_cryptos_header_c2 {
+      display: flex;
+      padding: 0.3rem 1rem;
+      border-radius: 0.75rem;
+      border-bottom: 1px solid var(--borderColor);
+      align-items: center;
+
+      ul {
+        gap: 0px;
+      }
+
+      .top_cryptos_header_c2_coinList {
+        font-size: 0.9rem;
+        width: 44%;
+      }
+
+      li {
+        padding: 0rem 1rem;
+        margin-top: -0.7rem;
+        color: var(--borderColor);
+        font-size: 0.9rem;
+      }
+    }
+
+    .top_cryptos_header_c1_blockchains {
+      ul {
+        gap: 0.3rem;
+      }
+      li {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.3rem 1rem;
+        border-radius: 0.55rem;
+        cursor: pointer;
+        align-items: center;
+        
+        &:hover{background-color: var(--mainBackgroundColor3);}
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .top_cryptos_header_c2_coinFilter {
+    width: 60%;
+    ul{
+      gap: 3rem;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.item_cripto_top {
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--mainBackgroundColor3);
+  border-radius: 0.5rem;
+  align-items: center;
+  &:hover{background-color: var(--mainBackgroundColor3);}
+
+  .item_cripto_top_imagen {
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .item_cripto_top_name {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  .item_cripto_top_rank {
+    overflow-x: scroll;
+    width: 8%;
+  }
+
+  .item_cripto_top_price {
+    overflow-x: scroll;
+    width: 8%;
+  }
+
+  .item_cripto_top_volume {
+    overflow-x: scroll;
+    width: 11%;
+  }
+
+  .item_cripto_top_marketCap {
+    overflow-x: scroll;
+    width: 15%;
+  }
+}

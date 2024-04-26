@@ -59,17 +59,17 @@ export default function NavBar() {
           <hr className='divisor'/>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
             <ItemNavBar url={'/'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
-            <ItemNavBar url={'market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
-            <ItemNavBar url={'socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
-            <ItemNavBar url={'games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
-            <ItemNavBar url={'portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
+            <ItemNavBar url={'/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
+            <ItemNavBar url={'/socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
+            <ItemNavBar url={'/games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
+            <ItemNavBar url={'/portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
             
           </ul>
 
           <ul style={{listStyle: 'none', marginTop: 30, padding: 0}}>
-            <ItemNavBar url={'profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
-            <ItemNavBar url={'settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
-            <ItemNavBar url={'sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
+            <ItemNavBar url={'/profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
+            <ItemNavBar url={'/settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
+            <ItemNavBar url={'/sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
             <ItemNavBar 
               url={'https://twitter.com/intent/post?text=Hello%2C+I+invite+you+to+try+Polaris%2C+an+application+to+access+information+in+an+Easy%2C+Fast+and+Convenient+way.+Access+now+by+entering+https%3A%2F%2Fapp.polarisweb3.org.'} 
               target='_blank' 
