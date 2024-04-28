@@ -1,0 +1,174 @@
+.general_detailStats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  padding: 1rem;
+
+  .header_general_detailStats {
+    min-height: 5rem;
+
+    .header_general_detailStats_c1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .header_general_detailStats_c1_brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+
+        .image {
+          width: 2.4rem;
+          border-radius: 20%;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          gap: 0.6rem;
+
+          .name {
+            font-size: 1.5rem;
+          }
+
+          .symbol {
+            color: var(--borderColor);
+            font-size: 0.8rem;
+            margin-top: 0.4rem;
+          }
+        }
+      }
+    }
+
+    .header_general_detailStats_c1_stars {
+      display: flex;
+      gap: 0.5rem;
+
+      .header_general_detailStats_c1_stars_c1, .header_general_detailStats_c1_stars_c2 {
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--mainBackgroundColor3);
+        border-radius: 0.50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        cursor: pointer;
+
+        &:hover{
+          background-color: var(--mainBackgroundColor);
+        }
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+    .header_general_detailStats_c2 {
+      display: flex;
+      gap: 0.5rem;
+
+      .header_general_detailStats_c2_price {
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      .header_general_detailStats_c2_change1D {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+    }
+  }
+  
+  .general_detailStats_c1 {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      border-bottom: 0px solid var(--borderColor);
+      display: flex;
+      justify-content: space-between;
+      min-height: 3rem;
+      align-items: center;
+
+      span {
+
+      }
+    }
+  }
+
+  .general_detailStats_c1-5 {
+    padding: 1rem 0rem;
+  }
+
+  .general_detailStats_c2 {
+    display: flex;
+    flex-direction: column;
+    
+    .general_detailStats_c2_info {
+      h4 {
+        margin: 1rem 0rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+    }
+
+    .general_detailStats_c2_socialData {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      .general_detailStats_c2_socialData_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0rem;
+
+        div {
+          width: 50%;
+          height: 100%;
+          overflow-y: auto;
+          overflow-x: auto;
+        }
+
+        .item_container {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 1rem;
+
+          ul {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            gap: 0.5rem;
+          }
+
+          li {
+            padding: 0rem 1rem;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.4rem;
+            background-color: var(--mainBackgroundColor3);
+
+            &:hover {
+              background-color: var(--borderColor);
+            }
+
+            a {
+              color: var(--paragraphColor);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

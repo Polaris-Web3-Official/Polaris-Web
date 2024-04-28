@@ -1,6 +1,6 @@
 export function formatCientyfuNumbre(numero) {
     // Convierte el número a una cadena de texto
-    const numeroCadena = numero.toString();
+    const numeroCadena = String(numero);
 
     // Verificar si el número está en notación científica
     const esNotacionCientifica = numeroCadena.includes('e');

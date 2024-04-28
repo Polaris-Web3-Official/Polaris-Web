@@ -52,7 +52,7 @@ export default function Index({coinId='bitcoin'}) {
 
       <div className='detail_coin_c3' style={{position: 'relative'}}>
         <div style={{
-          zIndex: 999999, 
+          zIndex: 999, 
           marginBottom: -10,
           position: 'relative',
           display: 'flex', 
