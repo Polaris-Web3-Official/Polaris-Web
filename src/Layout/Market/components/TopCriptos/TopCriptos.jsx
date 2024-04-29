@@ -39,7 +39,7 @@ export default function TopCriptos() {
 
   //Modal
   const handleCloseModal = () => {
-    setModal([false, false]); // Resetear el estado del índice de la transacción seleccionada para cerrar el modal
+    setModal([false, false]); 
   };
 
   const searsh = async () =>{
@@ -71,6 +71,7 @@ export default function TopCriptos() {
                 <li onClick={()=> setModal([true, false])} style={{backgroundColor: category === 'launchpad' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='../../../../../public/svg/icons/components/suitcase.svg' /> <span>Launchpad</span></li>
                   {modal[0] && (
                     <ModalCommuns
+                      open={modal[0]}
                       handleCloseModal={handleCloseModal}
                       title={'Available in V1.0 '}
                       description={'Polaris is currently in BETA, in V1.0 you will be able to see quick and convenient information about new projects coming to market.'}
@@ -79,6 +80,7 @@ export default function TopCriptos() {
                 <li onClick={()=> setModal([false, true])} style={{backgroundColor: category === 'games' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='../../../../../public/svg/icons/play.svg' /> <span>Gaming</span></li>
                   {modal[1] && (
                     <ModalCommuns
+                      open={modal[1]}
                       handleCloseModal={handleCloseModal}
                       title={'Available in V1.0 '}
                       description={'Polaris is currently in BETA, in V1.0 you will be able to see quick and convenient information about the new Gaming projects that come to market.'}

@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/socialFi.css'
 import Post from './Post/Post'
 import TopPost from './TopPost/TopPost'

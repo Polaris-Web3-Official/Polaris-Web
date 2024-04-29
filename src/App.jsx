@@ -25,6 +25,7 @@ import DetailStatsCoin from './Layout/DetailStatsCoin/DetailCoin'
 import Affilieates from './Layout/Affilieates/Affilieates'
 import Swaper from './Layout/Swaper/Swaper'
 import Recompenzas from './Layout/Recompenzas/Recompenzas'
+import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
 
 
 
@@ -37,13 +38,17 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Home />}/>
+
           <Route path='market' element={<Market />}/>
           <Route path='market/detail/:id' element={<DetailStatsCoin />}/>
+          
+          <Route path='socialfi' element={<SocialFi />}/>
+          <Route path='socialfi/detailPost/:id' element={<DetailPost />}/>
+
           <Route path='games' element={<Games />}/>
           <Route path='portfolio' element={<PortFolio />}/>
           <Route path='profile' element={<Profile />}/>
           <Route path='settings' element={<Settings />}/>
-          <Route path='socialfi' element={<SocialFi />}/>
           <Route path='sponsors' element={<Sponsors />}/>
           
           <Route path='products' element={<Products />}/>

@@ -1,12 +1,12 @@
 import { colors } from '../../constants/colors';
 import { Modal, ModalClose, Sheet, Typography } from '@mui/joy';
 
-export default function ModalCommuns({handleCloseModal, title, description}) {
+export default function ModalCommuns({open, handleCloseModal, title, description}) {
   return (
     <Modal 
           aria-labelledby="modal-title"
           aria-describedby="modal-desc"
-          open={true}
+          open={open}
           onClose={handleCloseModal}
           sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}
         >
