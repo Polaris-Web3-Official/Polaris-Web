@@ -25,7 +25,7 @@ export default function Header({text='Polaris Web3'}) {
             
             <div style={{display: 'flex', marginLeft: 5, gap: 5}}>
               <span style={{color: colors.borderColor, fontSize: 13}}>/</span>
-              <span style={{color: colors.borderColor, fontSize: 13, display: 'flex', gap: 5}}>{pathFormatted}</span>
+              <span style={{color: colors.borderColor, fontSize: 13, display: 'flex', gap: 5}}>{pathFormatted.slice(0,5)}</span>
             </div>
           </div>
           <div style={{fontSize: 20, display: 'flex', gap: 10, color: 'white'}}>{text}</div>

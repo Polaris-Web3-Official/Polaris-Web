@@ -1,7 +1,10 @@
 import React from 'react'
+import Comming from '../../components/comuns/Comming'
 
 export default function Affilieates() {
   return (
-    <div>Affilieates</div>
+    <div>
+      <Comming />
+    </div>
   )
 }

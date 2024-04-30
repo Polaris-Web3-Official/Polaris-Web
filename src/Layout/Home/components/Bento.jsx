@@ -1,16 +1,17 @@
 import '../styles/bento.css'
-import LineChart from '../../../components/charts/LineChart'
 import { CircularProgress } from '@mui/material'
 import { colors } from '../../../constants/colors'
 import LastTransactinsEth from './LastTransactinsEth'
 import BlockchainsNews from './BlockchainsNews'
-import BetsProjects from './BetsProjects'
 import { useEffect, useState } from 'react'
+import { searchHistoryCoins } from '../functions/searshHistoryCoins'
+import { createChart } from 'lightweight-charts'
 
 export default function Bento() {
   // eslint-disable-next-line no-unused-vars
   const [sentiment, setSentiment] = useState(59);
   const [sentimentIcon, setSentimentIcon] = useState('../../../../public/svg/icons/happy.svg');
+  const [chartData, setChartData] = useState();
 
   const iconCompare = ()=> {
     sentiment < 30 ? 
@@ -22,9 +23,71 @@ export default function Bento() {
       setSentimentIcon('../../../../public/svg/icons/happy.svg') 
   }
 
+  const shartDataSearsh = async ()=>{
+    const data = await searchHistoryCoins()
+    setChartData(data)
+  }
+
   useEffect(()=>{
     iconCompare();
+    shartDataSearsh()
   }, [sentiment])
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      const chartOptions = { 
+        layout: { 
+          textColor: 'white', 
+          background: { 
+            type: 'solid',
+            color: colors.mainBackgroundColor 
+          } 
+        },
+        grid: {
+          vertLines: {
+            color: 'rgba(197, 203, 206, 0.05)',
+          },
+          horzLines: {
+            color: 'rgba(197, 203, 206, 0.05)', 
+          },
+        },
+      };
+      const chart = createChart(document.getElementById('chart'), chartOptions);
+      
+      const bitcoinSeries = chart.addAreaSeries({
+          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
+          bottomColor: 'rgba(41, 98, 255, 0.28)',
+      });
+
+      const ethereumSeries = chart.addAreaSeries({
+          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
+          bottomColor: 'rgba(144, 144, 144, 0.28)',
+      });
+
+      const tetherSeries = chart.addAreaSeries({
+          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
+          bottomColor: 'rgba(147, 220, 140, 0.28)',
+      });
+
+      const binanceSeries = chart.addAreaSeries({
+          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
+          bottomColor: 'rgba(220, 219, 140, 0.28)',
+      });
+
+      const bitcoinDataChart = chartData === undefined ? [] : chartData.bitcoin;
+      const ethereumDataChart = chartData === undefined ? [] : chartData.ethereum;
+      const tetherDataChart = chartData === undefined ? [] : chartData.tether;
+      const binanceDataChart = chartData === undefined ? [] : chartData.binance;
+      
+      if (chartData) {
+        bitcoinSeries.setData(bitcoinDataChart);
+        ethereumSeries.setData(ethereumDataChart);
+        tetherSeries.setData(tetherDataChart);
+        binanceSeries.setData(binanceDataChart);
+        chart.timeScale().fitContent();
+      }
+    }, 30000)
+  }, [])
 
   return (
     <div className='bento'>
@@ -59,8 +122,7 @@ export default function Bento() {
         </div>
 
         <div className='bento_c1_user'>
-          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%'}}>
-            <LineChart />
+          <div id='chart' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%'}}>
           </div>
         </div>
       </div>

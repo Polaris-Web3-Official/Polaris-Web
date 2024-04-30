@@ -60,20 +60,18 @@ export default function NavBarTo() {
           </div>
 
           <div style={{ marginBottom: -10, opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s' }}>
-            <span style={{ textAlign: 'center', width: '100%', marginLeft: 20 }}>Available in version 1.0</span>
           </div>
         </div>
 
-        <div style={{ opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s' }}>
-          <hr className='divisor' />
+        <div style={{ opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s', marginTop: '1rem' }}>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             <ItemNavBar url={'/trading'} icon={<img src='../../../public/svg/icons/chartcompar.svg'/>} line={'Trading'}/>
             <ItemNavBar url={'/p2p-market'} icon={<img src='../../../public/svg/icons/piechart.svg'/>} line={'P2P-Market'}/>
-            <ItemNavBar url={'/swaper'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Swaper'}/>
+            <ItemNavBar url={'/swaper'} icon={<img src='../../../public/svg/icons/swap.svg'/>} line={'Swaper'}/>
+            <ItemNavBar url={'/recompenzas'} icon={<img src='../../../public/svg/icons/gift.svg'/>} line={'Recompenzas'}/>
             <ItemNavBar url={'/airdrops'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Airdrops'}/>
+            <ItemNavBar url={'/affiliates'} icon={<img src='../../../public/svg/icons/friends.svg'/>} line={'Affiliates'}/>
             <ItemNavBar url={'/community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Community'}/>
-            <ItemNavBar url={'/recompenzas'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Recompenzas'}/>
-            <ItemNavBar url={'/affiliates'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Affiliates'}/>
             <ItemNavBar url={'/jobs'} icon={<img src='../../../public/svg/icons/worker.svg'/>} line={'Jobs'}/>
             <ItemNavBar url={'/materials'} icon={<img src='../../../public/svg/icons/bookopen.svg'/>} line={'Materials'}/>
             <ItemNavBar url={'/masters'} icon={<img src='../../../public/svg/icons/notepad.svg'/>} line={'Masters'}/>

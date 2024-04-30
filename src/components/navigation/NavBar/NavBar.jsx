@@ -49,14 +49,13 @@ export default function NavBar() {
 
           <a style={{opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: -5}}>
-              <img style={{width: 140, userSelect: 'none'}} src='../../../public/svg/polaris/P001.svg' />
+              <img style={{width: 130, userSelect: 'none'}} src='../../../public/svg/polaris/P001.svg' />
               <span style={{color: colors.borderColor, fontSize: '0.8rem', marginTop: '0.4rem', marginLeft: '0.5rem'}}>( BETA )</span>
             </div>
           </a>
         </div>
 
         <div style={{opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
-          <hr className='divisor'/>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
             <ItemNavBar url={'/'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
             <ItemNavBar url={'/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
