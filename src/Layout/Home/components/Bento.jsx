@@ -6,14 +6,18 @@ import BlockchainsNews from './BlockchainsNews'
 import { useEffect, useState } from 'react'
 import { searchHistoryCoins } from '../functions/searshHistoryCoins'
 import { createChart } from 'lightweight-charts'
+import Loading from '../../../components/comuns/Loading'
 
 export default function Bento() {
   // eslint-disable-next-line no-unused-vars
   const [sentiment, setSentiment] = useState(59);
   const [sentimentIcon, setSentimentIcon] = useState('../../../../public/svg/icons/happy.svg');
   const [chartData, setChartData] = useState();
+  const [chartLoading, setChartLoading] = useState(true)
 
   const iconCompare = ()=> {
+    console.log('se ejecuto la funcion de los emojis');
+
     sentiment < 30 ? 
       setSentimentIcon('../../../../public/svg/icons/angry.svg') 
     : 
@@ -24,80 +28,76 @@ export default function Bento() {
   }
 
   const shartDataSearsh = async ()=>{
+    console.log('se ejecuto la funcion de buscar data');
     const data = await searchHistoryCoins()
     setChartData(data)
   }
 
   useEffect(()=>{
     iconCompare();
+    console.log('se ejecuto el useeffect');
     shartDataSearsh()
-  }, [sentiment])
-
-  useEffect(()=>{
-    setTimeout(()=>{
-      const chartOptions = { 
-        layout: { 
-          textColor: 'white', 
-          background: { 
-            type: 'solid',
-            color: colors.mainBackgroundColor 
-          } 
-        },
-        grid: {
-          vertLines: {
-            color: 'rgba(197, 203, 206, 0.05)',
-          },
-          horzLines: {
-            color: 'rgba(197, 203, 206, 0.05)', 
-          },
-        },
-      };
-      const chart = createChart(document.getElementById('chart'), chartOptions);
-      
-      const bitcoinSeries = chart.addAreaSeries({
-          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
-          bottomColor: 'rgba(41, 98, 255, 0.28)',
-      });
-
-      const ethereumSeries = chart.addAreaSeries({
-          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
-          bottomColor: 'rgba(144, 144, 144, 0.28)',
-      });
-
-      const tetherSeries = chart.addAreaSeries({
-          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
-          bottomColor: 'rgba(147, 220, 140, 0.28)',
-      });
-
-      const binanceSeries = chart.addAreaSeries({
-          lineColor: colors.ButtonColor, topColor: colors.ButtonColor,
-          bottomColor: 'rgba(220, 219, 140, 0.28)',
-      });
-
-      const bitcoinDataChart = chartData === undefined ? [] : chartData.bitcoin;
-      const ethereumDataChart = chartData === undefined ? [] : chartData.ethereum;
-      const tetherDataChart = chartData === undefined ? [] : chartData.tether;
-      const binanceDataChart = chartData === undefined ? [] : chartData.binance;
-      
-      if (chartData) {
-        bitcoinSeries.setData(bitcoinDataChart);
-        ethereumSeries.setData(ethereumDataChart);
-        tetherSeries.setData(tetherDataChart);
-        binanceSeries.setData(binanceDataChart);
-        chart.timeScale().fitContent();
-      }
-    }, 30000)
   }, [])
+
+  if (chartData !== undefined && chartLoading) {
+    console.log(chartData);
+    console.log(chartLoading);
+    setChartLoading(false)
+    const chart = createChart(document.getElementById('chart'), {
+      rightPriceScale: {
+        visible: false
+      },
+      layout: { 
+        textColor: 'white', 
+        background: { 
+          type: 'solid',
+          color: colors.mainBackgroundColor 
+        } 
+      },
+      grid: {
+        vertLines: {
+          color: 'rgba(197, 203, 206, 0.0005)',
+        },
+        horzLines: {
+          color: 'rgba(197, 203, 206, 0.0005)', 
+        },
+      },
+    });
+    
+    const bitcoinSeries = chart.addAreaSeries({
+        lineColor: 'rgba(41, 98, 255, 0.98)', topColor: 'rgba(41, 98, 255, 0.28)',
+        bottomColor: 'rgba(41, 98, 255, 0.28)',
+    });
+    const ethereumSeries = chart.addAreaSeries({
+        lineColor: 'rgba(144, 144, 144, 0.98)', topColor: 'rgba(144, 144, 144, 0.28)',
+        bottomColor: 'rgba(144, 144, 144, 0.28)',
+    });
+    const tetherSeries = chart.addAreaSeries({
+        lineColor: 'rgba(147, 220, 140, 0.98)', topColor: 'rgba(147, 220, 140, 0.28)',
+        bottomColor: 'rgba(147, 220, 140, 0.28)',
+    });
+    const binanceSeries = chart.addAreaSeries({
+        lineColor: 'rgba(220, 219, 140, 0.98)', topColor: 'rgba(220, 219, 140, 0.28)',
+        bottomColor: 'rgba(220, 219, 140, 0.28)',
+    });
+    const bitcoinDataChart = chartData === undefined ? [] : chartData.bitcoin;
+    const ethereumDataChart = chartData === undefined ? [] : chartData.ethereum;
+    const tetherDataChart = chartData === undefined ? [] : chartData.tether;
+    const binanceDataChart = chartData === undefined ? [] : chartData.binance;
+
+    bitcoinSeries.setData(bitcoinDataChart);
+    ethereumSeries.setData(ethereumDataChart);
+    tetherSeries.setData(tetherDataChart);
+    binanceSeries.setData(binanceDataChart);
+    chart.timeScale().fitContent();
+  }
+  
 
   return (
     <div className='bento'>
       <div className='bento_c1'>
-        
-
         <div className='bento_c1_trackingNetWork'>
         </div>
-
-
         <div className='bento_c1_satisfactionMarket'>
           <div className='bento_c1_satisfactionMarket_c1'>
             <h3>Sentiment Market</h3>
@@ -121,9 +121,24 @@ export default function Bento() {
           </div>
         </div>
 
-        <div className='bento_c1_user'>
-          <div id='chart' style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%'}}>
+        <div className='bento_c1_user' style={{position: 'relative'}}>
+          <div style={{
+              width: '100%', 
+              height: '100%', 
+              position: 'absolute', 
+              opacity: chartLoading ? 1 : 0, 
+              transition: 'all .5s'
+            }}>
+            <Loading />
           </div>
+
+          <div id='chart' style={{
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center', 
+              height: '100%', 
+              width: '100%'
+            }}></div>
         </div>
       </div>
 

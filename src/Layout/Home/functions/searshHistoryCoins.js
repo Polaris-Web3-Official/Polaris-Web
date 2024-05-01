@@ -51,6 +51,11 @@ export async function searchHistoryCoins() {
       })
     })
 
+    formattedBitcoinData.pop();
+    formattedEthereumData.pop();
+    formattedTetherData.pop();
+    formattedBinanceData.pop();
+
     return {
       bitcoin: formattedBitcoinData,
       ethereum: formattedEthereumData,

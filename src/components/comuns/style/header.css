@@ -1,5 +1,6 @@
 header {
   min-height: 4rem;
+  width: 100%;
   border-radius: 0.7rem;
   display: flex;
   justify-content: space-between;
@@ -49,4 +50,34 @@ header {
   flex-direction: column;
   justify-content: center;
   margin-left: 0.7rem;
+}
+
+@media (width < 800px){
+  #title_header {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width : 730px) {
+  header {
+    position: fixed;
+    width: 95.9vw;
+    margin-left: -1rem;
+    z-index: 99999;
+    margin-top: -19px;
+
+    .container_header2 {
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {  
+  .icons_header_container_menuAndroid {
+    display: flex !important;
+  }
+
+  .navBar_android {
+    display: flex !important;
+  }
 }

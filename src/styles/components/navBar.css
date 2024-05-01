@@ -5,6 +5,12 @@
   scrollbar-width: none;  
 }
 
+@media screen and (max-width : 730px) {
+  #navBarContainer {
+    display: none !important;
+  }
+}
+
 .navBar_move {
   transition: all 0.5s ease; /* Define una transición para el estilo left */
 }
@@ -23,6 +29,9 @@ flex-shrink: 0;
 }
 
 .sponsor {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url('https://polarisweb3.org/wp-content/uploads/2024/04/universo-e1551279332781.jpg');
 }
 
@@ -53,4 +62,8 @@ flex-shrink: 0;
 
 #navBarContainer {
   box-shadow: 0px 0px 20px 5px var(--mainBackgroundColor);
+}
+
+@media(width < 800){
+  
 }

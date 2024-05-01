@@ -9,6 +9,14 @@ export function GlobalContextProvider({children}){
   const [search, setSearch] = useState('hive');
   const [limitPosts, setLimitPosts] = useState(99);
   const [detailPost, setDetailPosts] = useState({});
+  const [sesionUser, setSesionUser] = useState({})
+  const [userDeviceWidth, setUserDeviceWidth] = useState()
+  const [navBar, setNavBar] = useState(true)
+
+ 
+  window.addEventListener('resize', (e)=>{
+    setUserDeviceWidth(e.currentTarget.innerWidth)
+  })
 
 useEffect(() => {
   fetchHivePosts(search, 99).then((posts) => {
@@ -22,18 +30,23 @@ useEffect(() => {
 
   return (
     <Context.Provider value={{
+      sesionUser: {
+        sesion: sesionUser,
+        setSeseion: setSesionUser,
+      },
+      userDevice: {
+        deviceWhidth: userDeviceWidth,
+      },
+      responsiveAndroidNabvar: {
+        navBar: navBar,
+        setNavBar: setNavBar,
+      },
       socialFi: {
         setSearch: setSearch,
         posts: posts,
         search: search,
         detailPost: detailPost,
         setDetailPosts: setDetailPosts,
-      },
-      sesionUser: {
-        name: 'Nombre',
-        active: true,
-        id: 1,
-        isMember: false,
       },
       theme: {
         mainBackgroundColor: "#171717",

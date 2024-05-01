@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.9rem;
+    justify-content: center;
 
     .bento_c1_user {
       width: 35%;
@@ -19,9 +20,15 @@
       align-items: center;
     }
 
+    @media screen and (max-width : 730px) {
+      .bento_c1_satisfactionMarket {
+        
+      }
+    }
+
     .bento_c1_satisfactionMarket {
       position: relative;
-      width: 24%;
+      width: 20rem;
       height: 15rem;
       background-color: var(--mainBackgroundColor2);
       border-radius: 0.75rem;
@@ -95,12 +102,42 @@
       overflow: hidden;
       background-image: url('https://cusoft.tech/wp-content/uploads/2024/03/image-3.jpg');
       background-position: center;
-      background-size: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
       
       img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1230px) {
+    .bento_c1 {
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .bento_c1_trackingNetWork {
+        display: none;
+      }
+      .bento_c1_satisfactionMarket{
+        width: 250px;
+      }
+      .bento_c1_user {
+        width: 350px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .bento_c1 {
+      .bento_c1_satisfactionMarket{
+        width: 300px;
+      }
+      .bento_c1_user {
+        width: 300px;
       }
     }
   }
@@ -111,9 +148,8 @@
     gap: 0.9rem;
 
     .bento_c2_salesNftHedera {
-      width: 53%;
+      width: 40rem;
       height: 25rem;
-      background-color: var(--mainBackgroundColor2);
       border-radius: 0.75rem;
     }
 
@@ -125,29 +161,52 @@
     }
   }
 
-  .bento_c3 {
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-
-    .bento_c3_newProjects {
-      width: 67%;
-      height: 25rem;
-      background-color: var(--mainBackgroundColor2);
-      border-radius: 0.75rem;
-    }
-
-    .bento_c3_generalMarketOverviewHedera {
-      width: 30%;
-      height: 25rem;
-      background-color: var(--mainBackgroundColor2);
-      border-radius: 0.75rem;
-    }
-  }
-
   .bento_c2 {
     margin-top: 0.25rem;
   }
 }
 
+@media screen and (max-width: 1230px) {
+  .bento_c2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .bento_c2_activeUserNFTMarket {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .bento_c2 {
+    .bento_c2_salesNftHedera {
+      overflow-y: scroll;
+      overflow-x: scroll;
+      background-color: var(--mainBackgroundColor2);
+
+      .tx_container{
+        overflow-y: scroll;
+        overflow-x: scroll;
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bento_c1_satisfactionMarket {
+    width: 90vw !important;
+  }
+
+  .bento_c1_user {
+    width: 90vw !important;
+  }
+
+  .bento_c2_salesNftHedera {
+    background-color: transparent !important;
+    margin-top: 1rem;
+    border-radius: 0px;
+    width: 100vw !important;
+  }
+}

@@ -32,7 +32,7 @@ import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
 function App() {
 
   return (
-    <div style={{backgroundColor: colors.mainBackgroundColor, width: '90vw', minHeight: '95vh'}}>
+    <div style={{backgroundColor: colors.mainBackgroundColor, width: '100%', minHeight: '95vh'}}>
       <BrowserRouter>
         <NavBar />
 

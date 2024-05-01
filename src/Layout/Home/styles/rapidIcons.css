@@ -10,7 +10,7 @@
   .rapid_icons_general_c1 {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     justify-content: space-evenly;
 
     .rapid_icons_general_c1_name {
@@ -19,7 +19,6 @@
       }
     }
   }
-
   .rapid_icons_general_c1_price {
     display: flex;
     gap: 5px;
@@ -45,5 +44,25 @@
       justify-content: center;
       align-items: center;
     }
+  }
+}
+
+.rapid_icons_general {
+  width: 17rem;
+}
+
+@media screen and (max-width: 750px) {
+  .rapid_icons_general {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .rapidInfoX {
+    margin-top: 3.5rem;
+  }
+
+  .rapid_icons_general {
+    width: 94vw;
   }
 }

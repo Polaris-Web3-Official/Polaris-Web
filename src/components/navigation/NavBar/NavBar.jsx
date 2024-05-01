@@ -2,11 +2,19 @@ import { colors } from '../../../constants/colors'
 import ItemNavBar from './ItemNavBar'
 import '../../../styles/components/navBar.css'
 import Booton from '../../comuns/Booton'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { Context } from '../../../context/GlobalContextProvider'
 
 export default function NavBar() {
   const [nabBarState, setNavBarState]= useState(false)
   const [icon, setIcon]=useState('cancel')
+  //const [userDeviceWidth, setUserDeviceWidth] = useState();
+
+  //const { userDevice } = useContext(Context)
+
+  //useEffect(()=>{
+  //  setUserDeviceWidth(userDevice.deviceWhidth)
+  //}, [userDevice.deviceWhidth])
 
   return (
     <div id='navBarContainer' className='navbar_c' style={{

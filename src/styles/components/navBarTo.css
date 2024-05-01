@@ -9,6 +9,12 @@
   transition: all 0.5s ease; /* Define una transición para el estilo left */
 }
 
+@media screen and (max-width : 730px) {
+  #navBarContainerTo {
+    display: none !important;
+  }
+}
+
 .divisor{
 flex-shrink: 0;
     border-top: 0px solid rgba(0, 0, 0, 0.08);

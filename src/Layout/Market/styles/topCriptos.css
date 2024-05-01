@@ -118,6 +118,10 @@
   padding: 0.7rem 1rem;
   border-bottom: 1px solid var(--mainBackgroundColor3);
   border-radius: 0.5rem;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   align-items: center;
   &:hover{background-color: var(--mainBackgroundColor3);}
 
@@ -155,5 +159,46 @@
   .item_cripto_top_marketCap {
     overflow-x: scroll;
     width: 15%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .top_cryptos_header_c1 {
+    display: none !important;
+  }
+
+  .top_cryptos_header_c2 {
+    overflow-y: auto;
+    overflow-x: auto;
+
+    .top_cryptos_header_c2_coinFilter {
+      ul{
+        li {
+          width: 200px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .item_cripto_top {
+    width: 30rem;
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  .item_cripto_top_rank {
+    display: none;
+  }
+
+  .item_cripto_top_name {
+    width: 130px !important;
+  }
+
+  .item_cripto_top_price {
+    width: 120px !important;
   }
 }
