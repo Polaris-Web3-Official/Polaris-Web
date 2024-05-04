@@ -19,7 +19,7 @@ export default function Header({text}) {
   
   const pathFormatted = pathParts.map((part, index) => (
     <span key={index} style={{ color: colors[index] }}>
-      {part.charAt(0).toUpperCase() + part.slice(1)}
+      {part.charAt(0).toUpperCase() + part.slice(1,8)}
     </span>
   ));
 
@@ -30,9 +30,6 @@ export default function Header({text}) {
     setUserDeviceWidth(userDevice.deviceWhidth)
   }, [userDevice.deviceWhidth])
 
-  console.log(userDeviceWidth);
-  console.log(responsiveAndroidNabvar.navBar);
-
   return (
     <header>
       <div className='container_header'>
@@ -42,7 +39,7 @@ export default function Header({text}) {
             
             <div style={{display: 'flex', marginLeft: 5, gap: 5}}>
               <span style={{color: colors.borderColor, fontSize: 13}}>/</span>
-              <span style={{color: colors.borderColor, fontSize: 13, display: 'flex', gap: 5}}>{pathFormatted.slice(0,5)}</span>
+              <span style={{color: colors.borderColor, fontSize: 13, display: 'flex', gap: 5}}>{pathFormatted}</span>
             </div>
           </div>
           <div id='title_header' style={{ display: 'flex', gap: 10, color: 'white'}}>Polaris Web3 (BETA)</div>
@@ -78,38 +75,38 @@ export default function Header({text}) {
         <div style={{transition: 'all .5s', width: '100%'}}>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
+              <ItemNavBar url={'/app'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
+              <ItemNavBar url={'/app/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
+              <ItemNavBar url={'/app/socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
+              <ItemNavBar url={'/app/games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
+              <ItemNavBar url={'/app/portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
             </div>
             
           </ul>
 
           <ul style={{listStyle: 'none', marginTop: 30, padding: 0}}>
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
+              <ItemNavBar url={'/app/profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
+              <ItemNavBar url={'/app/settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
+              <ItemNavBar url={'/app/sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>

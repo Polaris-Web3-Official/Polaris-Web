@@ -8,7 +8,7 @@ export default function DetailStatsCoin() {
 
   return (
     <div className='container'>
-      <Header text={`Statistics of ${id.charAt(0).toUpperCase() + id.slice(1, 100)} ( BETA )`}/>
+      <Header/>
       <Index coinId={id}/>
       <Footer />
     </div>

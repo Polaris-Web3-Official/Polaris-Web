@@ -73,8 +73,9 @@ export default function LastTransactinsEth() {
       {/* Renderizar el modal solo si hay una transacción seleccionada */}
       {selectedTransaction !== null && (
         <ModalCommuns 
+          open={true}
           handleCloseModal={handleCloseModal}
-          title={`Tx: ${transactions[selectedTransaction]?.hash?.slice(0,35)}`}
+          title={`Tx: ${transactions[selectedTransaction]?.hash?.slice(0,20)} ...`}
           description={`The transaction family tree will be available in Polaris V1.0. For more information we suggest reading our documentation.`}
         />
       )}

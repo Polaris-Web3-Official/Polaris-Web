@@ -9,7 +9,7 @@ export default function Footer() {
         width: '100%', 
         padding: 20, 
         gap: '1rem',
-        marginBottom: '-2.5rem', 
+        margin: '1rem 0rem -2.5rem 0rem', 
         alignItems: 'center',
         justifyContent: 'space-evenly',
         flexWrap: 'wrap'

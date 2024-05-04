@@ -26,6 +26,7 @@ import Affilieates from './Layout/Affilieates/Affilieates'
 import Swaper from './Layout/Swaper/Swaper'
 import Recompenzas from './Layout/Recompenzas/Recompenzas'
 import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
+import Presentation from './Layout/Presentation/Presentation'
 
 
 
@@ -34,39 +35,33 @@ function App() {
   return (
     <div style={{backgroundColor: colors.mainBackgroundColor, width: '100%', minHeight: '95vh'}}>
       <BrowserRouter>
-        <NavBar />
-
         <Routes>
-          <Route path='/' element={<Home />}/>
-
-          <Route path='market' element={<Market />}/>
-          <Route path='market/detail/:id' element={<DetailStatsCoin />}/>
+          <Route path='/' element={<Presentation />}/>
           
-          <Route path='socialfi' element={<SocialFi />}/>
-          <Route path='socialfi/detailPost/:id' element={<DetailPost />}/>
-
-          <Route path='games' element={<Games />}/>
-          <Route path='portfolio' element={<PortFolio />}/>
-          <Route path='profile' element={<Profile />}/>
-          <Route path='settings' element={<Settings />}/>
-          <Route path='sponsors' element={<Sponsors />}/>
+          <Route path='/app' element={<Home />}/>
+          <Route path='app/market' element={<Market />}/>
+          <Route path='app/market/detail/:id' element={<DetailStatsCoin />}/>
+          <Route path='app/socialfi' element={<SocialFi />}/>
+          <Route path='app/socialfi/detailPost/:id' element={<DetailPost />}/>
+          <Route path='app/games' element={<Games />}/>
+          <Route path='app/portfolio' element={<PortFolio />}/>
+          <Route path='app/profile' element={<Profile />}/>
+          <Route path='app/settings' element={<Settings />}/>
+          <Route path='app/sponsors' element={<Sponsors />}/>
           
-          <Route path='products' element={<Products />}/>
-          <Route path='affiliates' element={<Affilieates />}/>
-          <Route path='services' element={<Service />}/>
-          <Route path='materials' element={<Materials />}/>
-          <Route path='masters' element={<Masters />}/>
-          <Route path='recompenzas' element={<Recompenzas />}/>
-          <Route path='jobs' element={<Jobs />}/>
-          <Route path='community' element={<Community />}/>
-          <Route path='p2p-market' element={<P2PMarket />}/>
-          <Route path='trading' element={<Trading />}/>
-          <Route path='swaper' element={<Swaper />}/>
-          <Route path='airdrops' element={<Airdrops />}/>
-
+          <Route path='app/products' element={<Products />}/>
+          <Route path='app/affiliates' element={<Affilieates />}/>
+          <Route path='app/services' element={<Service />}/>
+          <Route path='app/materials' element={<Materials />}/>
+          <Route path='app/masters' element={<Masters />}/>
+          <Route path='app/recompenzas' element={<Recompenzas />}/>
+          <Route path='app/jobs' element={<Jobs />}/>
+          <Route path='app/community' element={<Community />}/>
+          <Route path='app/p2p-market' element={<P2PMarket />}/>
+          <Route path='app/trading' element={<Trading />}/>
+          <Route path='app/swaper' element={<Swaper />}/>
+          <Route path='app/airdrops' element={<Airdrops />}/>
         </Routes>
-
-        <NavBarTo />
       </BrowserRouter>
     </div>
   )

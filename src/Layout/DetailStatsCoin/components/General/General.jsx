@@ -41,8 +41,8 @@ export default function General({item}) {
             <img className='image' src={data?.image?.small} alt="" title=''/>
 
             <div>
-              <span className='name'>{data?.name?.slice(0,10)}</span>
-              <span className='symbol'>{String(data?.symbol).toLocaleUpperCase()}</span>
+              <span className='name'>{data?.name ? data?.name?.slice(0,8) : '⏳'}</span>
+              <span className='symbol'>{data?.symbol ? String(data?.symbol).toLocaleUpperCase() : '...'}</span>
             </div>
           </div>
 
@@ -50,7 +50,6 @@ export default function General({item}) {
             <div className='header_general_detailStats_c1_stars_c1'>
               <img src="../../../../../public/svg/icons/star.svg" alt="" title=''/>
             </div>
-
             <div className='header_general_detailStats_c1_stars_c2'>
               <img src="../../../../../public/svg/icons/bransh.svg" alt="" title=''/>
             </div>
@@ -60,16 +59,17 @@ export default function General({item}) {
         <div className='header_general_detailStats_c2'>
           <div className='header_general_detailStats_c2_price'>
             <span>
-              {String(data?.market_data?.current_price.usd).includes('e') ? 
-                formatCientyfuNumbre(data?.market_data?.current_price.usd) : 
-                data.market_data.current_price.usd}
+              { data?.market_data?.current_price.usd ?
+                  String(data?.market_data?.current_price.usd).includes('e') ? 
+                  formatCientyfuNumbre(data?.market_data?.current_price.usd) : 
+                  data?.market_data?.current_price?.usd : '0.000'}
             </span>
           </div>
           
 
           <div className='header_general_detailStats_c2_change1D'>
             <span style={{color: data?.market_data?.price_change_percentage_24h < 0 ? colors.testColor : colors.testColor2}}>
-              {data?.market_data?.price_change_percentage_24h}
+              {data?.market_data?.price_change_percentage_24h ? data?.market_data?.price_change_percentage_24h : '-0.0%'}
             </span>
 
             <span style={{color: colors.ButtonColor}}>
@@ -88,42 +88,42 @@ export default function General({item}) {
             height: '2rem',
             fontSize: '0.8rem'
           }}
-          text={`${data?.name} Cryptocurrency Tracker`}
-          url='#'
+          text={`${data?.name?.slice(0,7)} ... Cryptocurrency Tracker`}
+          url='https://docs.polarisweb3.org'
         />
       </div>
 
       <div className='general_detailStats_c1'>
         <div>
           <span>Precio mas alto 24H</span>
-          <span>$ {String(data?.market_data?.high_24h.usd).includes('e') ? 
+          <span>$ {data?.market_data?.high_24h?.usd ? String(data?.market_data?.high_24h.usd).includes('e') ? 
                 formatCientyfuNumbre(data?.market_data?.high_24h.usd) : 
-                data.market_data.high_24h.usd}</span>
+                data.market_data.high_24h.usd : 'cargando ...'}</span>
         </div>
 
         <div>
           <span>Precio mas bajo 24H</span>
-          <span>$ {String(data?.market_data?.low_24h.usd).includes('e') ? 
+          <span>$ {data?.market_data?.low_24h?.usd ? String(data?.market_data?.low_24h.usd).includes('e') ? 
                 formatCientyfuNumbre(data?.market_data?.low_24h.usd) : 
-                data.market_data.low_24h.usd}</span>
+                data.market_data.low_24h.usd : 'cargando ...'}</span>
         </div>
 
         <div>
           <span>Cap. de mercado</span>
-          <span>$ {formatNumber(data?.market_data?.market_cap.usd)}</span>
+          <span>$ {data?.market_data?.market_cap?.usd ? formatNumber(data?.market_data?.market_cap.usd) : 'cargando ...'}</span>
         </div>
 
         <div>
           <span>Volumen Total</span>
-          <span>$ {formatNumber(data?.market_data?.total_volume.usd)}</span>
+          <span>$ {data?.market_data?.total_volume?.usd ?   formatNumber(data.market_data.total_volume.usd) : 'cargando ...'}</span>
         </div>
 
         <div>
           <span>Supply Total</span>
 
           <section style={{display: 'flex', gap: '0.3rem', alignItems: 'center'}}>
-            <span>{formatNumber(data?.market_data?.total_supply)}</span>
-            <span style={{color: colors.borderColor, fontSize: '0.7rem'}}>{String(data?.symbol).toUpperCase()}</span>
+            <span>{data?.market_data?.total_supply ? formatNumber(data?.market_data?.total_supply) : 'cargando ...'}</span>
+            <span style={{color: colors.borderColor, fontSize: '0.7rem'}}>{data?.symbol ? String(data?.symbol).toUpperCase() : ' '}</span>
           </section>
         </div>
 
@@ -131,8 +131,8 @@ export default function General({item}) {
           <span>Supply circulante</span>
           
           <section style={{display: 'flex', gap: '0.3rem', alignItems: 'center'}}>
-            <span>{formatNumber(data?.market_data?.circulating_supply)}</span>
-            <span style={{color: colors.borderColor, fontSize: '0.7rem'}}>{String(data?.symbol).toUpperCase()}</span>
+            <span>{data?.market_data?.circulating_supply ? formatNumber(data?.market_data?.circulating_supply) : 'cargando ...'}</span>
+            <span style={{color: colors.borderColor, fontSize: '0.7rem'}}>{data?.symbol ? String(data?.symbol).toUpperCase() : ' '}</span>
           </section>
         </div>
       </div>

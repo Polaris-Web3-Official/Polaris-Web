@@ -115,14 +115,18 @@ export default function TopCriptos() {
             </div>
           </div>
 
-          <div className='top_cryptos_header_c2'>
+          <div className='top_cryptos_header_c2' style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <div className='top_cryptos_header_c2_coinList'>
               Coin
             </div>
 
+            <div className='filters' style={{display: 'none', fontSize: '0.7rem', color: 'var(--paragraphColor2)' }}>
+              Precio / Volumen / MarketCap / 24H
+            </div>
+
             <div className='top_cryptos_header_c2_coinFilter' >
               <ul >
-                <li style={{width: '19%'}}> Rank <span><img /></span></li>
+                <li className='deleted_responsive_android' style={{width: '19%'}}> Rank <span><img /></span></li>
                 
                 <li style={{ width: '14%' }} onClick={()=> handlePriceSort([sortByPrice, setSortByPrice], data)}>
                   Price <span><img /></span>
@@ -185,7 +189,7 @@ export default function TopCriptos() {
                       </span>
                     </div>
 
-                    <div>
+                    <div className='item_cripto_top_change24H'>
                       <span style={{color: item.price_change_24h < 0 ? colors.testColor : colors.testColor2}}>
                         {FormatStrPerPoint(item.price_change_percentage_24h)} %
                       </span>

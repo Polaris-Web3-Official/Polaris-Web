@@ -16,10 +16,10 @@
 
   .news_home_c1 {
     display: flex;
-    border-radius: 0.75rem;
     gap: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
+    border-bottom: 1px solid var(--mainBackgroundColor3);
 
     &:hover{
       background-color: var(--mainBackgroundColor3);
