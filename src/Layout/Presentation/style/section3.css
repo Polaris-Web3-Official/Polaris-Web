@@ -1,0 +1,41 @@
+.presentation_section3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 3rem;
+
+  h3 {
+    font-size: 2.7rem;
+    margin: 0px;
+    margin-bottom: -1.3rem;
+  }
+
+
+  .presentation_section3_carousel {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: scroll;
+    overflow-y: scroll;
+
+    .presentation_section3_carousel_item {
+      height: 33rem;
+      width: 26rem;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid var(--mainBackgroundColor3);
+
+      h4 {
+        font-size: 1.7rem;
+        margin: 1rem 0rem 2rem 0rem;
+        text-wrap: pretty;
+        line-height: 2.5rem;
+      }
+    }
+  }
+}

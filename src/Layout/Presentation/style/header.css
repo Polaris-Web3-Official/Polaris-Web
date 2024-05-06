@@ -1,0 +1,25 @@
+.presentation_header {
+  height: 4rem;
+  width: 100vw;
+  padding: 0 2.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: black;
+
+  img {
+    width: 8rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+    }
+  }
+}

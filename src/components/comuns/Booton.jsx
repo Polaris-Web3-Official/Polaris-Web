@@ -7,7 +7,7 @@ export default function Booton({ url = 'https://example.com', text = 'button', s
   };
 
   return (
-    <a href={url} onClick={click}>
+    <a href={url} onClick={click} target='_blank'>
       <button style={{outline: 'none', ...buttonStyles}}>
         {text}
       </button>

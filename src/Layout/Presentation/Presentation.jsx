@@ -7,7 +7,7 @@ export default function Presentation() {
   document.getElementById('root').style.padding = '0'
 
   return (
-    <div style={{border: '1px solid red', width: '100%', minHeight: '100vh'}}>
+    <div style={{width: '100vw', minHeight: '200vh', backgroundColor: 'rgb(0,0,0)'}}>
       <Header />
       <Index />
       <Footer />

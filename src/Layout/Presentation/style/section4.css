@@ -1,0 +1,51 @@
+.presentation_section4 {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .carousel {
+    --blur: 6px;
+    --contrast: 105%;
+    --speed: 13s;
+    height: 250px;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+
+    .mask {
+      position: absolute;
+      inset: 0;
+      background: #0000;
+      backdrop-filter: blur(var(--blur)) contrast(var(--contrast));
+      -webkit-backdrop-filter: blur(var(--blur)) contrast(var(--contrast)); /* so it works on Safari */
+      -webkit-mask: linear-gradient(90deg, #000 50px, #0000 175px calc(100% - 175px), #fff calc(100% - 50px));
+      pointer-events: none;
+    }
+
+    .logos {
+      animation: moveBg var(--speed) linear infinite;
+      position: absolute;
+      inset: 0;
+      background: url(../../../../public/img//Sponsors.webp) 0 50% / 567px 75px repeat-x;
+      -webkit-mask: linear-gradient(90deg, #0000 5px, #000 50px calc(100% - 50px), #0000 calc(100% - 5px));
+    }
+  }
+
+
+  /* make the second carousel larger icons and more blur*/
+  .carousel:nth-of-type(2) {
+    --blur: 9px;
+    --contrast: 125%;
+
+    .logos {
+      background: url(../../../../public/img//Sponsors.webp) 0 50% / 1134px 150px repeat-x;
+    }
+  }
+}
+
+@keyframes moveBg {
+  from { background-position: 0 50%; }
+  to { background-position:  -1134px 50%; }
+}
