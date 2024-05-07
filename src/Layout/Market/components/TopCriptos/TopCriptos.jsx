@@ -153,7 +153,7 @@ export default function TopCriptos() {
           {
             data?.map((item, index)=>{
               return (
-                <Link to={`detail/${item.id}`} key={index}>
+                <Link key={index}>
                   <div style={{display: 'flex'}} className='item_cripto_top'>
                     <div className='item_cripto_top_imagen'>
                       <img src={item.image} alt="" title=''/>

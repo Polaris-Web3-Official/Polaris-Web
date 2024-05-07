@@ -1,0 +1,72 @@
+{
+  "copirait": "@2024 Developed by Qsoft Development Team ❤️ for Polaris Web3 ✩",
+  "suscription": {
+    "init" : "Stay tuned for more updates.",
+    "incorrect": "Incorrect email, be sure to spell it correctly.",
+    "correct": "Email correct and ready to be sent.",
+    "welldone": "Mail sent successfully ✨"
+  },
+  "header": {
+    "home": "Home",
+    "introduction": "Introduction",
+    "utilities": "Utilities",
+    "sponsors": "Sponsors",
+    "documentation": "Documentation"
+  },
+  "section1": {
+    "title": "Access to Information Easy, Fast and Convenient",
+    "subtitle": "Polaris is an ecosystem of utilities developed to make it easier for you to make decisions on the Blockchain.",
+    "buttons": {
+      "btn1": {
+        "title": "Download App",
+        "subtitle": "Multiplatform mobile application"
+      },
+      "btn2": {
+        "title": "Documentation",
+        "subtitle": "Project specifications"
+      }
+    }
+  },
+  "section3": {
+    "title": "Bringing Web 3 to the click of a button",
+    "subtitle": "An all-in-one open source platform so you can make decisions with the best information on your side.",
+    "cards": {
+      "card": {
+        "title": "Top cryptocurrencies statistics in *real time",
+        "description": "Discover the real prices of the most interesting cryptocurrencies in the sector and how to get the best possible return. (BETA)"
+      },
+      "card1": {
+        "title": "Analysis of the most *impactful Web3 projects",
+        "description": "See what news can really have a positive or negative impact on the market and make informed decisions. (BETA)"
+      },
+      "card2": {
+        "title": "Most *recommended Web3 projects in the industry",
+        "description": "Find and research NFT projects that really have an innovative product or an interesting value proposition. (ALPHA)"
+      },
+      "card3": {
+        "title": "Choose different themes to *change the Blockchain",
+        "description": "With the Polaris Extension you can choose between different themes to make the Blockchain readable and perform traces. (ALPHA)"
+      },
+      "card4": {
+        "title": "Deep *tracking kit for research on the Blockchain",
+        "description": "Polaris kit, is a set of tools created to perform deep traces on any Blockchain using Artificial Intelligence. (PREALPHA)"
+      },
+      "card5": {
+        "title": "Win in video games and earn *rewards",
+        "description": "Polaris will have a series of interactive games for DeskTop, Web and through which our customers will get rewards. (PREALPHA)."
+      }
+    }
+  },
+  "section4": {
+    "title": "Polaris Documentation",
+    "subtitle": "A complete, detailed and open source documentation. In it you can find all the specifications of the project.",
+    "buttons":{
+      "btn1": {
+        "title": "Documentation in GitBook"
+      },
+      "btn2": {
+        "title": "Documentation on Github"
+      }
+    }
+  }
+}

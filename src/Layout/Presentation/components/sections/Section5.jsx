@@ -1,10 +1,11 @@
 /* eslint-disable no-inner-declarations */
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Booton from '../../../../components/comuns/Booton'
 import '../../style/section5.css'
-import { colors } from '../../../../constants/colors'
+import { useTranslation } from 'react-i18next'
 
 export default function Section5() {
+  const [t] = useTranslation("global");
 
   useEffect(()=>{
     const planets = document.querySelectorAll(".planet");
@@ -79,12 +80,12 @@ export default function Section5() {
           backdropFilter: blur('30px')
         }}
       >
-        <h3>Polaris <span style={{color: colors.ButtonColor}}>Documentation</span></h3>
-        <h5>
-          Una documentacion basta, 
-          detallada y de codigo abierto. 
-          En ella<br /> podras encotrar todas 
-          las especificaciones del proyecto.
+        <h3>
+          {t('section4.title')}
+        </h3>
+
+        <h5 style={{padding: '0rem 25rem'}}>
+          {t('section4.subtitle')}
         </h5>
         <div className='presentation_section5_buttons'>
           <div>
@@ -98,7 +99,7 @@ export default function Section5() {
               text='➡'
               url='https://docs.polarisweb3.org'
             />
-            <span>Documentacion en GitBook</span>
+            <span>{t('section4.buttons.btn1.title')}</span>
           </div>
           <div>
             <Booton 
@@ -112,7 +113,7 @@ export default function Section5() {
               text='➡'
               url='https://github.com/MrWiki15/docs_polaris'
             />
-            <span>Documentacion en Github</span>
+            <span>{t('section4.buttons.btn2.title')}</span>
           </div>
         </div>
       </div>

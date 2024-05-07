@@ -38,4 +38,11 @@
       }
     }
   }
+
+  button {
+
+    &:hover {
+      background-color: var(--mainBackgroundColor) !important;
+    }
+  }
 }

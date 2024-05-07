@@ -12,21 +12,22 @@ export function GlobalContextProvider({children}){
   const [sesionUser, setSesionUser] = useState({})
   const [userDeviceWidth, setUserDeviceWidth] = useState()
   const [navBar, setNavBar] = useState(true)
+  const [lenguaje, setLenguaje] = useState('en')
 
  
   window.addEventListener('resize', (e)=>{
     setUserDeviceWidth(e.currentTarget.innerWidth)
   })
 
-useEffect(() => {
-  fetchHivePosts(search, 99).then((posts) => {
-    if (posts === null) {
-      error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search} con la cantidad limite de ${limitPosts}`)
-    } else {
-      setPosts(posts);
-    }
-  });
-}, [search, limitPosts]);
+  useEffect(() => {
+    fetchHivePosts(search, 99).then((posts) => {
+      if (posts === null) {
+        error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search} con la cantidad limite de ${limitPosts}`)
+      } else {
+        setPosts(posts);
+      }
+    });
+  }, [search, limitPosts]);
 
   return (
     <Context.Provider value={{

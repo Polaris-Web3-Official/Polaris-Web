@@ -2,49 +2,95 @@
 import { colors } from '@mui/material'
 import '../../style/section3.css'
 import ItemSection3 from './ItemSection3'
+import { useTranslation } from 'react-i18next'
 
 export default function Section3() {
 
+  const [t] = useTranslation("global");
+
   return (
     <div className='presentation_section3' id='section3'>
-      <h3>“Llevando la Web 3 al alcance de un clik”</h3>
-      <p style={{color: 'var(--paragraphColor2)'}}>Una plataforma todo en uno <b style={{color: 'var(--paragraphColor)'}}> de codigo abierto </b> para que puedas tomar decisiones con la mejor informacion de tu lado.</p>
+      <h3>“{t('section3.title')}”</h3>
+      <p style={{color: 'var(--paragraphColor2)'}}>
+        {t('section3.subtitle')}
+      </p>
 
        <div className='presentation_section3_carousel'>
         <ItemSection3 
-          title={(<p>Estadisticas Criptos en tiempo <b style={{color: 'var(--ButtonColor)'}}>real</b></p>)}
-          description={(
-            <p  style={{color: 'var(--paragraphColor2)'}}>
-              Descubre los precios 
-              reales de las criptomonedas 
-              mas interesantes del sector y como sacarles la mayor rentabilidad posible.
-            </p>
-          )}
+          title={t('section3.cards.card.title')}
+          description={t('section3.cards.card.description')}
+
+          imgstyles={{
+            transform: 'scale(1.4)'
+          }}
+          img='../../../../../public/img/statsGraficsShot2.png'
+
+          btnText='Mobil App'
+          btnImg='../../../../../public/svg/icons/chart.svg'
         />
 
 
         <ItemSection3 
-          title={(<p>Analisis de las Noticias mas <b style={{color: 'var(--ButtonColor)'}}>impactantes</b> en el mercado</p>)}
-          description={(
-            <p style={{color: 'var(--paragraphColor2)'}}>
-              Observa cuales son las noticias 
-              que realmente pueden llegar a
-               tener un impacto positivo o 
-               negativo en el Mercado.
-            </p>
-          )}
+          title={t('section3.cards.card1.title')}
+          description={t('section3.cards.card1.description')}
+
+          imgstyles={{
+            transform: 'scale(1.3)',
+          }}
+          img='../../../../../public/img/statsGraficsShot.png'
+          
+          btnText='Web App'
+          btnImg='../../../../../public/svg/icons/friends.svg'
         />
 
         <ItemSection3 
-          title={(<p>Proyectos NFTs más <b style={{ color: 'var(--ButtonColor)' }}>recomendables</b> del sector</p>)}
-          description={(
-            <p style={{color: 'var(--paragraphColor2)'}}>
-              Encuentra e investiga a los proyectos 
-              NFTs que realmente tienen un pruducto 
-              innovador o una interesante propuesta 
-              de valor.
-            </p>
-          )}
+          title={t('section3.cards.card2.title')}
+          description={t('section3.cards.card2.description')}
+
+          imgstyles={{
+            transform: 'scale(1.3)'
+          }}
+          img='../../../../../public/img/statsGraficsShot5.png'
+        
+          btnText='Discord Bot'
+          btnImg='../../../../../public/svg/icons/service.svg'
+        />
+
+        <ItemSection3 
+          title={t('section3.cards.card3.title')}
+          description={t('section3.cards.card3.description')}
+
+          imgstyles={{
+            transform: 'scale(1.3)'
+          }}
+          img='../../../../../public/img/statsGraficsShot4.png'
+        
+          btnText='Extension Web'
+          btnImg='../../../../../public/svg/icons/products.svg'
+        />
+
+        <ItemSection3 
+          title={t('section3.cards.card4.title')}
+          description={t('section3.cards.card4.description')}
+          imgstyles={{
+            transform: 'scale(2)'
+          }}
+          img='https://cusoft.tech/wp-content/uploads/2024/04/image-9.webp'
+        
+          btnText='Polaris Kit'
+          btnImg='../../../../../public/svg/icons/notepad.svg'
+        />
+
+        <ItemSection3 
+          title={t('section3.cards.card5.title')}
+          description={t('section3.cards.card5.description')}
+          imgstyles={{
+            transform: 'scale(2)'
+          }}
+          img='https://cusoft.tech/wp-content/uploads/2024/04/image-9.webp'
+        
+          btnText='Polaris Game'
+          btnImg='../../../../../public/svg/icons/play.svg'
         />
        </div>
     </div>

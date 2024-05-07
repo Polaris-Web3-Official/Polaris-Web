@@ -68,8 +68,8 @@ export default function NavBarTo() {
             <ItemNavBar url={'/app/trading'} icon={<img src='../../../public/svg/icons/chartcompar.svg'/>} line={'Trading'}/>
             <ItemNavBar url={'/app/p2p-market'} icon={<img src='../../../public/svg/icons/piechart.svg'/>} line={'P2P-Market'}/>
             <ItemNavBar url={'/app/swaper'} icon={<img src='../../../public/svg/icons/swap.svg'/>} line={'Swaper'}/>
-            <ItemNavBar url={'/app/recompenzas'} icon={<img src='../../../public/svg/icons/gift.svg'/>} line={'Recompenzas'}/>
-            <ItemNavBar url={'/app/airdrops'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Airdrops'}/>
+            <ItemNavBar url={'/app/recompenzas'} icon={<img src='../../../public/svg/icons/gift.svg'/>} line={'Rewards'}/>
+            <ItemNavBar url={'/app/airdrops'} icon={<img src='../../../public/svg/icons/airdrop.svg'/>} line={'Airdrops'}/>
             <ItemNavBar url={'/app/affiliates'} icon={<img src='../../../public/svg/icons/friends.svg'/>} line={'Affiliates'}/>
             <ItemNavBar url={'/app/community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Community'}/>
             <ItemNavBar url={'/app/jobs'} icon={<img src='../../../public/svg/icons/worker.svg'/>} line={'Jobs'}/>

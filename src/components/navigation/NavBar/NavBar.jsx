@@ -125,7 +125,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <Booton text='Buy your Costellation' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
+        <Booton text='Buy your Star in Kabila' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
       </div>
     </div>
   )

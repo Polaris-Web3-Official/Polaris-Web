@@ -2,8 +2,22 @@ import Booton from '../../../../components/comuns/Booton';
 import '../../style/section1.css'
 import { colors } from '../../../../constants/colors';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Section1() {
+  const [t] = useTranslation("global")
+
+  function formatTitle(title) {
+    const palabras = title.split(" ");
+    return (
+      <h2>
+        {palabras[0] + ' ' + palabras[1] + ' ' + palabras[2]} 
+        <br />
+        {palabras[3] + ' ' + palabras[4] + ' ' + palabras[5] +  ' '} 
+          <b style={{color: 'var(--ButtonColor)'}}>{palabras[6]}</b>
+      </h2>
+    )
+  }
 
   useEffect(()=>{
       //Generar la info de las estrellas 
@@ -73,8 +87,8 @@ export default function Section1() {
 
   return (
     <section className='presentation_section1' id='section1'>
-      <h2>Acceso a Informacion <br />Facil Rapida y <b style={{color: colors.ButtonColor}}>Conveniente </b></h2>
-      <p>Polaris es un ecosistema de utilidades desarrolladas para facilitarte la toma de decisiones en la Blockchain</p>
+      {formatTitle(t('section1.title'))}
+      <p>{t('section1.subtitle')}</p>
       <div>
         <section>
           <Booton 
@@ -84,10 +98,10 @@ export default function Section1() {
               padding: '1rem',
               fontSize: '1.3rem'
             }}
-            text='Descargar App'
+            text={t('section1.buttons.btn1.title')}
             url='https://'
           />
-          <p style={{margin: '0rem 1rem 1rem 1rem'}}>Aplicacion mobil Multiplataforma</p>
+          <p style={{margin: '0rem 1rem 1rem 1rem'}}>{t('section1.buttons.btn1.subtitle')}</p>
 
           <img src='../../../../../public/svg/icons/externalLinkWhite.svg' title='' alt=''/>
         </section>
@@ -101,9 +115,9 @@ export default function Section1() {
               fontSize: '1.3rem'
             }}
             url='https://docs.polarisweb3.org'
-            text='Documentacion'
+            text={t('section1.buttons.btn2.title')}
           />
-          <p style={{margin: '0rem 1rem 1rem 1rem'}}>Especificaciones del proyecto</p>
+          <p style={{margin: '0rem 1rem 1rem 1rem'}}>{t('section1.buttons.btn2.subtitle')}</p>
 
           <img src='../../../../../public/svg/icons/externalLinkWhite.svg' title='' alt=''/>
         </section>

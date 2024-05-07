@@ -1,0 +1,72 @@
+{
+  "copirait": "@2024 Desarrollado por Qsoft Development Team ❤️ para Polaris Web3 ✩",
+  "suscription": {
+    "init" : "Permanece atento a más actualizaciones.",
+    "incorrect": "Correo electrónico incorrecto, asegúrate de escribirlo correctamente.",
+    "correcto": "Email correcto y listo para ser enviado.",
+    "welldone": "Correo enviado correctamente ✨"
+  },
+  "header": {
+    "home": "Casa",
+    "introduction": "Introducción",
+    "utilities": "Utilidades",
+    "sponsors": "Patrocinadores",
+    "documentation": "Documentación"
+  },  
+  "section1": {
+    "title": "Acceso a información Fácil, Rápida y Conveniente",
+    "subtitle": "Polaris es un ecosistema de utilidades desarrollado para facilitarte la toma de decisiones en la Blockchain.",
+    "buttons": {
+      "btn1": {
+        "title": "Descargar App",
+        "subtitle": "Aplicación móvil multiplataforma"
+      },
+      "btn2": {
+        "title": "Documentación",
+        "subtitle": "Especificaciones del proyecto"
+      }
+    }
+  },
+  "section3": {
+    "title": "Llevando la Web 3 al alcance de un clik",
+    "subtitle": "Una plataforma todo en uno de codigo abierto para que puedas tomar decisiones con la mejor informacion de tu lado.",
+    "cards": {
+      "card": {
+        "title": "Estadisticas Criptos en tiempo *real",
+        "description": "Descubre los precios reales de las criptomonedas mas interesantes del sector y como sacarles la mayor rentabilidad posible. (BETA)"
+      },
+      "card1": {
+        "title": "Analisis de los proyectos mas *impactantes del sector",
+        "description": "Observa cuales son las noticias que realmente pueden llegar a tener un impacto positivo o negativo en el Mercado. (BETA)"
+      },
+      "card2": {
+        "title": "Proyectos Web3 más *recomendables del sector",
+        "description": "Encuentra e investiga a los proyectos NFTs que realmente tienen un pruducto innovador o una interesante propuesta de valor. (ALPHA)"
+      },
+      "card3": {
+        "title": "Elige diferentes temas para *cambiar la Blockchain",
+        "description": "Con la Extencion de Polaris puedes elegir entre diferentes temas para volver legible la Blockchain y realizar rastreos. (ALPHA)"
+      },
+      "card4": {
+        "title": "Kit de rastreo *profundo para investigar en la Blockchain",
+        "description": "Polaris kit, es un grupo de herramientas creadas para realizar rastreos profundos en cualquier Blockchain utilizando IA. (PREALPHA)"
+      },
+      "card5": {
+        "title": "Juega a minijuegos y gana *recompensas",
+        "description": "Polaris contara con una serie de juegos interactivos para DeskTop, Web y atravez de los cuales nuestros clientes Obtendran recompenzas. (PREALPHA)"
+      }
+    }
+  },
+  "section4": {
+    "title": "Documentación Polaris",
+    "subtitle": "Una documentación completa, detallada y de código abierto. En ella puedes encontrar todas las especificaciones del proyecto.",
+    "buttons":{
+      "btn1": {
+        "title": "Documentación en GitBook"
+      },
+      "btn2": {
+        "title": "Documentación en Github"
+      }
+    }
+  }
+}

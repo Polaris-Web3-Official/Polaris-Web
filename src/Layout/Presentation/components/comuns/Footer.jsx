@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import '../../style/footer.css'
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  //Traduccion
+  const [t] = useTranslation("global");
+
   const [inputValue, setInputValue] = useState('');
   const [valid, setValid] = useState(false);
   const [correctEmail, setCorrectEmail] = useState()
@@ -78,7 +82,9 @@ export default function Footer() {
           <li><a href='' title='Polaris Web3 ~ LinkedIn'>LinkedIn</a></li>
         </ul>
 
-       <h4 title='Polaris Web3 ~ @Copiraid'>@2024 Developed by Qsoft Development Team ❤️ for Polaris Web3 ✩</h4>
+        <h4 title='Polaris Web3 ~ @Copiraid'>
+          {t("copirait")}
+        </h4>
       </div>
 
       <div className='presentation_footer_suscription'>
