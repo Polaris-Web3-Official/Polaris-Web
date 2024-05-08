@@ -88,9 +88,11 @@ export default function Section1() {
   return (
     <section className='presentation_section1' id='section1'>
       {formatTitle(t('section1.title'))}
-      <p>{t('section1.subtitle')}</p>
+
+      <p className='presentation_section1_subtitle'>{t('section1.subtitle')}</p>
+
       <div>
-        <section>
+        <section title='Polaris Web3 ~ Download App'>
           <Booton 
             styles={{
               backgroundColor: 'transparent',
@@ -98,15 +100,16 @@ export default function Section1() {
               padding: '1rem',
               fontSize: '1.3rem'
             }}
+            title={'Polaris Web3 ~ Download App'}
             text={t('section1.buttons.btn1.title')}
-            url='https://'
+            url='https://com-mrwiki-d7.uptodown.com/android/descargar'
           />
           <p style={{margin: '0rem 1rem 1rem 1rem'}}>{t('section1.buttons.btn1.subtitle')}</p>
-
-          <img src='../../../../../public/svg/icons/externalLinkWhite.svg' title='' alt=''/>
+          
+          <img src='../../../../../public/svg/icons/externalLinkWhite.svg'/>
         </section>
 
-        <section>
+        <section title='Polaris Web3 ~ Documentation'>
           <Booton 
             styles={{
               backgroundColor: 'transparent',
@@ -114,6 +117,7 @@ export default function Section1() {
               padding: '1rem',
               fontSize: '1.3rem'
             }}
+            title={'Polaris Web3 ~ Documentation'}
             url='https://docs.polarisweb3.org'
             text={t('section1.buttons.btn2.title')}
           />

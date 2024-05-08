@@ -70,3 +70,48 @@
         opacity:0; 
   }
 }
+
+@media screen and (max-width: 979px) {
+  .presentation_section1{
+    h2 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .presentation_section1{
+    .presentation_section1_subtitle {
+      font-size: 18px;
+      padding: 0rem 3rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 674px) {
+  .presentation_section1{
+    
+    div {
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .presentation_section1{
+    height: auto;
+
+    h2 {
+      font-size: 30px;
+      margin-top: 10rem;
+    }
+    .presentation_section1_subtitle {
+      font-size: 15px;
+      padding: 0rem 3rem;
+      text-align: center;
+    }
+  }
+}

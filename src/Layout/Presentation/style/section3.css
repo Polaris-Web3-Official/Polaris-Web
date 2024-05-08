@@ -40,9 +40,61 @@
   }
 
   button {
-
     &:hover {
       background-color: var(--mainBackgroundColor) !important;
+    }
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .presentation_section3 {
+    
+    h3 {
+      font-size: 35px;
+      text-align: center;
+      text-wrap: pretty;
+    }
+
+    .presentation_section3_subtitle {
+      padding: 0rem 4rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 693px) {
+  .presentation_section3 {
+    
+    h3 {
+      font-size: 30px;
+      padding: 0rem 2rem;
+    }
+
+    .presentation_section3_subtitle {
+      font-size: 14px;
+      padding: 0rem 1rem;
+      text-wrap: pretty;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .presentation_section3 {
+    height: auto;
+    .presentation_section3_carousel_item {
+      width: 90% !important;
+      height: auto !important;
+
+      h4 {
+        margin: 0 !important;
+        font-size: 25px !important;
+        line-height: 28px !important;
+        padding: 1rem 0rem !important;
+      }
+
+      button {
+        width: 70% !important;
+      }
     }
   }
 }

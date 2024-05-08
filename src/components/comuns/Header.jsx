@@ -47,7 +47,7 @@ export default function Header({text}) {
       </div>
       
       <div className='container_header2'>
-        <a><div className='icons_header_container'><img className='icons_header' src="../../../public/svg/icons/mobil.svg" alt="" title='' /></div></a>
+        <a href='https://com-mrwiki-d7.uptodown.com/android/descargar' target='_blank'><div className='icons_header_container'><img className='icons_header' src="../../../public/svg/icons/mobil.svg" alt="" title='' /></div></a>
         <a className='icons_header_container_menuAndroid' style={{display: 'none'}} onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}><div className='icons_header_container'><img className='icons_header' src="../../../public/svg/icons/menu.svg" alt="" title='' /></div></a>
       </div>
 
@@ -157,7 +157,7 @@ export default function Header({text}) {
               </div>
             </div>
 
-            <Booton text='Buy your Costellation' styles={{width: '90%', height: '3rem', marginTop: '-0.4rem', margin: '0.4rem 0.2rem 2rem 1rem'}}/>
+            <Booton url='https://x.com/PolarisWeb3' text='Buy your Costellation' styles={{width: '90%', height: '3rem', marginTop: '-0.4rem', margin: '0.4rem 0.2rem 2rem 1rem'}}/>
           </div>
         </div>
       </div>

@@ -28,8 +28,8 @@ export default function Footer() {
   useEffect(()=>{
     if($span){
       $span?.classList.contains('active')  ?
-      $span.innerText = 'Email correcto y listo para ser enviado.' :
-      $span.innerText = 'Email incorrecto, asegurece de escribirlo bien.'
+      $span.innerText = t('suscription.correct') :
+      $span.innerText = t('suscription.incorrect')
     }
   }, [inputValue])
 
@@ -53,7 +53,7 @@ export default function Footer() {
             .then(() => {
               sessionStorage.setItem('polaris_newsLater_email', inputValue)
               setCorrectEmail(inputValue)
-              $span.innerText = 'Mail sent successfully ✨'
+              $span.innerText = t('suscription.welldone')
               $btn.style.display = 'none';
             }, (err) => {
               $btn.innerText = 'Bad response :(';
@@ -76,10 +76,9 @@ export default function Footer() {
     <div className='presentation_footer'>
       <div className='presentation_footer_social'>
         <ul>
-          <li><a href='' title='Polaris Web3 ~ Discord'>Discord</a></li>
-          <li><a href='' title='Polaris Web3 ~ Twitter'>Twitter</a></li>
-          <li><a href='' title='Polaris Web3 ~ Github'>Github</a></li>
-          <li><a href='' title='Polaris Web3 ~ LinkedIn'>LinkedIn</a></li>
+          <li><a href='https://twitter.com/PolarisWeb3' title='Polaris Web3 ~ Twitter'>Twitter</a></li>
+          <li><a href='https://github.com/MrWiki15/Polaris' title='Polaris Web3 ~ Github'>Github</a></li>
+          <li><a href='https://www.linkedin.com/company/qsoft-tech/' title='Polaris Web3 ~ LinkedIn'>LinkedIn</a></li>
         </ul>
 
         <h4 title='Polaris Web3 ~ @Copiraid'>
@@ -88,14 +87,15 @@ export default function Footer() {
       </div>
 
       <div className='presentation_footer_suscription'>
-        <span id='presentation_footer_suscription_span' className='active'>{
+        <span id='presentation_footer_suscription_span' className='active'>
+        {
           valid 
             ?
               $span?.classList.add('active')
             : 
               $span?.classList.remove('active') 
           }
-            Estate al tanto de todas las actualizaciones.
+            {t('suscription.init')}
           </span>
         <form 
           title='Polaris Web3 ~ Form Suscription'

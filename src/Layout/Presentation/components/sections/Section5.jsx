@@ -54,15 +54,15 @@ export default function Section5() {
     }
   }, [])
 
-
-
-
-
-
   return (
     <div className='presentation_section5' id='section5'>
-      <div className="presentation_section5_solar-system">
-        <div className="sun"></div>
+      <div className="presentation_section5_solar-system" title='Polaris Web3 ~ Solar System Web3 Projects'>
+        <div className="sun" style={{overflow: 'hidden'}}>
+        <img style={{width: '100%', height: '100%'}} 
+              src='../../../../../public/svg/polaris/ICON_V01.svg' 
+              title='Polaris Web3 ~ Solar system' 
+              alt='Polaris Web3 ~ Solar system'/>
+        </div>
         <div className="planet mercury"></div>
         <div className="planet venus"></div>
         <div className="planet earth"></div>
@@ -97,6 +97,7 @@ export default function Section5() {
                 padding: '0px',
               }}
               text='➡'
+              title={'Polaris Web3 ~ Documentation in GitBook'}
               url='https://docs.polarisweb3.org'
             />
             <span>{t('section4.buttons.btn1.title')}</span>
@@ -109,7 +110,7 @@ export default function Section5() {
                 borderRadius: '20px',
                 padding: '0px',
               }}
-            
+              title={'Polaris Web3 ~ Documentation on Github'}
               text='➡'
               url='https://github.com/MrWiki15/docs_polaris'
             />

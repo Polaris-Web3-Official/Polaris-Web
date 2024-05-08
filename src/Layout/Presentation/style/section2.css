@@ -10,3 +10,20 @@
     border-radius: 0.75rem;
   }
 }
+
+@media screen and (max-width: 950px) {
+  .presentation_section2 {
+    height: auto;
+    padding: 3rem 0rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .presentation_section2 {
+    padding: 5rem 0rem;
+
+    video {
+      width: 90%;
+    }
+  }
+}

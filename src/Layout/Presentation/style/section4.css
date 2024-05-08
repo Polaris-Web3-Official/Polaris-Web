@@ -49,3 +49,12 @@
   from { background-position: 0 50%; }
   to { background-position:  -1134px 50%; }
 }
+
+@media screen and (max-width: 400px) {
+  .presentation_section4{
+    .carousel {
+      height: 150px;
+    }
+  }
+  
+}

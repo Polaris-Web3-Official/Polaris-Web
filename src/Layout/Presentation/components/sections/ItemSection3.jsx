@@ -9,6 +9,8 @@ function ItemSection3({
   btnText = 'boton',
   btnUrl = '',
   imgstyles,
+  altTitle,
+  btnAltTitle
 }) {
 
   const formatTitle = (txt) => {
@@ -45,9 +47,9 @@ function ItemSection3({
   }
 
   return (
-    <div className='presentation_section3_carousel_item'>
+    <div className='presentation_section3_carousel_item' title={altTitle}>
       <div style={{ width: '100%', height: '13rem', overflow: 'hidden', borderRadius: '0.75rem' }}>
-        <img style={{
+        <img title={altTitle} className='presentation_section3_carousel_item_img' alt={altTitle} style={{
           width: '100%',
           height: '100%',
           objectFit: 'contain',
@@ -68,7 +70,7 @@ function ItemSection3({
           marginTop: '2rem',
         }}
         url={btnUrl}
-
+        title={btnAltTitle}
         text={(
           <div style={{
             width: '100%',

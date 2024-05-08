@@ -17,7 +17,6 @@ export default function Footer() {
       <span style={{textAlign: 'center'}}>
         @2024 Developed by Qsoft Development Team ❤️ for Polaris Web3 ✩
       </span>
-      <a href='https://kabila.app'><span style={{cursor: 'pointer', fontSize:'1rem'}}>Kabila Marketplace</span></a>
       <a href='https://cusoft.tech'><span style={{cursor: 'pointer', fontSize:'1rem'}}>Qsoft Blog</span></a>
       <a href='https://docs.polarisweb3.org'><span style={{cursor: 'pointer', fontSize:'1rem'}}>Documentation</span></a>
 

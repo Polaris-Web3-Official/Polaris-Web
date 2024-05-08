@@ -90,7 +90,7 @@ export default function NavBar() {
       <div style={{display: 'flex', flexDirection: 'column', opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
         <div className='sponsor' style={{
             margin: 20, 
-            backgroundColor: 'red', 
+            backgroundColor: 'transparent', 
             borderRadius: '1.25rem', 
             width: '13rem', 
             height: '10.5rem',
@@ -118,14 +118,14 @@ export default function NavBar() {
               </div>
 
               <div style={{width: '100%', height: '20%'}}>
-                <a className='bootonDocs'>
+                <a target='_blank' href='https://docs.polarisweb3.org' className='bootonDocs'>
                   DOCUMENTATION
                 </a>
               </div>
           </div>
         </div>
 
-        <Booton text='Buy your Star in Kabila' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
+        <Booton url='https://x.com/PolarisWeb3' text='Buy your Star in Kabila' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
       </div>
     </div>
   )
