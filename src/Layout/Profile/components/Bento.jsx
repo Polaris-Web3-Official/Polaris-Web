@@ -1,4 +1,4 @@
-import React from 'react'
+//Importando estilos
 import '../style/profile.css'
 
 export default function Bento() {

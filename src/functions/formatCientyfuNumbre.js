@@ -1,3 +1,8 @@
+//Funcion para formatear un numero
+//en notacion cientifica
+//Se utiliza normalmente para mostrar los precios
+//de x criptomonedas.
+
 export function formatCientyfuNumbre(numero) {
     // Convierte el número a una cadena de texto
     const numeroCadena = String(numero);

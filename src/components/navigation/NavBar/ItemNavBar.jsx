@@ -1,9 +1,14 @@
+/* eslint-disable react/prop-types */
+//Importaciones nativas
 import { useEffect, useState } from "react";
-import { colors } from "../../../constants/colors";
 import { Link, useLocation } from "react-router-dom";
+
+//Importando colores
+import { colors } from "../../../constants/colors";
 
 export default function ItemNavBar({ url, target = '_self', icon, line = 'example' }) {
   const location = useLocation().pathname;
+  
   const [focus, setFocus] = useState(location === url);
 
   useEffect(() => {

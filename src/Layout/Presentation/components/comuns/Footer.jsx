@@ -1,18 +1,27 @@
+//Importaciones nativas
 import { useEffect, useState } from 'react'
-import '../../style/footer.css'
 import { useTranslation } from 'react-i18next';
 
+//Importando estilos
+import '../../style/footer.css'
+
 export default function Footer() {
-  //Traduccion
+  //Inicializando la traduccion
   const [t] = useTranslation("global");
 
+  //Inicializando los respectivos estados
   const [inputValue, setInputValue] = useState('');
   const [valid, setValid] = useState(false);
   const [correctEmail, setCorrectEmail] = useState()
 
-
+  //Funcion para validar el email ingresado por el usuario
   const validEmail = async (email)=>{
+
+    //Exprecion regular para verificar el Email
+    //Mas informacion sobre esta expresion en la carpeta /reguex
     const expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    
+    //Utilizamos la expresion regular
     const valid = expReg.test(email)
     if (valid) {
       setValid(true)
@@ -25,6 +34,8 @@ export default function Footer() {
 
   const $span = document.getElementById('presentation_footer_suscription_span');
 
+  //Si el valor del input cambia, nosotros le vamos
+  //mostrando informacion al usuario sobre su Email
   useEffect(()=>{
     if($span){
       $span?.classList.contains('active')  ?
@@ -35,12 +46,20 @@ export default function Footer() {
 
   const $btn = document.getElementById('presentation_footer_suscription_button');
   const $form =  document.getElementById('presentation_footer_suscription_form');
+
+  //Eliminamos la accion por defecto de estas teclas
+  //para evitar repeticiones. El usuario solo puede mandar su email
+  //dando en el boton de (Enviar)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === 'Submit') {
       e.preventDefault();
     }
   });
 
+
+  //En el caso de ser el email ingresado por el usuario valido
+  //usamos el servicio de emailjs para mandar un mensaje de
+  //bienvenida a los usuarios y guardar el email en la Sesion.
   if($btn && valid){
     $form.addEventListener('submit', async (e)=> {
         e.preventDefault();
@@ -65,6 +84,8 @@ export default function Footer() {
     );
   }
 
+  //Buscamos en la Sesion si esta guardado el email
+  //y en el caso de estarlo
   useEffect(()=>{
     const email = sessionStorage.getItem('polaris_newsLater_email');
     setCorrectEmail(email)

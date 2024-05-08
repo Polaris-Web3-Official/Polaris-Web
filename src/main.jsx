@@ -1,9 +1,14 @@
+//Importaciones nativas
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './styles/index.css'
-import { GlobalContextProvider } from './context/GlobalContextProvider.jsx'
-import { I18nextProvider } from 'react-i18next'
 import i18next from 'i18next'
+import { I18nextProvider } from 'react-i18next'
+
+//Importando estilos
+import './styles/index.css'
+
+//Importaciones externas
+import App from './App.jsx'
+import { GlobalContextProvider } from './context/GlobalContextProvider.jsx'
 
 //Traducciones
 import global_es from './translations/es/global.json'

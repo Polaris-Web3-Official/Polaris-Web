@@ -1,13 +1,19 @@
+//Importaciones nativas
 import { useState, useEffect } from 'react'
+
+//Importaciones de los estilos
 import '../styles/blockchainNews.css'
+
+//Importaciones externas
 import { fetchData } from '../../../functions/fetchData'
+import { API_KRY_ALPHA_VETANGE } from '../../../constants/keys';
 
 export default function BlockchainsNews() {
   const [state, setState] = useState();
 
   const searsh = async ()=>{
     try {
-      const response = await fetchData('https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=COIN,CRYPTO:BTC,FOREX:USD&time_from=20220410T0130&limit=1000&apikey=aeda2c8f01eQF0LJ3ESCZD303DZ4443f9ac4b40918bade78');
+      const response = await fetchData(`https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=COIN,CRYPTO:BTC,FOREX:USD&time_from=20220410T0130&limit=1000&apikey=${API_KRY_ALPHA_VETANGE}`);
       setState(response.feed)
     } catch (error) {
       console.error(error);

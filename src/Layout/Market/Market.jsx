@@ -1,4 +1,4 @@
-import React from 'react'
+//importaciones externas
 import Header from '../../components/comuns/Header'
 import Footer from '../../components/comuns/Footer'
 import Index from './components/Index'

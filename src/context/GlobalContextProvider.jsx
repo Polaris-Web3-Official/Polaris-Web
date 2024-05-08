@@ -1,33 +1,42 @@
+/* eslint-disable react/prop-types */
+//Importaciones nativas
 import { createContext, useEffect, useState } from "react";
+
+//Importaciones externas
 import { fetchHivePosts } from "../Layout/SocialFi/functions/fetchHivePosts";
 import { error } from "../functions/error";
 
+//Creamos el contexto
 export const Context = createContext()
 
 export function GlobalContextProvider({children}){
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState('hive');
-  const [limitPosts, setLimitPosts] = useState(99);
   const [detailPost, setDetailPosts] = useState({});
   const [sesionUser, setSesionUser] = useState({})
   const [userDeviceWidth, setUserDeviceWidth] = useState()
   const [navBar, setNavBar] = useState(true)
-  const [lenguaje, setLenguaje] = useState('en')
 
  
+  //Escuchamos el evento resize del objeto window para determinar 
+  //la medida actual del dispositivo del usuario y actualizamos
+  //su respectivo estado.
   window.addEventListener('resize', (e)=>{
     setUserDeviceWidth(e.currentTarget.innerWidth)
   })
 
+  //Buscamos la informacion de los Posts en la Blockchain de Hive
+  //esta data debe de buscarse a nivel de componente no de la app
+  //por lo tanto en la V1.0 esto se movera a su respectivo componente.
   useEffect(() => {
     fetchHivePosts(search, 99).then((posts) => {
       if (posts === null) {
-        error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search} con la cantidad limite de ${limitPosts}`)
+        error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search}`)
       } else {
         setPosts(posts);
       }
     });
-  }, [search, limitPosts]);
+  }, [search]);
 
   return (
     <Context.Provider value={{

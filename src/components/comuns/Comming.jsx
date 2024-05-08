@@ -1,4 +1,4 @@
-import React from 'react'
+//No son necesarias las importaciones
 
 export default function Comming(alt, title) {
   return (

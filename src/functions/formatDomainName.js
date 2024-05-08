@@ -1,3 +1,7 @@
+//Funcion para formatear un dominio
+//input( https://www.cusoft.tech ~ https://cusoft.tech/post#4etc )
+//output(cusoft.tech)
+
 export function getDomainName(url) {
     try {
         const hostname = new URL(url).hostname;

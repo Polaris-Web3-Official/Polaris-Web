@@ -1,4 +1,4 @@
-import React from 'react'
+//Importando estilos
 import '../style/portfolio.css'
 
 export default function Bento() {

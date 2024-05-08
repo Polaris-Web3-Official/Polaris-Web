@@ -1,8 +1,13 @@
 /* eslint-disable no-inner-declarations */
+//importaciones nativas
 import { useEffect } from 'react'
-import Booton from '../../../../components/comuns/Booton'
-import '../../style/section5.css'
 import { useTranslation } from 'react-i18next'
+
+//Importando estilos
+import '../../style/section5.css'
+
+//Importaciones externas
+import Booton from '../../../../components/comuns/Booton'
 
 export default function Section5() {
   const [t] = useTranslation("global");
@@ -12,45 +17,45 @@ export default function Section5() {
     let startTime = Date.now(); 
     if (planets) {
       function updatePositions() {
-        const now = Date.now() - startTime; // Aktuelle vergangene Zeit seit dem Start
+        const now = Date.now() - startTime; // Tiempo transcurrido desde el inicio
         planets.forEach((planet, index) => {
-          const orbitTime = (index + 1) * 5000; // Umlaufzeit in Millisekunden (5s für Merkur, 10s für Venus usw.)
-          const distanceFromSun = (index + 1) * 50; // Abstand zur Sonne in Pixel (50 für Merkur, 100 für Venus usw.)
-          const diameter = getPlanetDiameter(index + 1); // Durchmesser des Planeten basierend auf dem Index
-          const angle = ((now % orbitTime) / orbitTime) * 360; // Aktueller Winkel basierend auf der vergangenen Zeit
-          const x = distanceFromSun * Math.cos((angle * Math.PI) / 180); // X-Position basierend auf dem Abstand und dem Winkel
-          const y = distanceFromSun * Math.sin((angle * Math.PI) / 180); // Y-Position basierend auf dem Abstand und dem Winkel
-          planet.style.width = `${diameter}px`; // Setzen der Breite basierend auf dem Durchmesser
-          planet.style.height = `${diameter}px`; // Setzen der Höhe basierend auf dem Durchmesser
-          planet.style.left = `calc(50% - ${diameter / 2}px + ${x}px)`; // Anpassung der Positionsberechnung für den Durchmesser
-          planet.style.top = `calc(50% - ${diameter / 2}px + ${y}px)`; // Anpassung der Positionsberechnung für den Durchmesser
+          const orbitTime = (index + 1) * 5000; //  Periodo orbital en milisegundos (5s para Mercurio, 10s para Venus, etc.)
+          const distanceFromSun = (index + 1) * 50; // Distancia al sol en píxeles (50 para Mercurio, 100 para Venus, etc.)
+          const diameter = getPlanetDiameter(index + 1); // Diámetro del planeta según el índice
+          const angle = ((now % orbitTime) / orbitTime) * 360; // Ángulo actual basado en el tiempo pasado
+          const x = distanceFromSun * Math.cos((angle * Math.PI) / 180); // Posición X basada en la distancia y el ángulo
+          const y = distanceFromSun * Math.sin((angle * Math.PI) / 180); // Posición Y basada en la distancia y el ángulo
+          planet.style.width = `${diameter}px`; // Fijar la anchura en función del diámetro
+          planet.style.height = `${diameter}px`; // Ajuste de la altura en función del diámetro
+          planet.style.left = `calc(50% - ${diameter / 2}px + ${x}px)`; // Ajuste del cálculo de la posición para el diámetro
+          planet.style.top = `calc(50% - ${diameter / 2}px + ${y}px)`; // Ajuste del cálculo de la posición para el diámetro
         });
       }
 
       function getPlanetDiameter(index) {
-        const diameters = [6, 15, 16, 8, 160, 130, 60, 55, 4]; // Durchmesser der Planeten in Kilometern
-        const scaleFactor = [1, 0.7, 0.6, 0.4, 0.2, 0.1, 0.08, 0.05, 0.002]; // Skalierungsfaktor für die Größenrelation
-        return diameters[index - 1] * scaleFactor[index - 1]; // Rückgabe des Durchmessers mit Skalierung
+        const diameters = [6, 15, 16, 8, 160, 130, 60, 55, 4]; // Diámetro de los planetas en kilómetros
+        const scaleFactor = [1, 0.7, 0.6, 0.4, 0.2, 0.1, 0.08, 0.05, 0.002]; // Factor de escala para la relación de tamaño
+        return diameters[index - 1] * scaleFactor[index - 1]; // Retorno del diámetro con escalado
       }
 
       //function restartAnimation() {
-      //  startTime = Date.now(); // Setzen der Startzeitpunkt der Animation auf die aktuelle Zeit
+      //  startTime = Date.now(); // Fijar la hora de inicio de la animación a la hora actual
       //}
 
       function createStars() {
         const starField = document.querySelector(".star-field");
-        const numStars = 100; // Anzahl der Sterne
+        const numStars = 100; // Número de estrellas
         for (let i = 0; i < numStars; i++) {
           const star = document.createElement("div");
           star.classList.add("star");
-          star.style.left = `${Math.random() * 100}%`; // Zufällige horizontale Position
-          star.style.top = `${Math.random() * 100}%`; // Zufällige vertikale Position
-          star.style.animationDelay = `${Math.random()}s`; // Zufällige Verzögerung für den Twinkle-Effekt
+          star.style.left = `${Math.random() * 100}%`; // Posición horizontal aleatoria
+          star.style.top = `${Math.random() * 100}%`; // Posición vertical aleatoria
+          star.style.animationDelay = `${Math.random()}s`; // Retardo aleatorio para el efecto centelleo
           starField?.appendChild(star);
         }
       }
       createStars();
-      setInterval(updatePositions, 1000 / 60); // Alle 16,67 ms aktualisieren (ca. 60 FPS)
+      setInterval(updatePositions, 1000 / 60); // Refresco cada 16,67 ms (aprox. 60 FPS)
     }
   }, [])
 

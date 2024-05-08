@@ -1,10 +1,16 @@
 /* eslint-disable react/prop-types */
+
+//Importando los colores
+import { colors } from '../../../../constants/colors'
+
+//Importando los estilos
 import '../../styles/general.css'
+
+//Importaciones externas
+import Booton from '../../../../components/comuns/Booton';
 import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre';
 import { formatNumber } from 'chart.js/helpers';
-import { colors } from '../../../../constants/colors'
 import { getDomainName } from '../../../../functions/formatDomainName';
-import Booton from '../../../../components/comuns/Booton';
 
 export default function General({item}) {
   const data = item[0];

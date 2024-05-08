@@ -1,34 +1,37 @@
-import color from '../../constants/colors';
+//Importaciones nativas
+import { useContext } from 'react';
+
+//Importando los estilos
+import './style/header.css'
+
+//Importaciones externas
 import { Context } from '../../context/GlobalContextProvider';
 import ItemNavBar from '../navigation/NavBar/ItemNavBar';
 import Booton from './Booton';
-import './style/header.css'
-import { useContext, useEffect, useState } from 'react';
 
-export default function Header({text}) {
-  const [userDeviceWidth, setUserDeviceWidth] = useState();
-  const [navBar, setNavBar] = useState();
+export default function Header() {
 
   const colors = [
     '#595959',
     '#595959',
     '#595959',
   ]
+
   const path = window.location.pathname;
+
+  //Filtramos el path para que solo devuelva el contenido deseado
   const pathParts = path.split('/').filter(part => part !== ''); 
   
+  //Funcion para formater el path filtrado
   const pathFormatted = pathParts.map((part, index) => (
     <span key={index} style={{ color: colors[index] }}>
       {part.charAt(0).toUpperCase() + part.slice(1,8)}
     </span>
   ));
 
-  const { userDevice } = useContext(Context)
+  //Cogemos las dimensiones del dispositivo del contexto global
+  //de la app
   const { responsiveAndroidNabvar } = useContext(Context)
-
-  useEffect(()=>{
-    setUserDeviceWidth(userDevice.deviceWhidth)
-  }, [userDevice.deviceWhidth])
 
   return (
     <header>
@@ -67,7 +70,7 @@ export default function Header({text}) {
         <a style={{transition: 'all .5s', marginTop: '1rem', paddingLeft: '2rem', position: 'relative'}}>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: -5}}>
             <img style={{width: 150, userSelect: 'none'}} src='../../../public/svg/polaris/P001.svg' />
-            <span style={{color: colors.borderColor, fontSize: '0.5rem', marginTop: '0.4rem', marginLeft: '0.5rem', color: 'var(--borderColor)'}}>( BETA )</span>
+            <span style={{ fontSize: '0.5rem', marginTop: '0.4rem', marginLeft: '0.5rem', color: 'var(--borderColor)'}}>( BETA )</span>
             <img onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)} style={{position: 'absolute', width: '2rem', right: 30}} src='../../../public/svg/icons/cancel.svg' alt='' title=''/>
           </div>
         </a>

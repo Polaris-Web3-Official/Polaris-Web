@@ -1,4 +1,9 @@
+/* eslint-disable react/prop-types */
+//importando los colores
 import { colors } from '../../constants/colors';
+
+//Importando los componentes de MUI para realizar un Modal
+//Mas informacion en la documentacion de la libreria
 import { Modal, ModalClose, Sheet, Typography } from '@mui/joy';
 
 export default function ModalCommuns({open, handleCloseModal, title, description}) {

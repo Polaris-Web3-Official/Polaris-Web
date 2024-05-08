@@ -1,3 +1,8 @@
+//Funcion para tomar la semana pasada de una fecha
+//especificada
+
+//Normalmnte utilizado para graficas de la libreria lightweight
+
 export function getLasWeck(date) {
   date.setDate(date.getDate() - 7);
   const year = date.getFullYear();

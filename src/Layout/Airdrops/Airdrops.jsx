@@ -1,4 +1,4 @@
-import React from 'react'
+//Importaciones externas
 import Comming from '../../components/comuns/Comming'
 import NavBar from '../../components/navigation/NavBar/NavBar'
 import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo'
@@ -6,9 +6,9 @@ import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo'
 export default function Airdrops() {
   return (
     <div>
-    <NavBar />
+      <NavBar />
       <Comming />
-    <NavBarTo />
+      <NavBarTo />
     </div>
   )
 }

@@ -1,3 +1,5 @@
+//Funcion para formatear un str por un punto
+
 export default function FormatStrPerPoint(str) {
   const str2 = String(str)
   const indexPunto = str2.indexOf(".");

@@ -1,9 +1,13 @@
-import './styles/App.css'
-import NavBarTo from './components/navigation/NavBarTo/NavBarTo'
-import NavBar from './components/navigation/NavBar/NavBar'
-import { colors } from './constants/colors'
+//Importaciones nativas
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+//Importando colores
+import { colors } from './constants/colors'
+
+//importando estilos
+import './styles/App.css'
+
+//Importaciones externas
 import Home from './Layout/Home/Home'
 import Market from './Layout/Market/Market'
 import Games from './Layout/Games/Games'

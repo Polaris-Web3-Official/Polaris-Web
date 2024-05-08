@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+
+//importaciones nativas
 import React, { useEffect, useState } from 'react'
+
+//Importaciones externas
 import { fetchData } from '../../../functions/fetchData'
 
 export default function Transaction({tx, url}) {

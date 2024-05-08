@@ -1,5 +1,7 @@
-import React from 'react'
+//importando estilos
 import '../styles/market.css'
+
+//importaciones externas
 import TopCriptos from './TopCriptos/TopCriptos'
 import WinnersCoins from './Winners/WinnersCoins'
 import TrendingCoins from './Trending/TrendingCoins'

@@ -1,4 +1,4 @@
-import React from 'react'
+//No se utiliza por ahora!!
 
 export default function Head({name}) {
   return (

@@ -1,17 +1,24 @@
+//Importaciones nativas
+import { useState } from 'react'
+
+//Importando colores
 import { colors } from '../../../constants/colors'
-import ItemNavBar from './ItemNavBar'
+
+//Importando los estilos
 import '../../../styles/components/navBar.css'
+
+//importaciones externas
+import ItemNavBar from './ItemNavBar'
 import Booton from '../../comuns/Booton'
-import { useContext, useEffect, useState } from 'react'
-import { Context } from '../../../context/GlobalContextProvider'
 
 export default function NavBar() {
   const [nabBarState, setNavBarState]= useState(false)
   const [icon, setIcon]=useState('cancel')
+
+  //Actualizacion de la medida del dispositivo del usuario
+  
   //const [userDeviceWidth, setUserDeviceWidth] = useState();
-
   //const { userDevice } = useContext(Context)
-
   //useEffect(()=>{
   //  setUserDeviceWidth(userDevice.deviceWhidth)
   //}, [userDevice.deviceWhidth])

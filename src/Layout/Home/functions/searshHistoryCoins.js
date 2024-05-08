@@ -1,6 +1,12 @@
+//importando funciones externas de /src/fuctions
 import { fetchData } from "../../../functions/fetchData";
 import { formatDate } from "../../../functions/formatDate";
 
+//Se busca la data de las x monedas para las graficas con undelay para la api
+//de coinguecko.
+
+//Puede optimizarse para que no sea tan repetitiva 
+//pero no se hizo la optimizacion por falta de tiempo.
 export async function searchHistoryCoins() {
   try {
     const bitcoinData = await fetchDataWithDelay('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30&interval=daily&precision=0', 4000);

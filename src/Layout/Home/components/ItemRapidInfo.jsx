@@ -1,4 +1,11 @@
-export default function ItemRapidInfo({data = [], x=0, icon='../../../../public/svg/icons/bitcoin.svg'}) {
+/* eslint-disable react/prop-types */
+
+export default function ItemRapidInfo({
+    data = [], // --> La data con la info
+    x=0, //--> El index al que tiene que acceder
+    icon='../../../../public/svg/icons/bitcoin.svg',
+    title,
+  }) {
   return (
     <div className='rapid_icons_general rapid_icons_c1'>
       <div className='rapid_icons_general_c1'>
@@ -13,7 +20,7 @@ export default function ItemRapidInfo({data = [], x=0, icon='../../../../public/
       </div>
       <div className='rapid_icons_general_2'>
         <span className='rapid_icons_general_2-icon'>
-          <img style={{width: 35, height: 35}} src={icon} alt="" title='' />
+          <img style={{width: 35, height: 35}} src={icon} alt={title} title={title} />
         </span>
       </div>
     </div>

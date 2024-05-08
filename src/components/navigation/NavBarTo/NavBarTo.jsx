@@ -1,11 +1,20 @@
-import { colors } from '../../../constants/colors';
-import ItemNavBar from './ItemNavBar';
-import '../../../styles/components/navBarTo.css';
+//Importaciones nativas
 import { useState, useEffect } from 'react';
 
+//importando colores
+import { colors } from '../../../constants/colors';
+
+//Importanco estilos
+import '../../../styles/components/navBarTo.css';
+
+//Emportaciones externas
+import ItemNavBar from './ItemNavBar';
+
+
 export default function NavBarTo() {
-  const [nabBarState, setNavBarState] = useState(false); // Inicializado como true para que esté cerrado por defecto
+  const [nabBarState, setNavBarState] = useState(false); // Inicializado como false para que esté cerrado por defecto
   const [icon, setIcon] = useState('cancel');
+
 
   useEffect(() => {
     const navBar = document.getElementById('navBarContainerTo');

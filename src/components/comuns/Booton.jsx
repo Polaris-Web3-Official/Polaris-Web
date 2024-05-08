@@ -1,3 +1,4 @@
+//Importando los colores
 import { colors } from '../../constants/colors';
 
 export default function Booton({ 

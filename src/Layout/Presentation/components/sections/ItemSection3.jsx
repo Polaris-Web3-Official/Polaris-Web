@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+
+//Importaciones externas
 import Booton from '../../../../components/comuns/Booton';
 
 function ItemSection3({
@@ -55,7 +57,7 @@ function ItemSection3({
           objectFit: 'contain',
           borderRadius: '0.75rem',
           ...imgstyles,
-        }} src={img} alt={title} />
+        }} src={img} />
       </div>
 
       <h4>{formatTitle(title)}</h4>

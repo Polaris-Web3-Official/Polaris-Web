@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react'
+//Importaciones nativas
+import { useState, useEffect } from 'react'
+
+//Importando estilos
 import '../../styles/winnersCoins.css'
-import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
+
+//Importando colores
+import { colors } from '../../../../constants/colors'
+
+//Importaciones externas
 import FormatStrPerPoint from '../../../../functions/formatNumbrePerPoint'
 import { fetchData } from '../../../../functions/fetchData'
-import { colors } from '../../../../constants/colors'
+import { POLARIS_API } from '../../../../constants/keys'
+import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
 
 export default function WinnersCoins() {
   const [data, setData] = useState([]);
@@ -13,7 +21,7 @@ export default function WinnersCoins() {
   const searsh = async () => {
     try {
       setLoading(true);
-      const response = await fetchData("https://polarisapp.tech/api/polaris/winners");
+      const response = await fetchData(`${POLARIS_API.winers}`);
       response?.sort(
         (a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h
       );

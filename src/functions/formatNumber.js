@@ -1,3 +1,8 @@
+//Funcion para formatear un numero
+//( puede ser optimizada ) -> ( optimizacion no realizada por falta de tiempo ) 
+//input( 200000000 ) => int ~ float
+//output( 200,000.000 ) => str
+
 export default function formatNumber(num){
   const str = String(num);
   let formattedNumber = "";
@@ -21,4 +26,4 @@ export default function formatNumber(num){
   }
 
   return hasDecimal ? formattedNumber + decimalPart : formattedNumber;
-};
+}

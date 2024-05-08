@@ -1,12 +1,21 @@
+/* eslint-disable no-unused-vars */
+
+//Importaciones nativas
 import { useState, useEffect } from 'react'
+
+//Importando estilos
 import '../../styles/topCriptos.css'
-import { fetchData } from '../../../../functions/fetchData'
-import FormatStrPerPoint from '../../../../functions/formatNumbrePerPoint';
-import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre';
-import formatMarketCap from '../../../../functions/formatMarketCap';
-import { colors } from '../../../../constants/colors'
+
+//Importaciones externas
 import ModalCommuns from '../../../../components/comuns/Modal';
+import FormatStrPerPoint from '../../../../functions/formatNumbrePerPoint';
+import formatMarketCap from '../../../../functions/formatMarketCap';
+import { fetchData } from '../../../../functions/fetchData'
+import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre';
+import { colors } from '../../../../constants/colors'
 import { Link } from 'react-router-dom';
+import { POLARIS_API } from '../../../../constants/keys';
+
 
 export default function TopCriptos() {
   const [category, setCategory] = useState('crypto');
@@ -45,7 +54,7 @@ export default function TopCriptos() {
   const searsh = async () =>{
     try{
       setLoading(true)
-      const data = await fetchData(`https://polarisapp.tech/api/polaris/${coin}`);
+      const data = await fetchData(`${POLARIS_API.base}${coin}`);
       setData(data)
     } catch(e){
       console.log(error);

@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+//No se realizan importaciones
 
 export default function Loading({alt, title}) {
   return (

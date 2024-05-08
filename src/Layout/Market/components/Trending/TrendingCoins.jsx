@@ -1,10 +1,18 @@
+/* eslint-disable no-unused-vars */
+
+//Importaciones nativas
 import { useState, useEffect } from 'react'
+
+//Importando estilos
 import '../../styles/winnersCoins.css'
-import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
+
+//Importaciones externas 
 import FormatStrPerPoint from '../../../../functions/formatNumbrePerPoint'
+import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
 import { fetchData } from '../../../../functions/fetchData'
 import { colors } from '../../../../constants/colors'
-import { Link } from 'react-router-dom'
+import { POLARIS_API } from '../../../../constants/keys'
+
 
 export default function TrendingCoins() {
   const [data, setData] = useState([]);
@@ -14,7 +22,7 @@ export default function TrendingCoins() {
   const searsh = async () => {
     try {
       setLoading(true);
-      const response = await fetchData("https://polarisapp.tech/api/polaris/trending");
+      const response = await fetchData(`${POLARIS_API.trending}`);
       setData(response.coins);
     } catch (e) {
       setError(e);
@@ -26,8 +34,6 @@ export default function TrendingCoins() {
   useEffect(()=>{
     searsh();
   }, [])
-
-  console.log(data);
 
 
   return (

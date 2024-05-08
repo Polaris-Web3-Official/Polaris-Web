@@ -1,16 +1,28 @@
+//Importaciones nativas
 import { useState, useEffect } from 'react'
-import Booton from '../../../../components/comuns/Booton'
-import '../../style/header.css'
-import { Switch } from '@mui/material'
-import { styled } from '@mui/material'
-import { colors } from '../../../../constants/colors'
 import { useTranslation } from 'react-i18next'
 
+//Importando los estilos
+import '../../style/header.css'
+
+//Importaciones de Material UI, libreria de componentes
+import { Switch } from '@mui/material'
+import { styled } from '@mui/material'
+
+//Importaciones Externas
+import Booton from '../../../../components/comuns/Booton'
+import { colors } from '../../../../constants/colors'
+
+
 export default function Header() {
+  //Inicializando la traduccion 
   const [t, i18n] = useTranslation("global")
+
+  //Inicializando los estados correspondientes
   const [language, setLanguage] = useState(true)
   const [showNavBar, setShowNavBar] = useState(false)
 
+  //En el caso de que (language) cambie, se cambian los leguajes 
   useEffect(()=>{
     if (language) {
       i18n.changeLanguage("en")
@@ -19,6 +31,9 @@ export default function Header() {
     }
   }, [language])
 
+  //Creando el componente de Switsh (estilo APPLE)
+  //Sacado directamente del tutorial de la libreria.
+  //Mas informacion en la respectiva documentacion --> https://mui.com/material-ui/react-switch/
   const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
   ))(({ theme }) => ({
@@ -74,6 +89,7 @@ export default function Header() {
     },
   }));
 
+  //Seleccionamos la imagen y en el caso de ser precionada, se despliega el menu.
   document.getElementById('presentation_header_button_menu_android')
     ?.addEventListener('click', ()=>{
       setShowNavBar(!showNavBar)
@@ -82,6 +98,8 @@ export default function Header() {
 
   let menu = document.getElementById('presentation_header_menu_android');
 
+  //En el caso de que el usuario halla presionado en el menu
+  //Se le adiciona una clase y se le dan x estilos en el codigo css
   useEffect(()=>{
     if(showNavBar){
       menu?.classList?.add('menu_android_active')
@@ -159,12 +177,9 @@ export default function Header() {
         text='Web APP ( BETA )'
       />
 
-      <button 
-        onClick={(e)=> e.preventDefault()}
-        id='presentation_header_button_menu_android' 
-        className='presentation_header_button_menu_android'>
-        <img src='../../../../../public/svg/icons/menu.svg' title='Polaris web3 ~ Menu' alt='Polaris web3 ~ Menu'/>
-      </button>
+
+      <img id='presentation_header_button_menu_android' src='../../../../../public/svg/icons/menu.svg' title='Polaris web3 ~ Menu' alt='Polaris web3 ~ Menu'/>
+
       
       <div id='presentation_header_menu_android' className='presentation_header_menu_android'>
         <div style={{

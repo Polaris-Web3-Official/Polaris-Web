@@ -1,9 +1,17 @@
+/* eslint-disable no-unused-vars */
+
+//Importaciones nativas
 import { useState, useEffect } from 'react'
+
+//importando estilos
 import '../../styles/winnersCoins.css'
-import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
+
+//Importaciones externas
 import FormatStrPerPoint from '../../../../functions/formatNumbrePerPoint'
+import { formatCientyfuNumbre } from '../../../../functions/formatCientyfuNumbre'
 import { fetchData } from '../../../../functions/fetchData'
 import { colors } from '../../../../constants/colors'
+import { POLARIS_API } from '../../../../constants/keys'
 
 export default function LossersCoins() {
   const [data, setData] = useState([]);
@@ -13,7 +21,7 @@ export default function LossersCoins() {
   const searsh = async () => {
     try {
       setLoading(true);
-      const response = await fetchData("https://polarisapp.tech/api/polaris/losers");
+      const response = await fetchData(`${POLARIS_API.losers}`);
       response?.sort(
         (a, b) => a.price_change_percentage_24h - b.price_change_percentage_24h
       );

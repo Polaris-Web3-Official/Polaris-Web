@@ -1,8 +1,14 @@
+//Importaciones nativas
 import { useEffect, useState, useRef } from 'react';
-import { fetchData } from '../../../functions/fetchData';
+
+//Importando estilos
 import '../styles/lastTransactionsEth.css';
-import { formatCientyfuNumbre } from '../../../functions/formatCientyfuNumbre';
+
+//Importaciones externas
 import ModalCommuns from '../../../components/comuns/Modal';
+import { fetchData } from '../../../functions/fetchData';
+import { formatCientyfuNumbre } from '../../../functions/formatCientyfuNumbre';
+import { API_KEY_ETH } from '../../../constants/keys';
 
 export default function LastTransactinsEth() {
   const [transactions, setTransactions] = useState([]);
@@ -11,7 +17,7 @@ export default function LastTransactinsEth() {
 
   const fetchTransactions = async () => {
     try {
-      const response = await fetchData('https://api.etherscan.io/api?module=proxy&action=eth_getBlockByNumber&tag=latest&boolean=true&apikey=XGUJGP8M9DMUZX9MMA595ZP193Y4EY78MI');
+      const response = await fetchData(`https://api.etherscan.io/api?module=proxy&action=eth_getBlockByNumber&tag=latest&boolean=true&apikey=${API_KEY_ETH}`);
       const newTransactions = response?.result?.transactions?.slice(0, 1);
 
       const filteredTransactions = newTransactions.filter(newTx => !transactions.find(tx => tx.hash === newTx.hash));
@@ -21,6 +27,7 @@ export default function LastTransactinsEth() {
     }
   };
 
+  //Se crea un intervalo para que una nueva transaccion se adicione cada 10 segundos
   useEffect(() => {
     const intervalId = setInterval(() => {
       fetchTransactions(); 

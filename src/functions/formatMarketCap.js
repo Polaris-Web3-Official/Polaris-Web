@@ -1,3 +1,5 @@
+//Funcion para formatear el marketcap de las X criptomonedas
+
 export default function formatMarketCap(str){
   const trillion = 1000000000000;
   const billion = 1000000000;

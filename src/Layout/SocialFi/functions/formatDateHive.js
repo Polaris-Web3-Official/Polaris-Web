@@ -1,3 +1,5 @@
+
+//Formateamos la fecha de creacio de la cuenta/post/comentario etc
 export default function formatDateHive(fechaCreacion) {
   const createdDate = new Date(fechaCreacion);
   const now = new Date();

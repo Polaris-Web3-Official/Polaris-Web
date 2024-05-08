@@ -1,4 +1,16 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+//importaciones nativas
+import { useEffect } from "react";
+
+//tecnicamente hacemos magia xD
+//Usamos el widguet de elfsight para poner el feed de twitter
+//para luego eliminar la marca de agua.
+
+//Ojo esto es ilegal y ba en contra de las condiciones del servicios de elfsight
+//En la v1.0 para obtener esta data y que sea dinamica
+//Polaris hara scraping de la data directamente del dominio de https://twitter.com/search?q={idCoin}
 
 export default function Feed({item}) {
   function elfsightWidget() {
@@ -27,7 +39,7 @@ export default function Feed({item}) {
     }, 3000)
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log('cambio el pathname');
     elfsightWidget();
     deletefreeButton();

@@ -1,3 +1,7 @@
+//Funcion para buscar Data
+//Si ocurre un error, lanza un error
+//En el caso de no, retorna la data
+
 export const fetchData = async (calUrl) => {
   try {
     const response = await fetch(calUrl);

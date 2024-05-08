@@ -1,12 +1,21 @@
-import '../styles/bento.css'
-import { CircularProgress } from '@mui/material'
-import { colors } from '../../../constants/colors'
-import LastTransactinsEth from './LastTransactinsEth'
-import BlockchainsNews from './BlockchainsNews'
+//Importaciones nativas
 import { useEffect, useState } from 'react'
-import { searchHistoryCoins } from '../functions/searshHistoryCoins'
 import { createChart } from 'lightweight-charts'
+
+//Importando colores
+import { colors } from '../../../constants/colors'
+
+//Importando estilos
+import '../styles/bento.css'
+
+//Importando de la libreria de componentes
+import { CircularProgress } from '@mui/material'
+
+//Importaciones externas
+import BlockchainsNews from './BlockchainsNews'
 import Loading from '../../../components/comuns/Loading'
+import LastTransactinsEth from './LastTransactinsEth'
+import { searchHistoryCoins } from '../functions/searshHistoryCoins'
 
 export default function Bento() {
   // eslint-disable-next-line no-unused-vars
@@ -39,6 +48,9 @@ export default function Bento() {
     shartDataSearsh()
   }, [])
 
+  //Si la data del grafico no es undefined y chartLoading es verdadero
+  //se crea la info del grafico
+  
   if (chartData !== undefined && chartLoading) {
     console.log(chartData);
     console.log(chartLoading);

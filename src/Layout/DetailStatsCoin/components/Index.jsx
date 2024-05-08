@@ -1,27 +1,43 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
+//Importaciones nativas
 import { useEffect, useState } from 'react'
-import { fetchData } from '../../../functions/fetchData';
+
+//Importando los colores
+import { colors } from '../../../constants/colors';
+
+//Importando estilos
 import '../styles/details.css'
+
+//Importaciones externas 
 import Feed from './Feed/Feed';
 import Market from './Market/Market';
 import General from './General/General';
-import { colors } from '../../../constants/colors';
+import { fetchData } from '../../../functions/fetchData';
 
-export default function Index({coinId='bitcoin'}) {
+export default function Index({coinId='bitcoin'}) {  //Por defecto la x(coin) es bitcoin
   const [chartData, setChartData] = useState();
   const [data, setData] = useState();
-  const [error, setError] = useState();
-  const [loading, setLoading] = useState();
 
+  const [error, setError] = useState(); //Se utiliza para renderizar algo si ocurre un error
+  const [loading, setLoading] = useState(); //Se utiliza para renderizar algo miestras la data se procesa
+
+  //Buscamos la data que mostrara el grafico en coinguecko (temporal)
+  //En la v1.0 esta data estara en la api interna de Polaris
   const searshChartData = async ()=>{
     const data = await fetchData(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=30&interval=daily&precision=3`)
     setChartData(data)
   }
 
+  //Buscamos la data general de la x(coin)
+  //Tambien temporal por el mismo motivo de arriba 
   const searshGlobalData = async ()=>{
     const data = await fetchData(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true`)
     setData(data)
   }
 
+  //Buscamos la data
   useEffect(()=>{
     try {
       setLoading(true)
@@ -36,7 +52,10 @@ export default function Index({coinId='bitcoin'}) {
     }
   }, [])
 
+  //Gyardamos en un array en el index 0 la data global
+  //y en el index 1 la data del grafico.
   const dataCompleted = [data, chartData]
+  
   console.log(dataCompleted);
 
   return (

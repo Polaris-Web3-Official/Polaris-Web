@@ -24,7 +24,7 @@
     }
   }
 
-  .presentation_header_button_menu_android, .presentation_header_menu_android {
+  #presentation_header_button_menu_android, .presentation_header_menu_android {
     display: none;
   }
 }
@@ -61,26 +61,9 @@
     margin-left: -1rem;
   }
 
-  .presentation_header_button_menu_android {
-    display: flex !important;
-    border: 0px solid var(--mainBackgroundColor3);
-    background-color: transparent;
-    outline: none;
-    margin-right: -2rem;
-
-    &:active{
-      border: 0px solid var(--mainBackgroundColor3);
-      outline: none;
-    }
-
-    &:hover{
-      border: 0px solid var(--mainBackgroundColor3);
-      outline: none;
-    }
-
-    img {
-      width: 2rem;
-    }
+  #presentation_header_button_menu_android {
+    width: 2.5rem;
+    margin-right: -1.2rem;
   }
 
   .presentation_header_menu_android {
@@ -94,14 +77,9 @@
     left: 100vw;
     width: 100vw;
     height: 100vh;
-    background-color: transparent;
-    overflow: scroll;
-  }
-
-  .menu_android_active {
-    left: 0px !important;
     background-color: #000;
-    
+    overflow: scroll;
+
     ul {
       display: flex;
       flex-direction: column;
@@ -164,5 +142,10 @@
         height: 20px;
       }
     }
+  }
+
+  .menu_android_active {
+    left: 0px !important;
+    background-color: #000;
   }
 }

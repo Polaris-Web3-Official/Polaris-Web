@@ -1,9 +1,14 @@
+//Importando colores
+import { colors } from '../../constants/colors'
+
+//Importando estilos
 import './styles/general.css'
+
+//Importaciones externas
 import Header from '../../components/comuns/Header'
 import RapidInfo from './components/RapidInfo'
 import Footer from '../../components/comuns/Footer'
 import Bento from './components/Bento'
-import { colors } from '../../constants/colors'
 import NavBar from '../../components/navigation/NavBar/NavBar'
 import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+//importamos las secciones que conformaran toda la pagina
 import Section1 from './sections/Section1'
 import Section2 from './sections/Section2'
 import Section3 from './sections/Section3'

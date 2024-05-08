@@ -1,10 +1,19 @@
 /* eslint-disable react/prop-types */
-import '../../styles/market.css'
-import { createChart } from 'lightweight-charts'
+
+//importaciones nativas
 import { useEffect } from 'react';
+import { createChart } from 'lightweight-charts'
+
+//importando los colores
 import { colors } from '../../../../constants/colors'
+
+//Importando los estilos
+import '../../styles/market.css'
+
+//Importaciones externas
 import { formatDate } from '../../../../functions/formatDate';
 import { insertSaltLine } from '../../../../functions/insertSaltLine';
+
 
 export default function Market({item}) {
   useEffect(()=>{

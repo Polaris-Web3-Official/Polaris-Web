@@ -1,4 +1,4 @@
-import React from 'react'
+//Importando estilos
 import '../../style/section2.css'
 
 export default function Section2() {

@@ -1,12 +1,18 @@
-import Booton from '../../../../components/comuns/Booton';
-import '../../style/section1.css'
-import { colors } from '../../../../constants/colors';
+//Importaciones nativas
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+//Importando los estilos
+import '../../style/section1.css'
+
+//Importaciones externas
+import Booton from '../../../../components/comuns/Booton';
+
 export default function Section1() {
+  //Inicializando la traduccion
   const [t] = useTranslation("global")
 
+  //Funcion para formatear el titulo recibido de la traduccion.
   function formatTitle(title) {
     const palabras = title.split(" ");
     return (
@@ -25,9 +31,9 @@ export default function Section1() {
       function generateRandomStar() {
         const starNames = ['Sirius', 'Betelgeuse', 'Proxima Centauri', 'Alpha Centauri', 'Vega', 'Arcturus', 'Rigel', 'Pollux', 'Capella', 'Aldebaran', 'Antares', 'Spica', 'Deneb', 'Regulus', 'Fomalhaut'];
         const constellations = ['Orion', 'Canis Major', 'Centaurus', 'Lyra', 'Boötes', 'Gemini', 'Auriga', 'Taurus', 'Scorpius', 'Virgo', 'Cygnus', 'Leo', 'Pegasus', 'Aquarius', 'Sagittarius'];
-        const apparentMagnitude = Math.random() * (6.5 - (-1)) + (-1); // Random number between -1 and 6.5
-        const absoluteMagnitude = Math.random() * (15 - (-10)) + (-10); // Random number between -10 and 15
-        const distanceLightYear = Math.random() * (1000 - 1) + 1; // Random number between 1 and 1000
+        const apparentMagnitude = Math.random() * (6.5 - (-1)) + (-1); // Numero random entre -1 y 6.5
+        const absoluteMagnitude = Math.random() * (15 - (-10)) + (-10); // Numero random entre -10 y 15
+        const distanceLightYear = Math.random() * (1000 - 1) + 1; // Numero random entre 1 y 1000
 
         const randomNameIndex = Math.floor(Math.random() * starNames.length);
         const randomConstellationIndex = Math.floor(Math.random() * constellations.length);
@@ -40,6 +46,9 @@ export default function Section1() {
           distance_light_year: distanceLightYear.toFixed(2)
         };
       }
+
+
+      //Funcion para generar las estrellas
       function generateRandomStars(numberOfStars) {
         const stars = [];
         for (let i = 0; i < numberOfStars; i++) {
@@ -47,6 +56,8 @@ export default function Section1() {
         }
         return stars;
       }
+
+      //generando las estrellas
       const randomStars = generateRandomStars(100);
       //----------------------------------------------------------------------------------------------------------
 
@@ -71,6 +82,9 @@ export default function Section1() {
           square.remove();
         }, 10000); 
       }
+
+
+      //Monitoreando las estrellas
       let starCreationInterval = setInterval(createSquare, 150);
       let maxStars = 400;
       function monitorStars() {

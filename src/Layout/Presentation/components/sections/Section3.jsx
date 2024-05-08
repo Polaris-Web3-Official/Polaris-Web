@@ -1,11 +1,14 @@
 
-import { colors } from '@mui/material'
-import '../../style/section3.css'
-import ItemSection3 from './ItemSection3'
+//Importaciones nativas
 import { useTranslation } from 'react-i18next'
 
-export default function Section3() {
+//Importando estilos
+import '../../style/section3.css'
 
+//Importaciones externas
+import ItemSection3 from './ItemSection3'
+
+export default function Section3() {
   const [t] = useTranslation("global");
 
   return (

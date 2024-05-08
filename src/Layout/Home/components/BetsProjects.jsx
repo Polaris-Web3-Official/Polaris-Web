@@ -1,11 +1,20 @@
-import '../styles/bestsProjects.css'
-import { fetchData } from '../../../functions/fetchData'
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+
+//Importaciones nativas
 import { useState, useEffect } from 'react'
+
+//Importando los estilos
+import '../styles/bestsProjects.css'
+
+//Importaciones externas
+import LineChart from '../../../components/charts/LineChart';
 import formatStr from '../../../functions/formatStr';
 import formatMarketCap from '../../../functions/formatMarketCap';
-import LineChart from '../../../components/charts/LineChart';
+import { fetchData } from '../../../functions/fetchData'
+import { POLARIS_API } from '../../../constants/keys'
 
-export default function BetsProjects({url = 'https://polarisapp.tech/api/polaris/magic_eden'}) {
+export default function BetsProjects({url = `${POLARIS_API.magiceden}`}) {
   const [state, setState] = useState();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
@@ -74,15 +83,3 @@ export default function BetsProjects({url = 'https://polarisapp.tech/api/polaris
     </div>
   )
 }
-
-/*
-  {
-    "symbol": "famous_fox_federation",
-    "name": "Famous Fox Federation",
-    "description": "1",
-    "image": "https://creator-hub-prod.s3.us-east-2.amazonaws.com/famous_fox_federation_pfp_1679672949828.gif",
-    "floorPrice": 13860000000,
-    "volumeAll": 1359185.8236587578,
-    "hasCNFTs": false
-  }
-*/
