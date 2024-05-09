@@ -23,7 +23,7 @@ If you have any problems or suggestions, please send an email to: [Email](mailto
 
 ## License 📄
 
-This project is under the MIT License - see the file [LICENSE.md](LICENSE) for details.
+This project is under the MIT License - see the file [LICENSE.md](LICENCE) for details.
 
 ## Expressions of Gratitude 🎁
 
