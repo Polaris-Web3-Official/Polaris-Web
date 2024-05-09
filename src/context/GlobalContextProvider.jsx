@@ -3,7 +3,7 @@
 import { createContext, useEffect, useState } from "react";
 
 //Importaciones externas
-import { fetchHivePosts } from "../Layout/SocialFi/functions/fetchHivePosts";
+import { fetchHivePosts } from "../Layout/SocialFi/functions/FetchHivePosts";
 import { error } from "../functions/error";
 
 //Creamos el contexto

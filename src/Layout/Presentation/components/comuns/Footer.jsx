@@ -98,7 +98,7 @@ export default function Footer() {
       <div className='presentation_footer_social'>
         <ul>
           <li><a href='https://twitter.com/PolarisWeb3' title='Polaris Web3 ~ Twitter'>Twitter</a></li>
-          <li><a href='https://github.com/MrWiki15/Polaris' title='Polaris Web3 ~ Github'>Github</a></li>
+          <li><a href='https://github.com/Polaris-Web3-Official' title='Polaris Web3 ~ Github'>Github</a></li>
           <li><a href='https://www.linkedin.com/company/qsoft-tech/' title='Polaris Web3 ~ LinkedIn'>LinkedIn</a></li>
         </ul>
 
