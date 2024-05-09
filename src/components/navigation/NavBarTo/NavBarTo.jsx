@@ -64,7 +64,7 @@ export default function NavBarTo() {
                 setNavBarState(prevState => !prevState);
               }}
               style={{ position: 'absolute', width: 20, marginLeft: 10, marginTop: 3, cursor: 'pointer', userSelect: 'none', zIndex: 9999 }}
-              src={`../../../public/svg/icons/${icon}.svg`}
+              src={`https://cusoft.tech/wp-content/uploads/2024/05/${icon}.png`}
             />
           </div>
 
@@ -74,18 +74,18 @@ export default function NavBarTo() {
 
         <div style={{ opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s', marginTop: '1rem' }}>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            <ItemNavBar url={'/app/trading'} icon={<img src='../../../public/svg/icons/chartcompar.svg'/>} line={'Trading'}/>
-            <ItemNavBar url={'/app/p2p-market'} icon={<img src='../../../public/svg/icons/piechart.svg'/>} line={'P2P-Market'}/>
-            <ItemNavBar url={'/app/swaper'} icon={<img src='../../../public/svg/icons/swap.svg'/>} line={'Swaper'}/>
-            <ItemNavBar url={'/app/recompenzas'} icon={<img src='../../../public/svg/icons/gift.svg'/>} line={'Rewards'}/>
-            <ItemNavBar url={'/app/airdrops'} icon={<img src='../../../public/svg/icons/airdrop.svg'/>} line={'Airdrops'}/>
-            <ItemNavBar url={'/app/affiliates'} icon={<img src='../../../public/svg/icons/friends.svg'/>} line={'Affiliates'}/>
-            <ItemNavBar url={'/app/community'} icon={<img src='../../../public/svg/icons/bransh.svg'/>} line={'Community'}/>
-            <ItemNavBar url={'/app/jobs'} icon={<img src='../../../public/svg/icons/worker.svg'/>} line={'Jobs'}/>
-            <ItemNavBar url={'/app/materials'} icon={<img src='../../../public/svg/icons/bookopen.svg'/>} line={'Materials'}/>
-            <ItemNavBar url={'/app/masters'} icon={<img src='../../../public/svg/icons/notepad.svg'/>} line={'Masters'}/>
-            <ItemNavBar url={'/app/services'} icon={<img src='../../../public/svg/icons/service.svg'/>} line={'Services'}/>
-            <ItemNavBar url={'/app/products'} icon={<img src='../../../public/svg/icons/products.svg'/>} line={'Products'}/>
+            <ItemNavBar url={'/app/trading'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/chartcompar.png'/>} line={'Trading'}/>
+            <ItemNavBar url={'/app/p2p-market'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/piechart.png'/>} line={'P2P-Market'}/>
+            <ItemNavBar url={'/app/swaper'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/swap.png'/>} line={'Swaper'}/>
+            <ItemNavBar url={'/app/recompenzas'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/gift.png'/>} line={'Rewards'}/>
+            <ItemNavBar url={'/app/airdrops'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/airdrop.png'/>} line={'Airdrops'}/>
+            <ItemNavBar url={'/app/affiliates'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/friends.png'/>} line={'Affiliates'}/>
+            <ItemNavBar url={'/app/community'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/bransh.png'/>} line={'Community'}/>
+            <ItemNavBar url={'/app/jobs'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/worker.png'/>} line={'Jobs'}/>
+            <ItemNavBar url={'/app/materials'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/bookopen.png'/>} line={'Materials'}/>
+            <ItemNavBar url={'/app/masters'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/notepad.png'/>} line={'Masters'}/>
+            <ItemNavBar url={'/app/services'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/service.png'/>} line={'Services'}/>
+            <ItemNavBar url={'/app/products'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/products.png'/>} line={'Products'}/>
           </ul>
         </div>
       </div>

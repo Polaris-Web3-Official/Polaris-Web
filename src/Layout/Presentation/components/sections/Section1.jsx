@@ -120,7 +120,7 @@ export default function Section1() {
           />
           <p style={{margin: '0rem 1rem 1rem 1rem'}}>{t('section1.buttons.btn1.subtitle')}</p>
           
-          <img src='../../../../../public/svg/icons/externalLinkWhite.svg'/>
+          <img src='https://cusoft.tech/wp-content/uploads/2024/05/externalLinkWhite.png'/>
         </section>
 
         <section title='Polaris Web3 ~ Documentation'>
@@ -137,7 +137,7 @@ export default function Section1() {
           />
           <p style={{margin: '0rem 1rem 1rem 1rem'}}>{t('section1.buttons.btn2.subtitle')}</p>
 
-          <img src='../../../../../public/svg/icons/externalLinkWhite.svg' title='' alt=''/>
+          <img src='https://cusoft.tech/wp-content/uploads/2024/05/externalLinkWhite.png'/>
         </section>
       </div>
     </section>

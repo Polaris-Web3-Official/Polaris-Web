@@ -1,6 +1,11 @@
+/* eslint-disable react/prop-types */
+
+//Realizando importaciones nativas
 import { useEffect, useState } from "react";
-import { colors } from "../../../constants/colors";
 import { Link, useLocation } from "react-router-dom";
+
+//importando los colores
+import { colors } from "../../../constants/colors";
 
 export default function ItemNavBar({ url, target = '_self', icon, line = 'example' }) {
   const location = useLocation().pathname;

@@ -59,12 +59,12 @@ export default function NavBar() {
               }
 
               setNavBarState(newState);
-            }} style={{position: 'absolute',width: 20, marginRight: 10, marginTop: 3, cursor: 'pointer', userSelect: 'none', zIndex: 9999}} src={`../../../public/svg/icons/${icon}.svg`}/>
+            }} style={{position: 'absolute',width: 20, marginRight: 10, marginTop: 3, cursor: 'pointer', userSelect: 'none', zIndex: 9999}} src={`https://cusoft.tech/wp-content/uploads/2024/05/${icon}.png`}/>
           </div>
 
           <a style={{opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: -5}}>
-              <img style={{width: 130, userSelect: 'none'}} src='../../../public/svg/polaris/P001.svg' />
+              <img style={{width: 130, userSelect: 'none'}} src='https://cusoft.tech/wp-content/uploads/2024/05/P001.svg' />
               <span style={{color: colors.borderColor, fontSize: '0.8rem', marginTop: '0.4rem', marginLeft: '0.5rem'}}>( BETA )</span>
             </div>
           </a>
@@ -72,22 +72,22 @@ export default function NavBar() {
 
         <div style={{opacity: icon === 'cancel' ? 1 : 0, transition: 'all .5s'}}>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
-            <ItemNavBar url={'/app'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
-            <ItemNavBar url={'/app/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
-            <ItemNavBar url={'/app/socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
-            <ItemNavBar url={'/app/games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
-            <ItemNavBar url={'/app/portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
+            <ItemNavBar url={'/app'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/home.png'/>} line={'Home'}/>
+            <ItemNavBar url={'/app/market'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/chart.png'/>} line={'Market'}/>
+            <ItemNavBar url={'/app/socialfi'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/social.png'/>} line={'SocialFi'}/>
+            <ItemNavBar url={'/app/games'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/play.png'/>} line={'Games'}/>
+            <ItemNavBar url={'/app/portfolio'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/wallet.png'/>} line={'PortFolio'}/>
             
           </ul>
 
           <ul style={{listStyle: 'none', marginTop: 30, padding: 0}}>
-            <ItemNavBar url={'/app/profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
-            <ItemNavBar url={'/app/settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
-            <ItemNavBar url={'/app/sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
+            <ItemNavBar url={'/app/profile'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/user.png'/>} line={'Profile'}/>
+            <ItemNavBar url={'/app/settings'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/settings.png'/>} line={'Settings'}/>
+            <ItemNavBar url={'/app/sponsors'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/heart.png'/>} line={'Sponsors'}/>
             <ItemNavBar 
               url={'https://twitter.com/intent/post?text=Hello%2C+I+invite+you+to+try+Polaris%2C+an+application+to+access+information+in+an+Easy%2C+Fast+and+Convenient+way.+Access+now+by+entering+https%3A%2F%2Fapp.polarisweb3.org.'} 
               target='_blank' 
-              icon={<img src='../../../public/svg/icons/share.svg'/>} 
+              icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/share.png'/>} 
               line={'Share with friends'}
             />
           </ul>
@@ -114,7 +114,7 @@ export default function NavBar() {
               gap: '1rem',
             }}>
               <div style={{width: '2rem', height: '2rem', borderRadius: '0.5rem', backgroundColor: colors.paragraphColor, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                <img style={{width: '70%', height: '70%'}} src='../../../../public/svg/icons/star.svg'/>
+                <img style={{width: '70%', height: '70%'}} src='https://cusoft.tech/wp-content/uploads/2024/05/star.png'/>
               </div>
 
               <div>

@@ -7,7 +7,7 @@ export default function Section2() {
       <video 
           title='Polaris Web3 ~ Introduction Video'
           src='' 
-          poster='../../../../../public/img/previewVideoPolaris.png'
+          poster='https://cusoft.tech/wp-content/uploads/2024/05/previewVideoPolaris-1.png'
           autoPlay 
           muted 
           loop 

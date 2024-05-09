@@ -113,7 +113,7 @@ export default function Header() {
   return (
   <div className='presentation_header' style={{zIndex: 99999}}>
       <a href="/" style={{display: 'flex', justifyContent: 'center'}}>
-        <img className='logo'  src="../../../../../public/svg/polaris/P001.svg" alt="Polaris Web3 ~ Ecosistem utility for Web3 Community" title='Polaris Web3 ~ Ecosistem utility for Web3 Community'/>
+        <img className='logo'  src="https://cusoft.tech/wp-content/uploads/2024/05/P001.svg" alt="Polaris Web3 ~ Ecosistem utility for Web3 Community" title='Polaris Web3 ~ Ecosistem utility for Web3 Community'/>
       </a>
 
       <ul >
@@ -131,7 +131,7 @@ export default function Header() {
         alignItems: 'center',
       }}>
         <img 
-        src='../../../../../public/img/banderaEsColor.webp'
+        src='https://cusoft.tech/wp-content/uploads/2024/05/banderaEsColor.webp'
         style={{
           width: '1.6rem',
           objectFit: 'contain',
@@ -150,7 +150,7 @@ export default function Header() {
             />
           </div>
         <img 
-        src='../../../../../public/img/banderaEnColor.webp'
+        src='https://cusoft.tech/wp-content/uploads/2024/05/banderaEnColor.webp'
         style={{
           width: '1.6rem',
           objectFit: 'contain',
@@ -178,7 +178,7 @@ export default function Header() {
       />
 
 
-      <img id='presentation_header_button_menu_android' src='../../../../../public/svg/icons/menu.svg' title='Polaris web3 ~ Menu' alt='Polaris web3 ~ Menu'/>
+      <img id='presentation_header_button_menu_android' src='https://cusoft.tech/wp-content/uploads/2024/05/menu.png' title='Polaris web3 ~ Menu' alt='Polaris web3 ~ Menu'/>
 
       
       <div id='presentation_header_menu_android' className='presentation_header_menu_android'>
@@ -190,8 +190,8 @@ export default function Header() {
             marginTop: '-0.5rem',
             alignItems: 'center',
           }}>
-          <img style={{width: '150px'}} src='../../../../../public/svg/polaris/P001.svg' title='Polaris Web3 ~ Logo' alt='Polaris Web3 ~ Logo'/>
-          <img onClick={()=> setShowNavBar(!showNavBar)} style={{width: '1.5rem'}} src='../../../../../public/svg/icons/cancel.svg' title='Polaris Web3 ~ Close Menu' alt='Polaris Web3 ~ Close Menu'/>
+          <img style={{width: '150px'}} src='https://cusoft.tech/wp-content/uploads/2024/05/P001.svg' title='Polaris Web3 ~ Logo' alt='Polaris Web3 ~ Logo'/>
+          <img onClick={()=> setShowNavBar(!showNavBar)} style={{width: '1.5rem'}} src='https://cusoft.tech/wp-content/uploads/2024/05/cancel.png' title='Polaris Web3 ~ Close Menu' alt='Polaris Web3 ~ Close Menu'/>
         </div>
 
         <ul >
@@ -204,12 +204,12 @@ export default function Header() {
 
         <div className='presentation_header_menu_android_language'>
           <div onClick={()=> i18n.changeLanguage('es')}>
-            <img src='../../../../../public/img/banderaEsColor.webp' title='Polaris Web3 ~ Language Esp' alt='Polaris Web3 ~ Language Esp'/>
+            <img src='https://cusoft.tech/wp-content/uploads/2024/05/banderaEsColor.webp' title='Polaris Web3 ~ Language Esp' alt='Polaris Web3 ~ Language Esp'/>
             <span>Español</span>
           </div>
 
           <div onClick={()=> i18n.changeLanguage('en')}>
-            <img src='../../../../../public/img/banderaEnColor.webp' title='Polaris Web3 ~ Language Eng' alt='Polaris Web3 ~ Language Eng'/>
+            <img src='https://cusoft.tech/wp-content/uploads/2024/05/banderaEnColor.webp' title='Polaris Web3 ~ Language Eng' alt='Polaris Web3 ~ Language Eng'/>
             <span>English</span>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function Header() {
                 gap: '1rem',
               }}>
                 <div style={{width: '2rem', height: '2rem', borderRadius: '0.5rem', backgroundColor: colors.paragraphColor, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                  <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src='../../../../public/svg/icons/star.svg' title='Polaris Web3 ~ Star' alt='Polaris Web3 ~ Star'/>
+                  <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src='https://cusoft.tech/wp-content/uploads/2024/05/star.png' title='Polaris Web3 ~ Star' alt='Polaris Web3 ~ Star'/>
                 </div>
 
                 <div>

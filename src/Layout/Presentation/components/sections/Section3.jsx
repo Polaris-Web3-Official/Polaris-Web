@@ -27,10 +27,10 @@ export default function Section3() {
           imgstyles={{
             transform: 'scale(1.4)'
           }}
-          img='../../../../../public/img/statsGraficsShot2.png'
+          img='https://cusoft.tech/wp-content/uploads/2024/05/statsGraficsShot2.png'
           btnUrl='https://com-mrwiki-d7.uptodown.com/android/descargar'
           btnText='Mobil App'
-          btnImg='../../../../../public/svg/icons/chart.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/chart.svg'
         />
 
 
@@ -42,10 +42,10 @@ export default function Section3() {
           imgstyles={{
             transform: 'scale(1.3)',
           }}
-          img='../../../../../public/img/statsGraficsShot.png'
+          img='https://cusoft.tech/wp-content/uploads/2024/05/statsGraficsShot.png'
           btnUrl='app'
           btnText='Web App'
-          btnImg='../../../../../public/svg/icons/friends.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/friends.png'
         />
 
         <ItemSection3 
@@ -55,11 +55,11 @@ export default function Section3() {
           imgstyles={{
             transform: 'scale(1.3)'
           }}
-          img='../../../../../public/img/statsGraficsShot5.png'
+          img='https://cusoft.tech/wp-content/uploads/2024/05/statsGraficsShot5.png'
           altTitle={'Polaris Web3 ~ Discord Bot'}
           btnAltTitle={'Polaris Web3 ~ Reed More Discord Bot'}
           btnText='Discord Bot'
-          btnImg='../../../../../public/svg/icons/service.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/service.png'
         />
 
         <ItemSection3 
@@ -70,10 +70,10 @@ export default function Section3() {
           imgstyles={{
             transform: 'scale(1.3)'
           }}
-          img='../../../../../public/img/statsGraficsShot4.png'
+          img='https://cusoft.tech/wp-content/uploads/2024/05/statsGraficsShot4.png'
           btnUrl='https://docs.polarisweb3.org'
           btnText='Extension Web'
-          btnImg='../../../../../public/svg/icons/products.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/products.png'
         />
 
         <ItemSection3 
@@ -85,7 +85,7 @@ export default function Section3() {
           img='https://cusoft.tech/wp-content/uploads/2024/04/image-9.webp'
           btnUrl='https://docs.polarisweb3.org'
           btnText='Polaris Kit'
-          btnImg='../../../../../public/svg/icons/notepad.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/notepad.png'
           altTitle={'Polaris Web3 ~ Tracking Kit'}
           btnAltTitle={'Polaris Web3 ~ Reed More Tracking Kit'}
         />
@@ -99,7 +99,7 @@ export default function Section3() {
           img='https://cusoft.tech/wp-content/uploads/2024/04/image-9.webp'
           btnUrl='https://docs.polarisweb3.org'
           btnText='Polaris Game'
-          btnImg='../../../../../public/svg/icons/play.svg'
+          btnImg='https://cusoft.tech/wp-content/uploads/2024/05/play.png'
           altTitle={'Polaris Web3 ~ Video Games'}
           btnAltTitle={'Polaris Web3 ~ Reed More Video Games'}
         />

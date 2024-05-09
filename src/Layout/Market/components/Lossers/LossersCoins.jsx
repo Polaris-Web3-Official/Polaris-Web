@@ -49,7 +49,7 @@ export default function LossersCoins() {
         <a href='https://docs.polarisweb3.org' target='_blank'>
           <div className='view_more_winners_coin' style={{display: 'flex', gap: '0.5rem', alignItems: 'center'}}>
             <span style={{marginRight: -5}}>Comming</span>
-            <img style={{width: 30}} src='../../../../../public/svg/icons/components/arrow.svg'/>
+            <img style={{width: 30}} src='https://cusoft.tech/wp-content/uploads/2024/05/arrow.png'/>
           </div>
         </a>
       </nav>

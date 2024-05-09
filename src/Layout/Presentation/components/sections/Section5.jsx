@@ -64,7 +64,7 @@ export default function Section5() {
       <div className="presentation_section5_solar-system" title='Polaris Web3 ~ Solar System Web3 Projects'>
         <div className="sun" style={{overflow: 'hidden'}}>
         <img style={{width: '100%', height: '100%'}} 
-              src='../../../../../public/svg/polaris/ICON_V01.svg' 
+              src='https://cusoft.tech/wp-content/uploads/2024/05/ICON_V01.svg' 
               title='Polaris Web3 ~ Solar system' 
               alt='Polaris Web3 ~ Solar system'/>
         </div>

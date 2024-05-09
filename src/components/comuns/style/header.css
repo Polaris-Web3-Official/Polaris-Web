@@ -60,16 +60,18 @@ header {
 
 @media screen and (max-width : 730px) {
   header {
-    position: fixed;
-    width: 95.9vw;
-    margin-left: -1rem;
+    position: fixed !important;
+    width: 97%;
+    margin-left: -3.1rem;
     z-index: 99999;
-    margin-top: -19px;
+    margin-top: -2.9rem;
 
     .container_header2 {
       gap: 1rem;
     }
   }
+
+  
 }
 
 @media screen and (max-width: 500px) {  

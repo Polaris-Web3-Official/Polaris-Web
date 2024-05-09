@@ -38,7 +38,7 @@ export default function Header() {
       <div className='container_header'>
         <div className='container_header_c1'>
           <div style={{display: 'flex'}}>
-            <img style={{width: '0.9rem'}} src='../../../public/svg/icons/home.svg' title='Home Polaris Web3' alt='Home Polaris Web3'/>
+            <img style={{width: '20px'}} src='https://cusoft.tech/wp-content/uploads/2024/05/home.png' title='Home Polaris Web3' alt='Home Polaris Web3'/>
             
             <div style={{display: 'flex', marginLeft: 5, gap: 5}}>
               <span style={{color: colors.borderColor, fontSize: 13}}>/</span>
@@ -50,8 +50,8 @@ export default function Header() {
       </div>
       
       <div className='container_header2'>
-        <a href='https://com-mrwiki-d7.uptodown.com/android/descargar' target='_blank'><div className='icons_header_container'><img className='icons_header' src="../../../public/svg/icons/mobil.svg" alt="" title='' /></div></a>
-        <a className='icons_header_container_menuAndroid' style={{display: 'none'}} onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}><div className='icons_header_container'><img className='icons_header' src="../../../public/svg/icons/menu.svg" alt="" title='' /></div></a>
+        <a href='https://com-mrwiki-d7.uptodown.com/android/descargar' target='_blank'><div className='icons_header_container'><img className='icons_header' src="https://cusoft.tech/wp-content/uploads/2024/05/mobil.png" alt="" title='' /></div></a>
+        <a className='icons_header_container_menuAndroid' style={{display: 'none'}} onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}><div className='icons_header_container'><img className='icons_header' src="https://cusoft.tech/wp-content/uploads/2024/05/menu.png" alt="" title='' /></div></a>
       </div>
 
       <div className='navBar_android' style={{
@@ -69,54 +69,54 @@ export default function Header() {
       }}>
         <a style={{transition: 'all .5s', marginTop: '1rem', paddingLeft: '2rem', position: 'relative'}}>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: -5}}>
-            <img style={{width: 150, userSelect: 'none'}} src='../../../public/svg/polaris/P001.svg' />
+            <img style={{width: 150, userSelect: 'none'}} src='https://cusoft.tech/wp-content/uploads/2024/05/P001.svg' />
             <span style={{ fontSize: '0.5rem', marginTop: '0.4rem', marginLeft: '0.5rem', color: 'var(--borderColor)'}}>( BETA )</span>
-            <img onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)} style={{position: 'absolute', width: '2rem', right: 30}} src='../../../public/svg/icons/cancel.svg' alt='' title=''/>
+            <img onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)} style={{position: 'absolute', width: '2rem', right: 30}} src='https://cusoft.tech/wp-content/uploads/2024/05/cancel.png' alt='' title=''/>
           </div>
         </a>
 
         <div style={{transition: 'all .5s', width: '100%'}}>
           <ul style={{listStyle: 'none', margin: 0, padding: 0}}>
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app'} icon={<img src='../../../public/svg/icons/home.svg'/>} line={'Home'}/>
+              <ItemNavBar url={'/app'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/home.png'/>} line={'Home'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/market'} icon={<img src='../../../public/svg/icons/chart.svg'/>} line={'Market'}/>
+              <ItemNavBar url={'/app/market'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/chart.png'/>} line={'Market'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/socialfi'} icon={<img src='../../../public/svg/icons/social.svg'/>} line={'SocialFi'}/>
+              <ItemNavBar url={'/app/socialfi'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/social.png'/>} line={'SocialFi'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/games'} icon={<img src='../../../public/svg/icons/play.svg'/>} line={'Games'}/>
+              <ItemNavBar url={'/app/games'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/play.png'/>} line={'Games'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/portfolio'} icon={<img src='../../../public/svg/icons/wallet.svg'/>} line={'PortFolio'}/>
+              <ItemNavBar url={'/app/portfolio'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/wallet.png'/>} line={'PortFolio'}/>
             </div>
             
           </ul>
 
           <ul style={{listStyle: 'none', marginTop: 30, padding: 0}}>
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/profile'} icon={<img src='../../../public/svg/icons/user.svg'/>} line={'Profile'}/>
+              <ItemNavBar url={'/app/profile'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/user.png'/>} line={'Profile'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/settings'} icon={<img src='../../../public/svg/icons/settings.svg'/>} line={'Settings'}/>
+              <ItemNavBar url={'/app/settings'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/settings.png'/>} line={'Settings'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
-              <ItemNavBar url={'/app/sponsors'} icon={<img src='../../../public/svg/icons/heart.svg'/>} line={'Sponsors'}/>
+              <ItemNavBar url={'/app/sponsors'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/heart.png'/>} line={'Sponsors'}/>
             </div>
 
             <div onClick={()=> responsiveAndroidNabvar.setNavBar(!responsiveAndroidNabvar.navBar)}>
               <ItemNavBar 
                 url={'https://twitter.com/intent/post?text=Hello%2C+I+invite+you+to+try+Polaris%2C+an+application+to+access+information+in+an+Easy%2C+Fast+and+Convenient+way.+Access+now+by+entering+https%3A%2F%2Fapp.polarisweb3.org.'} 
                 target='_blank' 
-                icon={<img src='../../../public/svg/icons/share.svg'/>} 
+                icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/share.png'/>} 
                 line={'Share with friends'}
               />
             </div>
@@ -142,7 +142,7 @@ export default function Header() {
                   gap: '1rem',
                 }}>
                   <div style={{width: '2rem', height: '2rem', borderRadius: '0.5rem', backgroundColor: colors.paragraphColor, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                    <img style={{width: '70%', height: '70%'}} src='../../../../public/svg/icons/star.svg'/>
+                    <img style={{width: '70%', height: '70%'}} src='https://cusoft.tech/wp-content/uploads/2024/05/star.png'/>
                   </div>
 
                   <div>

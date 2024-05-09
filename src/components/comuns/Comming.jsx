@@ -3,7 +3,7 @@
 export default function Comming(alt, title) {
   return (
     <div style={{ height: '44rem', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <img style={{width: '10rem'}} src='../../../public/img/working.gif' alt={alt} title={title}/>
+      <img style={{width: '10rem'}} src='https://cusoft.tech/wp-content/uploads/2024/05/working.gif' alt={alt} title={title}/>
     </div>
   )
 }

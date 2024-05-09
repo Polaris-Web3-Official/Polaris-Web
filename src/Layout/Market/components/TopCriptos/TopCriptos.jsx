@@ -76,8 +76,8 @@ export default function TopCriptos() {
           <div className='top_cryptos_header_c1'>
             <div className='top_cryptos_header_c1_categories'>
               <ul>
-                <li style={{backgroundColor: category === 'crypto' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='../../../../../public/svg/icons/components/chart.svg'/> <span>Cryptocurrencies</span></li>
-                <li onClick={()=> setModal([true, false])} style={{backgroundColor: category === 'launchpad' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='../../../../../public/svg/icons/components/suitcase.svg' /> <span>Launchpad</span></li>
+                <li style={{backgroundColor: category === 'crypto' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='https://cusoft.tech/wp-content/uploads/2024/05/chart-1.png'/> <span>Cryptocurrencies</span></li>
+                <li onClick={()=> setModal([true, false])} style={{backgroundColor: category === 'launchpad' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='https://cusoft.tech/wp-content/uploads/2024/05/suitcase.png' /> <span>Launchpad</span></li>
                   {modal[0] && (
                     <ModalCommuns
                       open={modal[0]}
@@ -86,7 +86,7 @@ export default function TopCriptos() {
                       description={'Polaris is currently in BETA, in V1.0 you will be able to see quick and convenient information about new projects coming to market.'}
                     />
                   )}
-                <li onClick={()=> setModal([false, true])} style={{backgroundColor: category === 'games' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='../../../../../public/svg/icons/play.svg' /> <span>Gaming</span></li>
+                <li onClick={()=> setModal([false, true])} style={{backgroundColor: category === 'games' ? colors.mainBackgroundColor3 : 'transparent'}}><img src='https://cusoft.tech/wp-content/uploads/2024/05/play.png' /> <span>Gaming</span></li>
                   {modal[1] && (
                     <ModalCommuns
                       open={modal[1]}
@@ -101,23 +101,23 @@ export default function TopCriptos() {
             <div className='top_cryptos_header_c1_blockchains'>
               <ul>
                 <li style={{backgroundColor: coin === 'btc' ? colors.mainBackgroundColor3 : 'transparent'}} onClick={()=> setCoin('btc')}>
-                  <img src='/src/Layout/Market/assets/btc.png'/>
+                  <img src='https://cusoft.tech/wp-content/uploads/2024/05/btc.png'/>
                   <span>Bitcoin</span>
                 </li>
                 <li style={{backgroundColor: coin === 'eth' ? colors.mainBackgroundColor3 : 'transparent'}} onClick={()=> setCoin('eth')}>
-                  <img src='/src/Layout/Market/assets/eth.png'/>
+                  <img src='https://cusoft.tech/wp-content/uploads/2024/05/eth.png'/>
                   <span>Ethereum</span>
                 </li>
                 <li style={{backgroundColor: coin === 'matic' ? colors.mainBackgroundColor3 : 'transparent'}} onClick={()=> setCoin('matic')}>
-                  <img src='/src/Layout/Market/assets/matic.png'/>
+                  <img src='https://cusoft.tech/wp-content/uploads/2024/05/matic.png'/>
                   <span>Polygon</span>
                 </li>
                 <li style={{backgroundColor: coin === 'sol' ? colors.mainBackgroundColor3 : 'transparent'}} onClick={()=> setCoin('sol')}>
-                  <img src='/src/Layout/Market/assets/sol.png'/>
+                  <img src='https://cusoft.tech/wp-content/uploads/2024/05/sol.png'/>
                   <span>Solana</span>
                 </li>
                 <li style={{backgroundColor: coin === 'hbar' ? colors.mainBackgroundColor3 : 'transparent'}} onClick={()=> setCoin('hbar')}>
-                  <img src='/src/Layout/Market/assets/hbar.png'/>
+                  <img src='https://cusoft.tech/wp-content/uploads/2024/05/hbar.png'/>
                   <span>Hedera</span>
                 </li>
               </ul>
