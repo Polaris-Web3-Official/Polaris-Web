@@ -23,7 +23,7 @@ You can find the Polaris Documentation at:  [Wiki](https://docs.polarisweb3.org)
 
 ## Soporte
 
-If you have any problems or suggestions, please send an email to: [Email](https://mailto:universe@polarisweb3.org).
+If you have any problems or suggestions, please send an email to: [Email](mailto:universe@polarisweb3.org).
 
 ## License 📄
 
