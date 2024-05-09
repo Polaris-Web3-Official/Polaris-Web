@@ -55,11 +55,23 @@
   .rapid_icons_general {
     width: 22rem;
   }
+
+  .bento_c1_satisfactionMarket {
+    width: 90vw !important;
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  .bento_c1_user {
+    width: 90vw !important;
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 @media screen and (max-width: 440px) {
   .rapidInfoX {
-    margin-top: 3.5rem;
+    margin-top: 2rem;
   }
 
   .rapid_icons_general {

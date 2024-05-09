@@ -4,7 +4,7 @@ import './style/footer.css'
 export default function Footer() {
 
   return (
-    <div style={{
+    <div className='footer_main_app' style={{
         display: 'flex', 
         width: '100%', 
         padding: 20, 

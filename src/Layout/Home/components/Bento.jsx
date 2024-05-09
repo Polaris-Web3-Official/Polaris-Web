@@ -20,7 +20,7 @@ import { searchHistoryCoins } from '../functions/searshHistoryCoins'
 export default function Bento() {
   // eslint-disable-next-line no-unused-vars
   const [sentiment, setSentiment] = useState(59);
-  const [sentimentIcon, setSentimentIcon] = useState('../../../../public/svg/icons/happy.svg');
+  const [sentimentIcon, setSentimentIcon] = useState('https://cusoft.tech/wp-content/uploads/2024/05/happy.svg');
   const [chartData, setChartData] = useState();
   const [chartLoading, setChartLoading] = useState(true)
 
@@ -28,12 +28,12 @@ export default function Bento() {
     console.log('se ejecuto la funcion de los emojis');
 
     sentiment < 30 ? 
-      setSentimentIcon('../../../../public/svg/icons/angry.svg') 
+      setSentimentIcon('https://cusoft.tech/wp-content/uploads/2024/05/angry.svg') 
     : 
     sentiment < 60 ? 
-      setSentimentIcon('../../../../public/svg/icons/confused.svg') 
+      setSentimentIcon('https://cusoft.tech/wp-content/uploads/2024/05/confused.svg') 
     : 
-      setSentimentIcon('../../../../public/svg/icons/happy.svg') 
+      setSentimentIcon('https://cusoft.tech/wp-content/uploads/2024/05/happy.svg') 
   }
 
   const shartDataSearsh = async ()=>{

@@ -31,14 +31,14 @@ export default function RapidInfo() {
           <ItemRapidInfo
             data={data}
             x={0}
-            icon='../../../../public/svg/icons/bitcoin.svg'
+            icon='https://cusoft.tech/wp-content/uploads/2024/05/bitcoin.svg'
             title={'Polaris Web3 ~ Bitcoin'}
           />
 
           <ItemRapidInfo
             data={data}
             x={1}
-            icon='../../../../public/svg/icons/ethereum.svg'
+            icon='https://cusoft.tech/wp-content/uploads/2024/05/ethereum.svg'
             title={'Polaris Web3 ~ Ethereum'}
           />
         </div>
@@ -47,14 +47,14 @@ export default function RapidInfo() {
           <ItemRapidInfo
             data={data}
             x={2}
-            icon='../../../../public/svg/icons/usdt.svg'
+            icon='https://cusoft.tech/wp-content/uploads/2024/05/usdt.svg'
             title={'Polaris Web3 ~ Tether'}
           />
 
           <ItemRapidInfo
             data={data}
             x={3}
-            icon='../../../../public/svg/icons/binance.svg'
+            icon='https://cusoft.tech/wp-content/uploads/2024/05/binance.svg'
             title={'Polaris Web3 ~ Binance'}
           />
         </div>
