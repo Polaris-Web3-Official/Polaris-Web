@@ -27,3 +27,4 @@ dist-ssr
 *.env
 env
 src/constants/keys.jsx
+package-lock.json
