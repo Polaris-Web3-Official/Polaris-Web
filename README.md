@@ -4,7 +4,7 @@ Polaris is an ecosystem of tools created by Qsoft Development Team with the obje
 
 ## Visual
 
-(Polaris Web App)[https://cusoft.tech/wp-content/uploads/2024/05/previewVideoPolaris.png]
+![Polaris Web APP](https://cusoft.tech/wp-content/uploads/2024/05/previewVideoPolaris.png)
 
 ## Built With 🛠️
 
