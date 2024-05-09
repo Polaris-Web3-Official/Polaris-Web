@@ -2,9 +2,9 @@
 
 Polaris is an ecosystem of tools created by Qsoft Development Team with the objective of facilitating the reading and understanding of data in the Blockchain in an Easy, Fast and Convenient way. To meet this goal, the Polaris ecosystem has utilities ranging from a cross-platform mobile App, a Web App, Browser Extensions, Discord Bots and Video Games.
 
-## Visuales
+## Visual
 
-[Polaris Web App](/public/img/previewVideoPolaris.png)
+(Polaris Web App)[https://cusoft.tech/wp-content/uploads/2024/05/previewVideoPolaris.png]
 
 ## Built With 🛠️
 
