@@ -106,7 +106,9 @@ export default function Section1() {
       <p className='presentation_section1_subtitle'>{t('section1.subtitle')}</p>
 
       <div>
-        <section title='Polaris Web3 ~ Download App'>
+        <section title='Polaris Web3 ~ Download App' onClick={()=>{
+          window.location.href = '/app'
+        }}>
           <Booton 
             styles={{
               backgroundColor: 'transparent',
@@ -123,7 +125,9 @@ export default function Section1() {
           <img src='https://cusoft.tech/wp-content/uploads/2024/05/externalLinkWhite.png'/>
         </section>
 
-        <section title='Polaris Web3 ~ Documentation'>
+        <section onClick={()=>{
+          window.location.href = 'https://docs.polarisweb3.org'
+        }} title='Polaris Web3 ~ Documentation'>
           <Booton 
             styles={{
               backgroundColor: 'transparent',

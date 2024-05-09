@@ -31,6 +31,7 @@ import Swaper from './Layout/Swaper/Swaper'
 import Recompenzas from './Layout/Recompenzas/Recompenzas'
 import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
 import Presentation from './Layout/Presentation/Presentation'
+import Layout404 from './Layout/404/Layout404'
 
 
 
@@ -65,6 +66,9 @@ function App() {
           <Route path='app/trading' element={<Trading />}/>
           <Route path='app/swaper' element={<Swaper />}/>
           <Route path='app/airdrops' element={<Airdrops />}/>
+
+          <Route path='*' element={<Layout404 />}/>
+
         </Routes>
       </BrowserRouter>
     </div>

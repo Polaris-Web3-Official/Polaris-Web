@@ -176,18 +176,22 @@
 @media screen and (max-width: 644px) {
   .presentation_section5 {
     h3 {
-      font-size: 45px;
+      font-size: 40px;
     }
     h5 {
       padding: 0px 50px !important;
     }
+  }
+
+  .planet {
+    display: none;
   }
 }
 
 @media screen and (max-width: 557px) {
   .presentation_section5 {
     .presentation_section5_buttons {
-      gap: 2rem;
+      gap: 2rem !important;
       justify-content: center;
       align-items: center;
     }
@@ -197,10 +201,10 @@
 @media screen and (max-width: 503px) {
   .presentation_section5 {
     h3 {
-      font-size: 30px;
+      font-size: 30px !important;
     }
     h5 {
-      font-size: 15px;
+      font-size: 15px !important;
     }
   }
 }
