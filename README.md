@@ -1,4 +1,5 @@
 # Polaris Web App
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 Polaris is an ecosystem of tools created by Qsoft Development Team with the objective of facilitating the reading and understanding of data in the Blockchain in an Easy, Fast and Convenient way. To meet this goal, the Polaris ecosystem has utilities ranging from a cross-platform mobile App, a Web App, Browser Extensions, Discord Bots and Video Games.
 
