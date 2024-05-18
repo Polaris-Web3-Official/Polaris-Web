@@ -17,19 +17,19 @@ export default function formatDateHive(fechaCreacion) {
   let timeElapsed;
 
   if (diffInYears >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInYears)} año(s)`;
+    timeElapsed = `Created makes ${Math.floor(diffInYears)} year(s)`;
   } else if (diffInMonths >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInMonths)} mes(es)`;
+    timeElapsed = `Created makes ${Math.floor(diffInMonths)} month(s)`;
   } else if (diffInWeeks >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInWeeks)} semana(s)`;
+    timeElapsed = `Created makes ${Math.floor(diffInWeeks)} week(s)`;
   } else if (diffInDays >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInDays)} día(s)`;
+    timeElapsed = `Created makes ${Math.floor(diffInDays)} day(s)`;
   } else if (diffInHours >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInHours)} hora(s)`;
+    timeElapsed = `Created makes ${Math.floor(diffInHours)} hour(s)`;
   } else if (diffInMinutes >= 1) {
-    timeElapsed = `Creado(a) hace ${Math.floor(diffInMinutes)} minuto(s)`;
+    timeElapsed = `Created makes ${Math.floor(diffInMinutes)} minute(s)`;
   } else {
-    timeElapsed = `Creado(a) hace unos momentos`;
+    timeElapsed = `Created makes a few moments`;
   }
   return timeElapsed;
 }

@@ -10,12 +10,17 @@ import { error } from "../functions/error";
 export const Context = createContext()
 
 export function GlobalContextProvider({children}){
-  const [posts, setPosts] = useState([]);
-  const [search, setSearch] = useState('hive');
-  const [detailPost, setDetailPosts] = useState({});
   const [sesionUser, setSesionUser] = useState({})
   const [userDeviceWidth, setUserDeviceWidth] = useState()
   const [navBar, setNavBar] = useState(true)
+
+  //Hive Blockchain
+  const [posts, setPosts] = useState([]);
+  const [search, setSearch] = useState('hive');
+  const [detailPost, setDetailPosts] = useState({});
+  const [savedPosts, setSavedPosts] = useState([])
+  const [statsPosts, setStatsPost] = useState([])
+
 
  
   //Escuchamos el evento resize del objeto window para determinar 
@@ -29,7 +34,7 @@ export function GlobalContextProvider({children}){
   //esta data debe de buscarse a nivel de componente no de la app
   //por lo tanto en la V1.0 esto se movera a su respectivo componente.
   useEffect(() => {
-    fetchHivePosts(search, 99).then((posts) => {
+    fetchHivePosts(search, 20).then((posts) => {
       if (posts === null) {
         error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search}`)
       } else {
@@ -52,11 +57,16 @@ export function GlobalContextProvider({children}){
         setNavBar: setNavBar,
       },
       socialFi: {
-        setSearch: setSearch,
         posts: posts,
         search: search,
         detailPost: detailPost,
+        savedPosts: savedPosts,
+        statsPosts: statsPosts,
+
+        setSearch: setSearch,
+        setSavedPosts: setSavedPosts,
         setDetailPosts: setDetailPosts,
+        setStatsPost: setStatsPost,
       },
       theme: {
         mainBackgroundColor: "#171717",

@@ -13,11 +13,13 @@ export default function Index() {
 
       <div className='bento_socialfi_c2'>
         <div className='bento_socialfi_c2_topPost'>
-          <TopPost />
-        </div>
-        <div className='bento_socialfi_c2_recommendedTopics'>
           <RecomendedTopics />
         </div>
+
+        <div className='bento_socialfi_c2_recommendedTopics'>
+          <TopPost />
+        </div>
+        
         <div className='bento_socialfi_c2_whoToFollow'>
           <WhoToFollow />
         </div>

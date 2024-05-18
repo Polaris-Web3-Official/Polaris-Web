@@ -1,0 +1,48 @@
+.socialfi_stats_posts {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 16px;
+    color: var(--paragraphColor2);
+  }
+
+  .socialfi_stats_posts_c1 {
+    width: 40rem;
+    height: 45rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .socialfi_stats_posts_c1_bento {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0rem;
+    }
+    
+  }
+
+  .socialfi_stats_posts_c2 {
+    width: 30rem;
+    height: 45rem;
+    border-radius: 0.75rem;
+    background-color: var(--mainBackgroundColor0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

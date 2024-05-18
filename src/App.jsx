@@ -32,6 +32,7 @@ import Recompenzas from './Layout/Recompenzas/Recompenzas'
 import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
 import Presentation from './Layout/Presentation/Presentation'
 import Layout404 from './Layout/404/Layout404'
+import StatsPosts from './Layout/SocialFi/components/StatsPosts/StatsPosts'
 
 
 
@@ -43,11 +44,17 @@ function App() {
         <Routes>
           <Route path='/' element={<Presentation />}/>
           
+
           <Route path='/app' element={<Home />}/>
           <Route path='app/market' element={<Market />}/>
           <Route path='app/market/detail/:id' element={<DetailStatsCoin />}/>
+
+
           <Route path='app/socialfi' element={<SocialFi />}/>
           <Route path='app/socialfi/detailPost/:id' element={<DetailPost />}/>
+          <Route path='app/socialfi/statsPost/:id' element={<StatsPosts />}/>
+          
+
           <Route path='app/games' element={<Games />}/>
           <Route path='app/portfolio' element={<PortFolio />}/>
           <Route path='app/profile' element={<Profile />}/>

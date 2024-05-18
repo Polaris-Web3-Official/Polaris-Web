@@ -1,25 +1,29 @@
 /* eslint-disable no-unused-vars */
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useParams } from 'react-router'
 import Header from '../../../../components/comuns/Header'
 import Footer from '../../../../components/comuns/Footer'
 import { Context } from '../../../../context/GlobalContextProvider'
 import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import '../../styles/detailPosts.css'
 import formatDateHive from '../../functions/formatDateHive'
 import { colors } from '../../../../constants/colors'
 import ImportantsButons from './ImportantsButons'
+import NavBar from '../../../../components/navigation/NavBar/NavBar'
+import NavBarTo from '../../../../components/navigation/NavBarTo/NavBarTo'
 
 export default function DetailPost() {
   const { id } = useParams() 
 
   const { socialFi } = useContext(Context)
   const element = socialFi.detailPost
+  const container = document.getElementById('detail_post_hive_c1_post');
 
   return (
     <div className='container'>
+      <NavBar />
       <Header text={`${element.title.slice(0,50)}...`}/>
-
       <div id='detail_post_hive' className='detail_post_hive'>
         <section className='detail_post_hive_c1'>
           <div className='detail_post_hive_c1_presentationPost'>
@@ -52,20 +56,20 @@ export default function DetailPost() {
               </div>
 
               <div>
-                <ImportantsButons />
+                <ImportantsButons detailPost={element}/>
               </div>
             </div>
           </div>
 
           <div id='detail_post_hive_c1_post' className='detail_post_hive_c1_post'>
-            <Markdown>
+            <Markdown skipHtml={true} remarkPlugins={[remarkGfm]}>
               {element.body}
             </Markdown>
           </div>
         </section>
       </div>
-
       <Footer />
+      <NavBarTo />
     </div>
   )
 }

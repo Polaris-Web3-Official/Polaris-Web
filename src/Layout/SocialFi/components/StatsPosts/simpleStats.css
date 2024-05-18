@@ -1,0 +1,64 @@
+.statsposts_simple_stats {
+  width: 12.5rem;
+  height: 14rem;
+  background-color: var(--mainBackgroundColor2);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.4rem;
+
+  .statsposts_simple_stats_header {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    div {
+      padding: 0.3rem;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        width: 80%;
+      }
+    }
+
+  }
+
+  .statsposts_simple_stats_mid {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+
+    h3 {
+      font-size: 20px;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    span {
+      font-size: 12px;
+      color: var(--paragraphColor2);
+    }
+  }
+
+  .statsposts_simple_stats_state {
+    padding: 0.3rem 0.6rem;
+    background-color: var(--mainBackgroundColor3);
+    border-radius: 0.3rem;
+    font-size: 12px;
+  }
+
+  .statsposts_simple_stats_chart {
+    width: 100%;
+    height: 4.5rem;
+  }
+}

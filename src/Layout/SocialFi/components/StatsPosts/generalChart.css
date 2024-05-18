@@ -1,0 +1,8 @@
+.statsposts_general_chart {
+  width: 100%;
+  height: 21rem;
+  padding: 1rem;
+  background-color: var(--mainBackgroundColor2);
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}

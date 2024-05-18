@@ -5,7 +5,7 @@ import { Context } from '../../context/GlobalContextProvider';
 //importaciones externas
 import Header from '../../components/comuns/Header'
 import Footer from '../../components/comuns/Footer'
-import Comming from "../../components/comuns/Comming";
+import Index from './components/Index'
 import NavBar from '../../components/navigation/NavBar/NavBar';
 import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo';
 
@@ -21,19 +21,11 @@ export default function SocialFi() {
   console.log(widthUser);
 
   return (
-    <div className='container' style={{borderRadius: 20, display: 'flex', flexDirection:  'column', gap: '1.3rem'}}>
+    <div className='container' style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
       <NavBar />
-      {
-        widthUser <= 500  ? (
-          <div>
-            <Header />
-            <Comming />
-            <Footer />
-          </div>
-        ) : (
-          <Comming />
-        )
-      }
+      <Header />
+      <Index />
+      <Footer />
       <NavBarTo />
     </div>
   )

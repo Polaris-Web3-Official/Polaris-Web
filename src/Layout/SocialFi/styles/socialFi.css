@@ -1,5 +1,5 @@
 .bento_socialfi {
-  width: 100%;
+  width: 85vw;
   display: flex;
   gap: 1.5rem;
 
@@ -14,7 +14,7 @@
     height: 38rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     overflow-y: auto;
 
 

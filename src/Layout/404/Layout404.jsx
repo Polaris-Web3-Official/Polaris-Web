@@ -60,11 +60,8 @@ export default function Layout404() {
       setInterval(updatePositions, 1000 / 60); // Refresco cada 16,67 ms (aprox. 60 FPS)
     }
   }, [])
-
-  let layout404 = document.getElementById('layout404');
-  if (layout404) {
-    document.getElementById('root').style.padding = '0px'
-  }
+  
+   document.getElementById('root').style.padding = '0px';
 
   return (
     <div className='presentation_section5' id='layout404' >

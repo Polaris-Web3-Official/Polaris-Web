@@ -1,5 +1,5 @@
 import { Context } from '../../../../context/GlobalContextProvider';
-import { useContext, useState } from 'react'
+import { useContext, memo } from 'react'
 import { Link } from 'react-router-dom';
 import '../../styles/posts.css'
 import { colors } from '../../../../constants/colors'
@@ -12,35 +12,24 @@ import ImportantsButons from './ImportantsButons';
 
 const md = markdownIt()
 
-export default function Post() {
+function Post() {
 
-  const { socialFi, sesionUser } = useContext(Context)
+  const { socialFi } = useContext(Context)
 
   return (
     <div className='socialDefi_posts'>
       {/*Buscador de los Posts*/}
       <div className='socialDefi_posts_inputSearsh'>
         <form className='socialDefi_posts_inputSearsh_form' action="" name='' id='' title='' onSubmit={(x)=>{ x.preventDefault(); socialFi.setSearch(x.target[0].value)}}>
-          <input type="text" name="" id="" title='' alt='' placeholder='Searsh one topic in Hive Blockchain'/>
+          <input type="text" name="" id="" title='' alt='' placeholder={socialFi.search}/>
           <button type="submit" title='' name='' id=''>
             <img src='../../../../../public/svg/icons/searsh.svg' alt='' title=''/>
           </button>
         </form>
-
-        <div className='socialDefi_posts_inputSearsh_userInfoTest'>{/*Es un test, poco funcional*/}
-          <div className='socialDefi_posts_inputSearsh_userInfoTest_write'>
-            <img src="../../../../../public/svg/icons/write.svg" alt="" title=''/>
-            <span>Write</span>
-          </div>
-
-          <div className='socialDefi_posts_inputSearsh_userInfoTest_userPhoto'>
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="" title=''/>
-          </div>
-        </div>
       </div>
 
       {/*Informacion basica sobre el usuario X*/}
-      {Array.isArray(socialFi.posts) && socialFi.posts.map((item, index)=>{
+      {Array.isArray(socialFi.posts) && socialFi.posts.map((item)=>{
         const json = JSON.parse(item?.json_metadata)
         const body = convert(md.render(item?.body?.slice(0,420)))
         const bodyx = searshTextinBody(body)
@@ -53,16 +42,6 @@ export default function Post() {
               <span>{item?.author?.charAt(0).toUpperCase() + item?.author?.slice(1,20)}</span>
               <span>·</span>
               <p>{formatDateHive(item?.last_update)}</p>
-
-              {/*Si el usuario conecta su wallet y el usuario la wallet tiene un NFT se hace la verificacion*/}
-              {
-                sesionUser.isMember && (
-                  <div className='socialDefi_posts_c1_basicInfoUser_isMember'>
-                    <img src="../../../../../public/svg/icons/star.svg" alt="" title=''/>
-                    <span>Polaris VIPs Only</span>
-                  </div>
-                )
-              }
             </div>
 
             {/*Informacion basica sobre el Post*/}
@@ -101,7 +80,10 @@ export default function Post() {
               </div>
 
               <div className='socialDefi_posts_c1_basicnInfoRepercution_c2'>
-                <ImportantsButons item={item}/>
+                <ImportantsButons 
+                  url={`hive.blog${item?.url}`} 
+                  detailPost={item}
+                />
               </div>
             </div>
           </div>
@@ -111,3 +93,5 @@ export default function Post() {
     </div>
   )
 }
+
+export default memo(Post)
