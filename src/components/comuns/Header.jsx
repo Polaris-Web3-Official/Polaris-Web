@@ -34,7 +34,7 @@ export default function Header() {
   const { responsiveAndroidNabvar } = useContext(Context)
 
   return (
-    <header>
+    <header className='header_polaris'>
       <div className='container_header'>
         <div className='container_header_c1'>
           <div style={{display: 'flex'}}>

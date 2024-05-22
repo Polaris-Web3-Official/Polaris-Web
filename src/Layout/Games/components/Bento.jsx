@@ -1,6 +1,6 @@
 
 export default function Bento() {
   return (
-    <div>Bento</div>
+    <div>Hola mundo</div>
   )
 }

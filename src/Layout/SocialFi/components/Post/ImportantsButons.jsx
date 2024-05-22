@@ -26,16 +26,16 @@ export default function ImportantsButons({url, detailPost}) {
         <img src="../../../../../public/svg/icons/bookmark.svg" alt="" title=''/>
       </span>
       
-      <span onClick={()=> window.open(`https://twitter.com/intent/tweet?text=Check%20this%20:%20${url}`, '_blank')}>
+      <span onClick={()=> window.open(`https://twitter.com/intent/tweet?text=Check%20out%20this%20post%20on%20@hiveblocks%20that%20is%20super%20interesting%20and%20now%20you%20can%20analyze%20it%20thanks%20to%20@PolarisWeb3.%0A%0A${url}%20`, '_blank')}>
         <img src="../../../../../public/svg/icons/share2.svg" alt="" title=''/>
       </span>
 
       <span onClick={()=> 
         socialFi.setStatsPost(detailPost)
       }>
-        <Link  to={`/app/socialfi/statsPost/${detailPost?.post_id}`}>
+        <span id='bookMark' onClick={()=> setstate(!state)}>
           <img src="../../../../../public/svg/icons/piechart.svg" alt="" title=''/>
-        </Link>
+        </span>
       </span>
 
       <span onClick={()=> setstate(!state)}>

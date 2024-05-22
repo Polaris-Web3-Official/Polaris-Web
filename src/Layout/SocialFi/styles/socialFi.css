@@ -1,16 +1,19 @@
 .bento_socialfi {
   width: 85vw;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 
   .bento_socialfi_c1 {
-    width: 75%;
+    width: 50rem;
     height: 38rem;
     border-radius: 0.75rem;
   }
 
   .bento_socialfi_c2 {
-    width: 25%;
+    width: 15rem;
     height: 38rem;
     display: flex;
     flex-direction: column;
@@ -19,24 +22,112 @@
 
 
     .bento_socialfi_c2_topPost{
-      width: 100%;
+      width: 15rem;
       height: 10rem;
       border-radius: 0.75rem;
       background-color: var(--mainBackgroundColor2);
     }
 
     .bento_socialfi_c2_recommendedTopics {
-      width: 100%;
+      width: 15rem;
       height: 30rem;
-      border-radius: 0.75rem;
-      background-color: var(--mainBackgroundColor2);
-    }
-
-    .bento_socialfi_c2_whoToFollow{
-      width: 100%;
-      height: 30%;
       border-radius: 0.75rem;
       background-color: var(--mainBackgroundColor2);
     }
   }
 }
+
+@media screen and (max-width: 1266px) {
+  .bento_socialfi_c1 {
+    width: 1200px !important; 
+  }
+
+  .bento_socialfi_c2 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1033px) {
+  .bento_socialfi_c1 {
+    width: 98% !important; 
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .bento_socialfi_c1 {
+    width: 95vw !important; 
+    margin-left: -1%;
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .bento_socialfi_c1 {
+    margin-left: -3%;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .bento_socialfi_c1 {
+    margin-left: -5%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .bento_socialfi_c1 {
+    margin-left: -7%;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .bento_socialfi_c1 {
+    margin-left: -10%;
+  }
+}
+
+@media screen and (max-width: 438px) {
+  .bento_socialfi_c1 {
+    margin-left: -12%;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .bento_socialfi_c1 {
+    margin-left: -14%;
+  
+    .socialDefi_posts_c1_basicInfoUser {
+      p {
+        font-size: 13px;
+        color: var(--paragraphColor2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .bento_socialfi_c1 {
+    margin-left: -16%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .bento_socialfi_c1 {
+    margin-left: -17.5%;
+
+    .socialDefi_posts_c1_basicInfoUser {
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .bento_socialfi_c1 {
+    margin-left: -20%;
+  }
+}
+
+
+
+

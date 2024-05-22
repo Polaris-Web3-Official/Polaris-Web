@@ -56,7 +56,7 @@ export default function DetailPost() {
               </div>
 
               <div>
-                <ImportantsButons detailPost={element}/>
+                <ImportantsButons detailPost={element} url={`hive.blog${element?.url}`} />
               </div>
             </div>
           </div>
