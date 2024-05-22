@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import NavBar from '../../../../components/navigation/NavBar/NavBar'
 import NavBarTo from '../../../../components/navigation/NavBarTo/NavBarTo'
 import Header from '../../../../components/comuns/Header'
@@ -8,12 +8,42 @@ import { Context } from '../../../../context/GlobalContextProvider'
 import SimpleStats from './SimpleStats'
 import GeneralChart from './GeneralChart'
 import SimpleFooter from './SimpleFooter'
+import HumanSection from './HumanSection'
+import { counterVotes } from './functions/counterVotes'
+import Loading from '../../../../components/comuns/Loading'
 
 
 export default function StatsPosts() {
+  const [data, setData] = useState({})
+  const [loading, setLoading] = useState(true)
+  const [principalVoters, setPrincipalVoters] = useState([])
 
   const { socialFi } = useContext(Context)
   const element = socialFi.statsPosts;
+
+
+  async function searshData(){
+    setLoading(true)
+    const votesCounter = await counterVotes(element) 
+    setData(votesCounter)
+    setLoading(false)
+  }
+
+  useEffect(()=>{
+    searshData();
+  }, [element])
+
+  if (loading) {
+    return (
+      <div>
+        <NavBar />
+          <Header />
+            <Loading />
+          <Footer />
+        <NavBarTo />
+      </div>
+    )
+  }
 
   return (
     <div className='container'>
@@ -22,8 +52,6 @@ export default function StatsPosts() {
         <div className='socialfi_stats_posts'>
           
           <div className='socialfi_stats_posts_c1'> 
-            <h2>{element?.title?.slice(0,41)} ...</h2>
-            <h5>Fecha de creacion del post</h5>
 
             <section className='socialfi_stats_posts_c1_bento'>
               <SimpleStats 
@@ -33,9 +61,9 @@ export default function StatsPosts() {
                 id={'likes'}
                 data={
                   {
-                    comments: '80',
+                    comments: data?.positiveVotes?.votes,
                     state: 'Normal',
-                    chart: []
+                    chart: data?.positiveVotes?.chart,
                   }
                 }
               />
@@ -47,9 +75,20 @@ export default function StatsPosts() {
                 id={'comments'}
                 data={
                   {
-                    comments: '80',
+                    comments: data?.comments?.votes,
                     state: 'Normal',
-                    chart: []
+                    chart: [
+                      { time: '2018-12-22', value: 27.67 },
+                      { time: '2018-12-23', value: 27.67 },
+                      { time: '2018-12-24', value: 27.67 },
+                      { time: '2018-12-25', value: 27.67 },
+                      { time: '2018-12-26', value: 27.67 },
+                      { time: '2018-12-27', value: 27.67 },
+                      { time: '2018-12-28', value: 27.67 },
+                      { time: '2018-12-29', value: 27.67 },
+                      { time: '2018-12-30', value: 27.67 },
+                      { time: '2018-12-31', value: 27.67 },
+                    ]
                   }
                 }
               />
@@ -62,16 +101,27 @@ export default function StatsPosts() {
                 id={'deslikes'}
                 data={
                   {
-                    comments: '80',
+                    comments: data?.negativeVotes?.votes,
                     state: 'Normal',
-                    chart: []
+                    chart:  [
+                      { time: '2018-12-22', value: 27.67 },
+                      { time: '2018-12-23', value: 27.67 },
+                      { time: '2018-12-24', value: 27.67 },
+                      { time: '2018-12-25', value: 27.67 },
+                      { time: '2018-12-26', value: 27.67 },
+                      { time: '2018-12-27', value: 27.67 },
+                      { time: '2018-12-28', value: 27.67 },
+                      { time: '2018-12-29', value: 27.67 },
+                      { time: '2018-12-30', value: 27.67 },
+                      { time: '2018-12-31', value: 27.67 },
+                    ],
                   }
                 }
               />
             </section>
 
             <section className='socialfi_stats_posts_c1_activity'>
-              <GeneralChart />
+              <GeneralChart data={data?.activity}/>
             </section>
 
             <section className='socialfi_stats_posts_c1_footer'>
@@ -81,7 +131,10 @@ export default function StatsPosts() {
 
 
           <div className='socialfi_stats_posts_c2'>
-            Human Sectio
+            <HumanSection 
+              dataChart={data?.principalVoters.principalVotersValue.slice(0,10)}
+              labelsChart={data?.principalVoters.principalVotersName.slice(0,10)}
+            />
           </div>
         
         </div>

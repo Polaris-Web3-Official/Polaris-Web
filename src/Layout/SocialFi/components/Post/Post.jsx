@@ -55,10 +55,14 @@ function Post() {
                 </div>
 
                 <div className='socialDefi_posts_c1_basicInfoPosts_info_img'>
-                  <img src={json?.image?.includes('https://files.peakd.com') ||  
-                            json?.image?.includes('https://images.ecency.com') || 
-                            json?.image === ''  
-                            ? json?.image : '../../../../../public/img/hive_image.jpeg'} alt="" title=''/>
+                  {console.log(json?.image)}
+
+                  <img src={
+                    json?.image?.length >= 1 ? 
+                    json?.image[0] 
+                    : 'https://cusoft.tech/wp-content/uploads/2024/04/Imagen1.webp' 
+                  } 
+                    alt="" title=''/>
                 </div>
               </div>
             </Link>

@@ -34,7 +34,7 @@ export function GlobalContextProvider({children}){
   //esta data debe de buscarse a nivel de componente no de la app
   //por lo tanto en la V1.0 esto se movera a su respectivo componente.
   useEffect(() => {
-    fetchHivePosts(search, 20).then((posts) => {
+    fetchHivePosts(search, 90).then((posts) => {
       if (posts === null) {
         error(`Ocurrio u error al buscar la informacion de los ultimos posts en la blockchain de hive para la palabra ${search}`)
       } else {

@@ -14,7 +14,7 @@ export default function TopPost() {
       {
         socialFi?.posts?.sort((a, b)=>{
           b.active_votes.length - a.active_votes.length
-        }).slice(0,4).map((item, index)=>{
+        }).slice(0,10).map((item, index)=>{
           return (
             <Link to={`detailPost/${item?.post_id}`} key={index}>
               <div onClick={()=>{

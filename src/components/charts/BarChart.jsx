@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(
@@ -12,64 +13,43 @@ ChartJS.register(
 import { Bar } from 'react-chartjs-2';
 
 
-export default function BarChart() {
-
+export default function BarChart(
+  {
+    dataChart = [
+            50, 
+            60, 
+            70, 
+            80, 
+            60, 
+            70, 
+            80,
+            50, 
+            60, 
+            70, 
+            80, 
+            60, 
+            70, 
+            80,
+            50, 
+            60, 
+            70, 
+            80, 
+            60, 
+            70, 
+            80,
+            80, 
+            60, 
+            70, 
+            80,
+          ], labelsChart}) {
+  
+  const labels = Array.from({ length: 24 }, (_, i) => `${i} H`);
   const data = {
-    labels: [
-      '1 H', 
-      '2 H', 
-      '3 H', 
-      '4 H', 
-      '5 H', 
-      '6 H', 
-      '7 H',
-      '9 H',
-      '10 H', 
-      '11 H', 
-      '12 H',
-      '13 H', 
-      '14 H', 
-      '15 H', 
-      '16 H', 
-      '17 H', 
-      '18 H', 
-      '19 H',
-      '20 H',
-      '21 H', 
-      '22 H', 
-      '23 H',
-      '24 H',
-      ],
+    labels: labels,
     datasets: [
       {
-        label: 'Ventas por mes',
-        data: [
-            50, 
-            60, 
-            70, 
-            80, 
-            60, 
-            70, 
-            80,
-            50, 
-            60, 
-            70, 
-            80, 
-            60, 
-            70, 
-            80,
-            50, 
-            60, 
-            70, 
-            80, 
-            60, 
-            70, 
-            80,
-            80, 
-            60, 
-            70, 
-            80,
-          ],
+        label: 'Likes per hour',
+        data: dataChart,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 1,

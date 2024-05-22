@@ -20,14 +20,14 @@
 
     .bento_socialfi_c2_topPost{
       width: 100%;
-      height: 30%;
+      height: 10rem;
       border-radius: 0.75rem;
       background-color: var(--mainBackgroundColor2);
     }
 
     .bento_socialfi_c2_recommendedTopics {
       width: 100%;
-      height: 30%;
+      height: 30rem;
       border-radius: 0.75rem;
       background-color: var(--mainBackgroundColor2);
     }

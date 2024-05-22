@@ -2,7 +2,6 @@ import '../styles/socialFi.css'
 import Post from './Post/Post'
 import TopPost from './TopPost/TopPost'
 import RecomendedTopics from './RecomendedTopics/RecomendedTopics'
-import WhoToFollow from './WhoToFollow/WhoToFollow'
 
 export default function Index() {
   return (
@@ -18,10 +17,6 @@ export default function Index() {
 
         <div className='bento_socialfi_c2_recommendedTopics'>
           <TopPost />
-        </div>
-        
-        <div className='bento_socialfi_c2_whoToFollow'>
-          <WhoToFollow />
         </div>
       </div>
     </div>
