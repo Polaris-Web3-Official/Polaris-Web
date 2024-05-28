@@ -1,0 +1,6 @@
+.games {
+  width: 86vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

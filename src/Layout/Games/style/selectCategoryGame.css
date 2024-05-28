@@ -1,0 +1,13 @@
+.select_category_game {
+  width: auto;
+  border-radius: 0.75rem;
+  background-color: var(--mainBackgroundColor2);
+  height: 4rem;
+  margin: 1.5rem 0rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.9rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}

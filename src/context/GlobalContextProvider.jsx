@@ -16,7 +16,7 @@ export function GlobalContextProvider({children}){
 
   //Hive Blockchain
   const [posts, setPosts] = useState([]);
-  const [search, setSearch] = useState('hive');
+  const [search, setSearch] = useState('movie');
   const [detailPost, setDetailPosts] = useState({});
   const [savedPosts, setSavedPosts] = useState([])
   const [statsPosts, setStatsPost] = useState([])

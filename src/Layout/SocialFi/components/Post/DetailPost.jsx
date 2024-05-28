@@ -36,8 +36,6 @@ export default function DetailPost() {
               <div>
                 <h4>{element?.author?.charAt(0).toUpperCase() + element?.author?.slice(1,20)}</h4>
                 <span>·</span>
-                <p>12 min read</p>
-                <span>·</span>
                 <p>{formatDateHive(element?.last_update)}</p>
               </div>
             </div>

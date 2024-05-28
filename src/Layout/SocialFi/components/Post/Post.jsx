@@ -9,6 +9,7 @@ import markdownIt from 'markdown-it';
 import { convert } from 'html-to-text';
 import { searshTextinBody } from '../../functions/searshTextinBody';
 import ImportantsButons from './ImportantsButons';
+import Loading from '../../../../components/comuns/Loading';
 
 const md = markdownIt()
 
@@ -39,9 +40,9 @@ function Post() {
             <div className='socialDefi_posts_c1_basicInfoUser'>
               <img src='../../../../../public/img/user_image.png' alt="" title=''/>
               <span>·</span>
-              <span>{item?.author?.charAt(0).toUpperCase() + item?.author?.slice(1,20)}</span>
+              <span style={{color: 'var(--ButtonColor)'}}>{item?.author?.charAt(0).toUpperCase() + item?.author?.slice(1,20)}</span>
               <span>·</span>
-              <p>{formatDateHive(item?.last_update)}</p>
+              <p style={{color: 'var(--paragraphColor2)'}}>{formatDateHive(item?.last_update)}</p>
             </div>
 
             {/*Informacion basica sobre el Post*/}
@@ -55,7 +56,6 @@ function Post() {
                 </div>
 
                 <div className='socialDefi_posts_c1_basicInfoPosts_info_img'>
-                  {console.log(json?.image)}
 
                   <img src={
                     json?.image?.length >= 1 ? 
@@ -71,14 +71,16 @@ function Post() {
             <div className='socialDefi_posts_c1_basicnInfoRepercution'>
               <div className='socialDefi_posts_c1_basicnInfoRepercution_c1'>
                 <span style={{backgroundColor: colors.borderColor, padding: '0.1rem 1rem', borderRadius: '0.5rem'}}>
-                  {socialFi?.search?.charAt(0).toUpperCase() + socialFi?.search?.slice(1, 100)}
+                  {socialFi?.search?.slice(0, 10)}
                 </span>
 
                 <span>
                   {item?.pending_payout_value}
                 </span>
 
-                <span>
+                <span style={{
+                  color: 'var(--paragraphColor2)'
+                }}>
                   Selected for Polaris Beta
                 </span>
               </div>

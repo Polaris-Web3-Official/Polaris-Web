@@ -1,0 +1,33 @@
+.games_cardGame {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  .games_cardGame_card {
+    width: 385px;
+    height: 200px;
+    background-color: var(--mainBackgroundColor2);
+    border-radius: 0.75rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .img_hero {
+      position: absolute;
+      z-index: 1;
+      width: 140px;
+      bottom: 0;
+      right: 0;
+    }
+
+    .img_logotype {
+      width: 230px;
+      margin: 20px;
+    }
+  }
+}

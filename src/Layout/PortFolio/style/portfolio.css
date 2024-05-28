@@ -1,9 +1,9 @@
 .bento_portfolio {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  margin-top: 1.5rem;
+  gap: 1rem;
+  width: 86vw;
+  margin-top: 1rem;
 
   .bento_portfolio_c1 {
     width: 100%;

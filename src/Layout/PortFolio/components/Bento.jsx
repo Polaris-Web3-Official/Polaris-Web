@@ -1,21 +1,44 @@
 //Importando estilos
+import Comming from '../../../components/comuns/Comming'
 import '../style/portfolio.css'
+import HederaBalance from './HederaBalance'
+import HederaCard from './HederaCard'
+import WalletInteractions from './WalletInteractions'
 
 export default function Bento() {
   return (
     <div className='bento_portfolio'>
       <div className='bento_portfolio_c1'>
-        <div className='bento_portfolio_c1_creaditCardPolaris'></div>
-        <div className='bento_portfolio_c1_creditBalancePolaris'></div>
-        <div className='bento_portfolio_c1_walletConectedToPolaris'></div>
-        <div className='bento_portfolio_c1_walletTrackerHelp'></div>
+
+        <div className='bento_portfolio_c1_creaditCardPolaris' style={{overflow: 'hidden'}}>
+          <HederaCard />
+        </div>
+
+        <div className='bento_portfolio_c1_creditBalancePolaris'>
+          <HederaBalance />
+        </div>
+
+        <div className='bento_portfolio_c1_walletConectedToPolaris'>
+          <WalletInteractions />
+        </div>
+
+        <div className='bento_portfolio_c1_walletTrackerHelp'>
+        
+        </div>
+
       </div>
 
 
       <div className='bento_portfolio_c2'>
-        <div className='bento_portfolio_c2_infWalletsfamiliars'></div>
-        <div className='bento_portfolio_c2_historyUserTransactions'></div>
+        <div className='bento_portfolio_c2_infWalletsfamiliars'>
+        </div>
+
+        <div className='bento_portfolio_c2_historyUserTransactions'>
+        </div>
+
       </div>
+
+      {/*<Comming />*/}
     </div>
   )
 }

@@ -1,0 +1,56 @@
+.portfolio_hedera_card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://cusoft.tech/wp-content/uploads/2024/05/depositphotos_93111916-stock-photo-raster-abstract-dark-blue-purple.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .portfolio_hedera_card_info {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .portfolio_hedera_card_number {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .portfolio_hedera_card_caduct {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    padding: 0rem 1.4rem;
+    gap: 1rem;
+
+    .portfolio_hedera_card_caduct_c {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: var(--paragraphColor2);
+        font-size: 13px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
