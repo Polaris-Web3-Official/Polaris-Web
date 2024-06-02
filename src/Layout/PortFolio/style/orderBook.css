@@ -1,0 +1,88 @@
+.portfolio_orderBook {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .portfolio_orderBook_header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+  }
+
+  .portfolio_orderBook_content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    gap: 1rem;
+
+    .portfolio_orderBook_item {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      height: 110px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: var(--mainBackgroundColor);
+      border-radius: 0.75rem;
+
+      .portfolio_orderBook_item_c1 {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 0.7rem;
+          color: var(--paragraphColor2);
+        }
+      }
+
+      .portfolio_orderBook_item_c2 {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .portfolio_orderBook_item_c2_header {
+          width: 100%;
+          height: 30px;
+          align-items: center;
+          display: flex;
+          justify-content: space-evenly;
+          gap: 10px;
+
+          .portfolio_orderBook_item_c2_header_action {
+            display: flex;
+            gap: 5px;
+            
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .portfolio_orderBook_item_c2_content {
+          width: 100%;
+        }
+
+        .portfolio_orderBook_item_c2_content_chart {
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

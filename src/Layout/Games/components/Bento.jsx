@@ -6,7 +6,12 @@ import Comming from "../../../components/comuns/Comming";
 
 export default function Bento({data}) {
   return (
-    <div className="games">
+    <div className="games" style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
       <CardGames 
         data={data}
       />

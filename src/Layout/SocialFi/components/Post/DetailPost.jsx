@@ -43,12 +43,12 @@ export default function DetailPost() {
             <div className='socialDefi_posts_c1_basicnInfoRepercution_c2'>
               <div>
                 <section>
-                  <img src="../../../../../public/svg/icons/like.svg" alt="" title=''/>
+                  <img src="https://cusoft.tech/wp-content/uploads/2024/05/like.svg" alt="" title=''/>
                   <span>{element.active_votes ? element.active_votes.length : 0}</span>
                 </section>
 
                 <section>
-                  <img src="../../../../../public/svg/icons/comment.svg" alt="" title=''/>
+                  <img src="https://cusoft.tech/wp-content/uploads/2024/05/comment.svg" alt="" title=''/>
                   <span>{element.replies ? element.replies.length : 0}</span>
                 </section>
               </div>

@@ -38,7 +38,7 @@ function Post() {
         return (
           <div key={item?.post_id} className='socialDefi_posts_c1'>
             <div className='socialDefi_posts_c1_basicInfoUser'>
-              <img src='../../../../../public/img/user_image.png' alt="" title=''/>
+              <img src='https://cusoft.tech/wp-content/uploads/2024/05/user_image.png' alt="" title=''/>
               <span>·</span>
               <span style={{color: 'var(--ButtonColor)'}}>{item?.author?.charAt(0).toUpperCase() + item?.author?.slice(1,20)}</span>
               <span>·</span>

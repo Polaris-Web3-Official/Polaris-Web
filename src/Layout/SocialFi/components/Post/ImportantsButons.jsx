@@ -4,14 +4,13 @@ import '../../styles/importantsButtons.css';
 import Alert from '@mui/material/Alert';
 import { colors } from '../../../../constants/colors';
 import { Context } from '../../../../context/GlobalContextProvider';
-import { Link } from 'react-router-dom';
 
 
 export default function ImportantsButons({url, detailPost}) {
   const [state, setstate] = useState(false);
   const { socialFi } = useContext(Context)
 
-  useEffect(()=>{
+  useEffect(()=>{ 
     if(state){
       setTimeout(()=>{
         setstate(false)
@@ -23,23 +22,23 @@ export default function ImportantsButons({url, detailPost}) {
   return (
     <div className='important_buttons_socialFi'>
       <span id='bookMark' onClick={()=> setstate(!state)}>
-        <img src="../../../../../public/svg/icons/bookmark.svg" alt="" title=''/>
+        <img src="https://cusoft.tech/wp-content/uploads/2024/05/bookmark.svg" alt="" title=''/>
       </span>
       
       <span onClick={()=> window.open(`https://twitter.com/intent/tweet?text=Check%20out%20this%20post%20on%20@hiveblocks%20that%20is%20super%20interesting%20and%20now%20you%20can%20analyze%20it%20thanks%20to%20@PolarisWeb3.%0A%0A${url}%20`, '_blank')}>
-        <img src="../../../../../public/svg/icons/share2.svg" alt="" title=''/>
+        <img src="https://cusoft.tech/wp-content/uploads/2024/05/share2.svg" alt="" title=''/>
       </span>
 
       <span onClick={()=> 
         socialFi.setStatsPost(detailPost)
       }>
         <span id='bookMark' onClick={()=> setstate(!state)}>
-          <img src="../../../../../public/svg/icons/piechart.svg" alt="" title=''/>
+          <img src="https://cusoft.tech/wp-content/uploads/2024/05/piechart.svg" alt="" title=''/>
         </span>
       </span>
 
       <span onClick={()=> setstate(!state)}>
-        <img src="../../../../../public/svg/icons/ellipsis.svg" alt="" title=''/>
+        <img src="https://cusoft.tech/wp-content/uploads/2024/05/ellipsis.svg" alt="" title=''/>
       </span>
 
       <div className='alert_posts'>

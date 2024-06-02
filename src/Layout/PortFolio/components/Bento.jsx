@@ -1,8 +1,10 @@
 //Importando estilos
-import Comming from '../../../components/comuns/Comming'
+//import Comming from '../../../components/comuns/Comming'
 import '../style/portfolio.css'
 import HederaBalance from './HederaBalance'
 import HederaCard from './HederaCard'
+import LastTransactions from './LastTransactions'
+import OrderBook from './OrderBook'
 import WalletInteractions from './WalletInteractions'
 
 export default function Bento() {
@@ -23,14 +25,15 @@ export default function Bento() {
         </div>
 
         <div className='bento_portfolio_c1_walletTrackerHelp'>
-        
+          <LastTransactions />
         </div>
 
       </div>
 
 
       <div className='bento_portfolio_c2'>
-        <div className='bento_portfolio_c2_infWalletsfamiliars'>
+        <div className='bento_portfolio_c2_infoOrderBook'>
+          <OrderBook />
         </div>
 
         <div className='bento_portfolio_c2_historyUserTransactions'>

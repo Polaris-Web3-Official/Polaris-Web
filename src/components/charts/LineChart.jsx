@@ -48,3 +48,17 @@ export default function LineChart({dataChart, color='rgba(41, 98, 255, 0.28)', i
     </div>
   )
 }
+
+
+//const exampleChartData = {
+//  {hour: 2021-10-01, value: 139},
+//  {hour: 2021-10-02, value: 140},
+//  {hour: 2021-10-03, value: 141},
+//  {hour: 2021-10-04, value: 142},
+//  {hour: 2021-10-05, value: 143},
+//  {hour: 2021-10-06, value: 144},
+//  {hour: 2021-10-07, value: 145},
+//  {hour: 2021-10-08, value: 146},
+//  {hour: 2021-10-09, value: 147},
+//  {hour: 2021-10-10, value: 148},
+//}
