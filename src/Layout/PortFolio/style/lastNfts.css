@@ -1,0 +1,24 @@
+.portfolio_lastNfts {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-x: scroll;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  img {
+    width: 50px;
+    border-radius: 0.5rem;
+  }
+
+  .portfolio_lastNfts_card {
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--mainBackgroundColor3);
+  }
+
+}

@@ -3,6 +3,7 @@
 import '../style/portfolio.css'
 import HederaBalance from './HederaBalance'
 import HederaCard from './HederaCard'
+import LastNfts from './LastNfts'
 import LastTransactions from './LastTransactions'
 import OrderBook from './OrderBook'
 import WalletInteractions from './WalletInteractions'
@@ -37,6 +38,7 @@ export default function Bento() {
         </div>
 
         <div className='bento_portfolio_c2_historyUserTransactions'>
+          <LastNfts />
         </div>
 
       </div>

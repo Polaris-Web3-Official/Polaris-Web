@@ -33,6 +33,11 @@ import DetailPost from './Layout/SocialFi/components/Post/DetailPost'
 import Presentation from './Layout/Presentation/Presentation'
 import Layout404 from './Layout/404/Layout404'
 import StatsPosts from './Layout/SocialFi/components/StatsPosts/StatsPosts'
+import Links from './Layout/Links/Links'
+import HiveCuba from './Layout/Community/Layouts/HiveCuba/HiveCuba'
+import Hallgraph from './Layout/Community/Layouts/Hallgraph/Hallgraph'
+import Kabila from './Layout/Community/Layouts/Kabila/Kabila'
+import V1ps from './Layout/Community/Layouts/V1ps/V1ps'
 
 
 
@@ -43,38 +48,45 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Presentation />}/>
+          <Route path='/links' element={<Links />}/>
           
 
           <Route path='/app' element={<Home />}/>
-          <Route path='app/market' element={<Market />}/>
-          <Route path='app/market/detail/:id' element={<DetailStatsCoin />}/>
+            <Route path='app/market' element={<Market />}/>
+            <Route path='app/market/detail/:id' element={<DetailStatsCoin />}/>
+
+            <Route path='app/socialfi' element={<SocialFi />}/>
+              <Route path='app/socialfi/detailPost/:id' element={<DetailPost />}/>
+              <Route path='app/socialfi/statsPost/:id' element={<StatsPosts />}/>
+
+            <Route path='app/games' element={<Games />}/>
+            <Route path='app/portfolio' element={<PortFolio />}/>
+            <Route path='app/profile' element={<Profile />}/>
+            <Route path='app/settings' element={<Settings />}/>
+            <Route path='app/sponsors' element={<Sponsors />}/>
+
+            <Route path='app/products' element={<Products />}/>
+            <Route path='app/affiliates' element={<Affilieates />}/>
+            <Route path='app/services' element={<Service />}/>
+            <Route path='app/materials' element={<Materials />}/>
+            <Route path='app/masters' element={<Masters />}/>
+            <Route path='app/recompenzas' element={<Recompenzas />}/>
+            <Route path='app/jobs' element={<Jobs />}/>
+
+            {/* Comunidades */}
+            <Route path='app/community' element={<Community />}/>
+              <Route path='app/community/hivecuba'  element={<HiveCuba />}/>
+              <Route path='app/community/hallgraph' element={<Hallgraph />}/>
+              <Route path='app/community/kabila'    element={<Kabila />}/>
+              <Route path='app/community/v1ps'    element={<V1ps />}/>
 
 
-          <Route path='app/socialfi' element={<SocialFi />}/>
-          <Route path='app/socialfi/detailPost/:id' element={<DetailPost />}/>
-          <Route path='app/socialfi/statsPost/:id' element={<StatsPosts />}/>
-          
+            <Route path='app/p2p-market' element={<P2PMarket />}/>
+            <Route path='app/trading' element={<Trading />}/>
+            <Route path='app/swaper' element={<Swaper />}/>
+            <Route path='app/airdrops' element={<Airdrops />}/>
 
-          <Route path='app/games' element={<Games />}/>
-          <Route path='app/portfolio' element={<PortFolio />}/>
-          <Route path='app/profile' element={<Profile />}/>
-          <Route path='app/settings' element={<Settings />}/>
-          <Route path='app/sponsors' element={<Sponsors />}/>
-          
-          <Route path='app/products' element={<Products />}/>
-          <Route path='app/affiliates' element={<Affilieates />}/>
-          <Route path='app/services' element={<Service />}/>
-          <Route path='app/materials' element={<Materials />}/>
-          <Route path='app/masters' element={<Masters />}/>
-          <Route path='app/recompenzas' element={<Recompenzas />}/>
-          <Route path='app/jobs' element={<Jobs />}/>
-          <Route path='app/community' element={<Community />}/>
-          <Route path='app/p2p-market' element={<P2PMarket />}/>
-          <Route path='app/trading' element={<Trading />}/>
-          <Route path='app/swaper' element={<Swaper />}/>
-          <Route path='app/airdrops' element={<Airdrops />}/>
-
-          <Route path='*' element={<Layout404 />}/>
+            <Route path='*' element={<Layout404 />}/>
 
         </Routes>
       </BrowserRouter>

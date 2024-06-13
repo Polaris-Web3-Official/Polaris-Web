@@ -1,0 +1,11 @@
+.links_link {
+  width: 350px;
+  height: 60px;
+  border-radius: 0.75rem;
+  border: 1px solid var(--mainBackgroundColor2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

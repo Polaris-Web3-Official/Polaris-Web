@@ -12,6 +12,7 @@ export const Context = createContext()
 export function GlobalContextProvider({children}){
   const [sesionUser, setSesionUser] = useState({})
   const [userDeviceWidth, setUserDeviceWidth] = useState()
+  const [community, setCommunity] = useState('')
   const [navBar, setNavBar] = useState(true)
 
   //Hive Blockchain
@@ -67,6 +68,10 @@ export function GlobalContextProvider({children}){
         setSavedPosts: setSavedPosts,
         setDetailPosts: setDetailPosts,
         setStatsPost: setStatsPost,
+      },
+      cs: {
+        community,
+        setCommunity,
       },
       theme: {
         mainBackgroundColor: "#171717",
