@@ -77,6 +77,7 @@ export default function NavBarTo() {
             <ItemNavBar url={'/app/trading'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/chartcompar.png'/>} line={'Trading'}/>
             <ItemNavBar url={'/app/p2p-market'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/piechart.png'/>} line={'P2P-Market'}/>
             <ItemNavBar url={'/app/swaper'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/swap.png'/>} line={'Swaper'}/>
+            <ItemNavBar url={'/app/news'} icon={<img style={{width: '25px'}} src='https://cusoft.tech/wp-content/uploads/2024/06/news.svg'/>} line={'News'}/>
             <ItemNavBar url={'/app/recompenzas'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/gift.png'/>} line={'Rewards'}/>
             <ItemNavBar url={'/app/airdrops'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/airdrop.png'/>} line={'Airdrops'}/>
             <ItemNavBar url={'/app/affiliates'} icon={<img src='https://cusoft.tech/wp-content/uploads/2024/05/friends.png'/>} line={'Affiliates'}/>

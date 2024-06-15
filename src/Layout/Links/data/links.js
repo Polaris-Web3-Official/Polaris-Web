@@ -5,7 +5,7 @@ export const links =  [
   },
   {
     name: "Official Discord",
-    url: "https://discord.gg/Polaris",
+    url: "https://discord.com/invite/XRCYY3cmD3",
   },
   {
     name: "Official Website",
@@ -21,7 +21,7 @@ export const links =  [
   },
   {
     name: "Mobile App ( BETA )",
-    url: "https://polarisweb3.org/app",
+    url: "https://docs.polarisweb3.org/products/polaris-app",
   },
   {
     name: "Contact the Team",

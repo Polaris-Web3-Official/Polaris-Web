@@ -38,6 +38,7 @@ import HiveCuba from './Layout/Community/Layouts/HiveCuba/HiveCuba'
 import Hallgraph from './Layout/Community/Layouts/Hallgraph/Hallgraph'
 import Kabila from './Layout/Community/Layouts/Kabila/Kabila'
 import V1ps from './Layout/Community/Layouts/V1ps/V1ps'
+import News from './Layout/News/News'
 
 
 
@@ -84,6 +85,7 @@ function App() {
             <Route path='app/p2p-market' element={<P2PMarket />}/>
             <Route path='app/trading' element={<Trading />}/>
             <Route path='app/swaper' element={<Swaper />}/>
+            <Route path='app/news' element={<News />}/>
             <Route path='app/airdrops' element={<Airdrops />}/>
 
             <Route path='*' element={<Layout404 />}/>
