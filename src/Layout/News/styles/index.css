@@ -1,0 +1,6 @@
+.news_index {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  justify-content: space-between;
+}

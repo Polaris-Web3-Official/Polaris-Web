@@ -18,7 +18,10 @@ export default function DetailPost() {
 
   const { socialFi } = useContext(Context)
   const element = socialFi.detailPost
-  const container = document.getElementById('detail_post_hive_c1_post');
+
+  if (element.title === undefined) {
+    window.location.href = '/app/socialfi'
+  }
 
   return (
     <div className='container'>

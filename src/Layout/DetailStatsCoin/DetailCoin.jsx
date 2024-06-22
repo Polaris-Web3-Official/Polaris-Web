@@ -7,6 +7,7 @@ import Footer from '../../components/comuns/Footer'
 import Index from './components/Index'
 import NavBar from '../../components/navigation/NavBar/NavBar'
 import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo'
+import Comming from '../../components/comuns/Comming';
 
 export default function DetailStatsCoin() {
 
@@ -18,6 +19,7 @@ export default function DetailStatsCoin() {
       <NavBar />
       <Header/>
       <Index coinId={id}/>
+      <Comming />
       <Footer />
       <NavBarTo />
     </div>

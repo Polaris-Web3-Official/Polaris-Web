@@ -1,0 +1,33 @@
+.news_index_portals {
+  width: 14rem;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  height: 40rem;
+  background-color: var(--mainBackgroundColor2);
+  border-radius: .75rem;
+  margin-top: .5rem;
+
+  .news_index_portals_item {
+    padding: .5rem;
+    cursor: pointer;
+    padding-left: .9rem;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      background-color: var(--mainBackgroundColor) !important;
+    }
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  span {
+    font-size: .7rem;
+    text-transform: capitalize;
+    color: var(--borderColor);
+  }
+}

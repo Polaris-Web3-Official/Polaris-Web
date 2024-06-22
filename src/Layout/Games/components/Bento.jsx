@@ -2,7 +2,6 @@ import CardGames from "./CardGames";
 import ListGames from "./ListGames";
 import '../style/games.css'
 import SelectCategoryGame from "./SelectCategoryGame";
-import Comming from "../../../components/comuns/Comming";
 
 export default function Bento({data}) {
   return (
@@ -19,7 +18,6 @@ export default function Bento({data}) {
       <ListGames 
         data={data}
       />
-      <Comming />
     </div>
   )
 }

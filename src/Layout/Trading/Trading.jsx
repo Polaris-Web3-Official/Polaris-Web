@@ -1,13 +1,17 @@
 //importaciones externas
-import Comming from '../../components/comuns/Comming'
+import Header from '../../components/comuns/Header'
+import Footer from '../../components/comuns/Footer'
 import NavBar from '../../components/navigation/NavBar/NavBar'
 import NavBarTo from '../../components/navigation/NavBarTo/NavBarTo'
+import Index from './components/Index'
 
 export default function Trading() {
   return (
-    <div>
+    <div className="container">
       <NavBar />
-      <Comming />
+      <Header />
+      <Index />
+      <Footer />
       <NavBarTo />
     </div>
   )

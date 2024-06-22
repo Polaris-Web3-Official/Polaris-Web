@@ -11,7 +11,7 @@ export default function Comming(alt, title) {
       position: 'fixed',
       top: '0rem',
       left: '0rem',
-      zIndex: 10,
+      zIndex: 999,
       backgroundColor: 'rgba(16,16,16,0.05)',
       backdropFilter: 'blur(7px)'
       }}>

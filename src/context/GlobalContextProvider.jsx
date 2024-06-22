@@ -13,6 +13,7 @@ export function GlobalContextProvider({children}){
   const [sesionUser, setSesionUser] = useState({})
   const [userDeviceWidth, setUserDeviceWidth] = useState()
   const [community, setCommunity] = useState('')
+  const [portal, setPortal] = useState('abc-news')
   const [navBar, setNavBar] = useState(true)
 
   //Hive Blockchain
@@ -72,6 +73,10 @@ export function GlobalContextProvider({children}){
       cs: {
         community,
         setCommunity,
+      },
+      news: {
+        portal : portal,
+        setPortal: setPortal,
       },
       theme: {
         mainBackgroundColor: "#171717",

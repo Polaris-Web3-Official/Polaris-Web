@@ -4,13 +4,13 @@ export default function SelectItem({
   }) {
   return (
     <div style={{
-      backgroundColor: 'var(--mainBackgroundColor3)',
       padding: '0.4rem 1rem',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      gap: '0.4rem',
+      gap: '1rem',
       borderRadius: '0.3rem',
+      border: '1px solid var(--mainBackgroundColor3)',
     }}>
       <p>{name}</p>
       <img style={{width: '1.3rem'}} src={icon} alt={name} title={name}/>
