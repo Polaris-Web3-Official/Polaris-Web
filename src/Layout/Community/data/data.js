@@ -191,4 +191,39 @@ export const data = [
       },
     ]
   },
+  {
+    id: 'mental_friends',
+    name: 'Mental Friends',
+    description: 'Mental Friends quiere brindarte su apoyo y acompañamiento 🤝🏼 somos tus Friends, te ayudamos con tu salud mental. 🧠',
+    image: {
+      banner: 'https://cusoft.tech/wp-content/uploads/2024/06/1500x500-1.jpeg',
+      logo: 'https://pbs.twimg.com/profile_images/1747975351706300416/qoYU3b75_400x400.jpg',
+    },
+    links: {
+      web: 'x.com/MentalFriendsSM',
+      twitter: 'x.com/MentalFriendsSM',
+      discord: 'https://discord.com/invite/jCC26jQu9w',
+      youtube: null,
+      spotify: null,
+      telegram: 'https://t.me/+4hBMcaFSQvI3NTg0',
+      github: null,
+      reddit: null,
+      medium: null,
+    },
+    team: [
+      {
+        name: 'AdriiSaan',
+        image: 'https://pbs.twimg.com/profile_images/1621284241932800000/HwwloplF_400x400.jpg',
+        description: 'DM for diffusion/Collaborations #Web3/#NFTs👨🏻‍💻. Advisor🧐/Founder @MentalFriendsSM🧠./MOD/Hilos sobre temas variados.✍🏼',
+        social: {
+          twitter: 'https://x.com/adriisaanchez_',
+          telegram: null,
+          discord: null,
+          github: null,
+          medium: null,
+          reddit: null,
+        },
+      },
+    ]
+  },
 ];

@@ -132,7 +132,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <Booton url='https://x.com/PolarisWeb3' text='Buy your Star in Kabila' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
+        <Booton url='https://x.com/PolarisWeb3' text='Buy your Pass in Kabila' styles={{margin: '0.8rem', width: '90%', height: '3rem', marginTop: '-0.2rem'}}/>
       </div>
     </div>
   )

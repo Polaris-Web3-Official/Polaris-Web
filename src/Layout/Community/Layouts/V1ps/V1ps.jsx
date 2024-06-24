@@ -7,7 +7,7 @@ import Layout from "../../components/Layout";
 
 export default function V1ps() {
   return (
-    <div className='container'>
+    <div className='container' style={{marginTop: '1.5rem'}}>
       <NavBar />
         <Header />
         <Layout />

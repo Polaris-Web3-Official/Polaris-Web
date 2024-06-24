@@ -1,0 +1,78 @@
+.AppMentalFriends {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  b {
+    background-color: var(--mainBackgroundColor3);
+    font-weight: normal;
+    padding: .21rem;
+    border-radius: .5rem;
+    margin: .1rem;
+  }
+
+  .AppMentalFriends_c1 {
+    width: 100%;
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+    }
+
+    h2 {
+      margin-top: .5rem;
+      margin-left: 1rem;
+    }
+
+    section {
+      margin-top: 1rem;
+      padding: 1rem;
+      color: 'var(--paragraphColor2)';
+      background-color: var(--mainBackgroundColor2);
+      border-radius: .75rem;
+    }
+  }
+  .AppMentalFriends_c2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 1rem;
+
+    .AppMentalFriends_c2_header {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      gap: .5rem;
+    }
+
+    .AppMentalFriends_c2_item {      
+      width : 16rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width : 100%;
+        height: 170px;
+        border-radius: .75rem;
+        object-fit: cover;
+      }
+    }
+  }
+}

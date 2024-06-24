@@ -39,7 +39,7 @@ import Hallgraph from './Layout/Community/Layouts/Hallgraph/Hallgraph'
 import Kabila from './Layout/Community/Layouts/Kabila/Kabila'
 import V1ps from './Layout/Community/Layouts/V1ps/V1ps'
 import News from './Layout/News/News'
-
+import MentalFriens from './Layout/Community/Layouts/MentalFriens/MentalFriens'
 
 
 function App() {
@@ -80,6 +80,7 @@ function App() {
               <Route path='app/community/hallgraph' element={<Hallgraph />}/>
               <Route path='app/community/kabila'    element={<Kabila />}/>
               <Route path='app/community/v1ps'    element={<V1ps />}/>
+              <Route path='app/community/mental_friends'    element={<MentalFriens />}/>
 
 
             <Route path='app/p2p-market' element={<P2PMarket />}/>

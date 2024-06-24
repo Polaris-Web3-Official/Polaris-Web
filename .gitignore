@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+package-lock.json
+yarn.lock
 dist
 dist-ssr
 *.local
@@ -27,4 +29,3 @@ dist-ssr
 *.env
 env
 src/constants/keys.jsx
-package-lock.json

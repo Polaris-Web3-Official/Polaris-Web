@@ -8,6 +8,7 @@ import AppHallgraph from '../Layouts/Hallgraph/app/AppHallgraph'
 import AppHiveCuba from '../Layouts/HiveCuba/app/AppHiveCuba'
 import AppKabila from '../Layouts/Kabila/app/AppKabila'
 import AppV1ps from '../Layouts/V1ps/app/AppV1ps'
+import AppMentalFriends from '../Layouts/MentalFriens/app/AppMentalFriends'
 
 export default function Layout() {
   const { cs } = useContext(Context)
@@ -34,6 +35,8 @@ export default function Layout() {
                       <AppV1ps/>
                     ) : id === 'hallgraph' ? (
                       <AppHallgraph/>
+                    ) : id === 'mental_friends' ? (
+                      <AppMentalFriends />
                     ) : (
                       <div>App {id}</div>
                     )
@@ -65,18 +68,6 @@ export default function Layout() {
 
                         <img onClick={()=> window.open(item.links.telegram, '_blank')} 
                         src="https://cusoft.tech/wp-content/uploads/2024/06/telegram.svg" alt="" title=''/>
-
-                        <img onClick={()=> window.open(item.links.medium, '_blank')} 
-                        src="https://cusoft.tech/wp-content/uploads/2024/06/medium.svg" alt="" title=''/>
-
-                        <img onClick={()=> window.open(item.links.reddit, '_blank')} 
-                        src="https://cusoft.tech/wp-content/uploads/2024/06/reddit.svg" alt="" title=''/>
-
-                        <img onClick={()=> window.open(item.links.spotify, '_blank')} 
-                        src="https://cusoft.tech/wp-content/uploads/2024/06/spotify.svg" alt="" title=''/>
-
-                        <img onClick={()=> window.open(item.links.github, '_blank')} 
-                          src="https://cusoft.tech/wp-content/uploads/2024/06/github-1.svg" alt="" title=''/>
                       </div>
                     </div>
                   </div>
@@ -103,41 +94,6 @@ export default function Layout() {
                                   cursor: 'pointer'
                                 }} onClick={()=> window.open(teamMember.social.twitter, '_blank')} 
                                 src="https://cusoft.tech/wp-content/uploads/2024/06/twitter.svg" alt="" title=''/>
-
-                                <img style={{
-                                  width: '18px',
-                                  height: '18px',
-                                  cursor: 'pointer'
-                                }} onClick={()=> window.open(teamMember.social.discord, '_blank')} 
-                                  src="https://cusoft.tech/wp-content/uploads/2024/06/discord-5.svg" alt="" title=''/>
-
-                                <img style={{
-                                  width: '18px',
-                                  height: '18px',
-                                  cursor: 'pointer'
-                                }} onClick={()=> window.open(teamMember.social.telegram, '_blank')} 
-                                src="https://cusoft.tech/wp-content/uploads/2024/06/telegram.svg" alt="" title=''/>
-
-                                <img style={{
-                                  width: '18px',
-                                  height: '18px',
-                                  cursor: 'pointer'
-                                }} onClick={()=> window.open(teamMember.social.medium, '_blank')} 
-                                src="https://cusoft.tech/wp-content/uploads/2024/06/medium.svg" alt="" title=''/>
-
-                                <img style={{
-                                  width: '18px',
-                                  height: '18px',
-                                  cursor: 'pointer'
-                                }} onClick={()=> window.open(teamMember.social.reddit, '_blank')} 
-                                src="https://cusoft.tech/wp-content/uploads/2024/06/reddit.svg" alt="" title=''/>
-
-                                <img style={{
-                                  width: '18px',
-                                  height: '18px',
-                                  cursor: 'pointer'
-                                }} onClick={()=> window.open(teamMember.social.github, '_blank')} 
-                                  src="https://cusoft.tech/wp-content/uploads/2024/06/github-1.svg" alt="" title=''/>
                               </div>
                             </div>
                           </div>

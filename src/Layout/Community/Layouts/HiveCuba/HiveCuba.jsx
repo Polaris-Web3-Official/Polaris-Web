@@ -6,7 +6,7 @@ import NavBarTo from '../../../../components/navigation/NavBarTo/NavBarTo'
 
 export default function HiveCuba() {
   return (
-    <div className='container'>
+    <div className='container'  style={{marginTop: '1.5rem'}}>
       <NavBar />
         <Header />
         <Layout />
